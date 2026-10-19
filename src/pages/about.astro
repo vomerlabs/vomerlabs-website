@@ -58,8 +58,8 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
 
   .about-layout :is(h2, h3) {
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
     overflow-wrap: anywhere;
   }
@@ -67,9 +67,9 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
   .eyebrow,
   .mono {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.065em;
-    line-height: 1.5;
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: var(--line-height-normal);
   }
 
   .eyebrow {
@@ -80,27 +80,26 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
   .about-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-    gap: 95px;
-    padding-top: 60px;
-    padding-bottom: 80px;
+    gap: var(--layout-column-gap);
+    padding-block: var(--layout-section-padding);
   }
 
   .prose {
     min-width: 0;
     max-width: 700px;
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #4f5548;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-prose);
+    color: var(--color-text-prose);
     overflow-wrap: anywhere;
   }
 
   .prose h2 {
-    font-size: 1.875rem;
-    letter-spacing: -0.04em;
+    font-size: var(--font-size-subheading);
+    letter-spacing: var(--letter-spacing-tightest);
     color: var(--color-text);
     margin-top: 42px;
     margin-bottom: 18px;
-    line-height: 1.2;
+    line-height: var(--line-height-snug);
   }
 
   .prose > h2:first-child {
@@ -108,21 +107,21 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
   }
 
   .prose p {
-    margin-bottom: 20px;
+    margin-bottom: var(--space-prose);
   }
 
   .prose a {
-    color: #466123;
+    color: var(--color-link);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
   .about-panel {
     align-self: start;
-    background: #e0e7d5;
-    padding: 35px;
+    background: var(--color-surface-tinted);
+    padding: var(--panel-padding);
     position: sticky;
-    top: 30px;
+    top: var(--panel-sticky-offset);
   }
 
   .about-panel .eyebrow {
@@ -130,12 +129,12 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
   }
 
   .about-panel h2 {
-    font-size: 2.1875rem;
-    line-height: 1.15;
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-heading);
   }
 
   .principle {
-    border-top: 1px solid #bbc8ac;
+    border-top: 1px solid var(--color-border-tinted);
     padding-top: 20px;
     margin-top: 25px;
     display: flex;
@@ -146,50 +145,50 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
   .principle .mono {
     flex-shrink: 0;
     padding-top: 3px;
-    color: #5b694e;
+    color: var(--color-text-tinted);
   }
 
   .principle h3 {
-    font-size: 1rem;
-    letter-spacing: -0.02em;
+    font-size: var(--font-size-body);
+    letter-spacing: var(--letter-spacing-compact);
     margin-bottom: 8px;
   }
 
   .principle p {
-    color: #5b6750;
-    font-size: 0.75rem;
+    color: var(--color-text-tinted-muted);
+    font-size: var(--font-size-caption);
   }
 
   @media (max-width: 900px) {
     .about-layout {
-      gap: 45px;
+      gap: var(--layout-column-gap-medium);
     }
   }
 
   @media (max-width: 650px) {
     .about-layout {
       grid-template-columns: 1fr;
-      gap: 35px;
-      padding-block: 35px 50px;
+      gap: var(--layout-column-gap-small);
+      padding-block: var(--layout-section-padding-small);
     }
 
     .prose {
-      font-size: 0.9375rem;
-      line-height: 1.85;
+      font-size: var(--font-size-compact);
+      line-height: var(--line-height-prose-small);
     }
 
     .prose h2 {
-      font-size: 1.6875rem;
+      font-size: var(--font-size-subheading-small);
       margin-top: 32px;
     }
 
     .about-panel {
       position: static;
-      padding: 27px;
+      padding: var(--panel-padding-small);
     }
 
     .about-panel h2 {
-      font-size: 2rem;
+      font-size: var(--font-size-subtitle-small);
     }
   }
 </style>

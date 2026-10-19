@@ -48,7 +48,7 @@ const readingTime = estimateReadingTime(note.body);
     align-items: baseline;
     gap: var(--space-6);
     padding: var(--space-6);
-    background: #faf9f6;
+    background: var(--color-surface-raised);
     border-radius: var(--space-1);
     color: inherit;
     text-decoration: none;
@@ -60,14 +60,14 @@ const readingTime = estimateReadingTime(note.body);
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-2) var(--space-3);
-    color: var(--home-notes-muted, var(--color-text-muted));
+    color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-caption);
     font-variant-numeric: tabular-nums;
   }
 
   .note-meta :global(time) {
-    color: var(--home-notes-ink, var(--color-text));
+    color: var(--color-text);
   }
 
   .reading-time {
@@ -80,7 +80,7 @@ const readingTime = estimateReadingTime(note.body);
   .note-title {
     margin: 0;
     font-size: clamp(1.125rem, 1.5vw, 1.375rem);
-    line-height: 1.4;
+    line-height: var(--line-height-compact);
     letter-spacing: -0.015em;
     text-wrap: pretty;
   }
@@ -88,9 +88,9 @@ const readingTime = estimateReadingTime(note.body);
   .note-description {
     max-width: 70ch;
     margin: var(--space-2) 0 0;
-    color: var(--home-notes-muted, var(--color-text-muted));
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-compact);
+    line-height: var(--line-height-body);
   }
 
   .note-topics {
@@ -106,14 +106,14 @@ const readingTime = estimateReadingTime(note.body);
     padding: 0.125rem var(--space-2);
     background: var(--color-surface);
     border-radius: var(--space-1);
-    color: var(--home-notes-muted, var(--color-text-muted));
+    color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-caption);
   }
 
   .note-arrow {
     display: inline-flex;
-    color: var(--home-notes-muted, var(--color-text-muted));
+    color: var(--color-text-muted);
     transition: transform var(--motion-duration) var(--motion-ease);
   }
 

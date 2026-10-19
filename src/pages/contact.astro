@@ -70,8 +70,8 @@ import { site } from "../config/site";
 
   .contact-content h2 {
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
     overflow-wrap: anywhere;
   }
@@ -79,9 +79,9 @@ import { site } from "../config/site";
   .eyebrow,
   .prompt-number {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.065em;
-    line-height: 1.5;
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: var(--line-height-normal);
   }
 
   .eyebrow {
@@ -93,28 +93,28 @@ import { site } from "../config/site";
   .contact-content {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-    gap: 95px;
-    padding-block: 60px 80px;
+    gap: var(--layout-column-gap);
+    padding-block: var(--layout-section-padding);
   }
 
   .contact-invitation {
     min-width: 0;
     max-width: 700px;
-    color: #4f5548;
-    font-size: 1rem;
-    line-height: 1.9;
+    color: var(--color-text-prose);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-prose);
     overflow-wrap: anywhere;
   }
 
   .contact-invitation h2 {
     color: var(--color-text);
-    font-size: 1.875rem;
-    line-height: 1.2;
+    font-size: var(--font-size-subheading);
+    line-height: var(--line-height-snug);
     margin-bottom: 18px;
   }
 
   .contact-invitation p {
-    margin-bottom: 20px;
+    margin-bottom: var(--space-prose);
   }
 
   .email-link {
@@ -131,9 +131,9 @@ import { site } from "../config/site";
 
   .contact-aside {
     position: sticky;
-    top: 30px;
-    background: #e0e7d5;
-    padding: 35px;
+    top: var(--panel-sticky-offset);
+    background: var(--color-surface-tinted);
+    padding: var(--panel-padding);
     align-self: start;
   }
 
@@ -149,26 +149,26 @@ import { site } from "../config/site";
     gap: 20px;
     margin-top: 25px;
     padding-top: 20px;
-    border-top: 1px solid #bbc8ac;
+    border-top: 1px solid var(--color-border-tinted);
   }
 
   .prompt-number {
     flex-shrink: 0;
-    color: #5b694e;
+    color: var(--color-text-tinted);
   }
 
   .conversation-prompts p {
     min-width: 0;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
+    line-height: var(--line-height-compact);
+    letter-spacing: var(--letter-spacing-compact);
   }
 
   .contact-aside .closing-note {
     margin-top: 30px;
-    color: #5b6750;
-    font-size: 0.75rem;
+    color: var(--color-text-tinted-muted);
+    font-size: var(--font-size-caption);
   }
 
   .arrow {
@@ -180,43 +180,43 @@ import { site } from "../config/site";
   .contact-invitation .email-fallback {
     color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-caption);
   }
 
   .contact-aside h2 {
-    font-size: 2.1875rem;
-    line-height: 1.15;
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-heading);
   }
 
   @media (max-width: 900px) {
     .contact-content {
-      gap: 45px;
+      gap: var(--layout-column-gap-medium);
     }
   }
 
   @media (max-width: 650px) {
     .contact-content {
       grid-template-columns: 1fr;
-      padding-block: 35px 50px;
-      gap: 35px;
+      padding-block: var(--layout-section-padding-small);
+      gap: var(--layout-column-gap-small);
     }
 
     .contact-invitation {
-      font-size: 0.9375rem;
-      line-height: 1.85;
+      font-size: var(--font-size-compact);
+      line-height: var(--line-height-prose-small);
     }
 
     .contact-invitation h2 {
-      font-size: 1.6875rem;
+      font-size: var(--font-size-subheading-small);
     }
 
     .contact-aside {
       position: static;
-      padding: 27px;
+      padding: var(--panel-padding-small);
     }
 
     .contact-aside h2 {
-      font-size: 2rem;
+      font-size: var(--font-size-subtitle-small);
     }
   }
 </style>

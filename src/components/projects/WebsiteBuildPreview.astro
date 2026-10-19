@@ -36,7 +36,7 @@ const steps = [
   }
 
   figcaption {
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     font-weight: 700;
   }
 
@@ -58,7 +58,7 @@ const steps = [
     padding: var(--space-4) var(--space-3);
     border: 1px solid var(--color-border);
     border-radius: var(--space-1);
-    background: #faf9f6;
+    background: var(--color-surface-raised);
   }
 
   .build-step {
@@ -68,14 +68,14 @@ const steps = [
   }
 
   strong {
-    font-size: 1rem;
-    line-height: 1.2;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-snug);
   }
 
   .step-label, .step-detail {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    line-height: 1.5;
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-normal);
   }
 
   .step-label {

@@ -96,8 +96,8 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
     max-width: 20ch;
     margin-block: var(--space-6) var(--space-4);
     font-size: var(--font-size-page-title);
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
   }
 
@@ -106,7 +106,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
     margin: 0;
     color: var(--color-text-muted);
     font-size: var(--font-size-intro);
-    line-height: 1.4;
+    line-height: var(--line-height-compact);
   }
 
   .cover {
@@ -157,7 +157,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
 
   .body-content {
     min-width: 0;
-    font-size: 1.125rem;
+    font-size: var(--font-size-body-large);
   }
 
   .reading-footer {

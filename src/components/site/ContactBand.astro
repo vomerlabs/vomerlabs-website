@@ -32,9 +32,9 @@ import ArrowIcon from '../ui/ArrowIcon.astro';
     margin-block-end: 22px;
     color: #3d4f2d;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.065em;
-    line-height: 1.5;
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: var(--line-height-normal);
   }
 
   .contact-heading {
@@ -48,7 +48,7 @@ import ArrowIcon from '../ui/ArrowIcon.astro';
     margin: 0;
     font-size: clamp(2.125rem, 4.8vw, 3.5rem);
     line-height: 1.09;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
   }
 

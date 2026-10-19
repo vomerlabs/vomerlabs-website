@@ -30,8 +30,8 @@ const { notes, id = 'home-notes' } = Astro.props;
 
 <style>
   .home-notes {
-    padding-block: var(--home-notes-space, 3.5rem);
-    color: var(--home-notes-ink, var(--color-text));
+    padding-block: var(--space-14);
+    color: var(--color-text);
   }
 
   .notes-heading {
@@ -46,8 +46,8 @@ const { notes, id = 'home-notes' } = Astro.props;
   h2 {
     margin: 0;
     font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.035em;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
     text-wrap: balance;
   }
 
@@ -78,15 +78,15 @@ const { notes, id = 'home-notes' } = Astro.props;
     max-width: 70ch;
     margin: 0;
     padding: var(--space-6);
-    background: #faf9f6;
+    background: var(--color-surface-raised);
     border-radius: var(--space-1);
-    color: var(--home-notes-muted, var(--color-text-muted));
+    color: var(--color-text-muted);
     line-height: 1.75;
   }
 
   @media (max-width: 48rem) {
     .home-notes {
-      padding-block: 2.5rem;
+      padding-block: var(--space-10);
     }
 
     .notes-heading {

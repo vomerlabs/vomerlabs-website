@@ -87,7 +87,7 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
     display: grid;
     gap: var(--space-12);
     padding: var(--space-8);
-    background: #faf9f6;
+    background: var(--color-surface-raised);
     border-radius: var(--space-1);
     color: var(--color-text);
   }
@@ -118,8 +118,8 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
   .card-title {
     margin: 0;
     font-size: clamp(1.5rem, 2.5vw, 2rem);
-    line-height: 1.2;
-    letter-spacing: -0.025em;
+    line-height: var(--line-height-snug);
+    letter-spacing: var(--letter-spacing-heading);
     text-wrap: balance;
   }
 
@@ -140,7 +140,7 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
 
   .project-title :global(svg) {
     flex-shrink: 0;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--color-text-muted);
     transform: rotate(-45deg);
   }
@@ -160,7 +160,7 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
     border-radius: var(--space-1);
     color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: var(--font-size-caption);
   }
 
   .project-actions {

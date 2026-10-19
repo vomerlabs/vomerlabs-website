@@ -5,19 +5,35 @@
   --color-background: #f5f3ee;
   --color-text: #171815;
   --color-text-muted: #62675c;
+  --color-text-prose: #4f5548;
+  --color-text-tinted: #5b694e;
+  --color-text-tinted-muted: #5b6750;
   --color-muted: #8c9185;
   --color-accent: #c6f277;
   --color-accent-hover: #b4e45f;
   --color-status-background: #e9f3d6;
   --color-status-dot: #90b947;
   --color-border: #d5d6cd;
+  --color-border-subtle: #d7d8cf;
+  --color-border-tinted: #bbc8ac;
   --color-surface: #eeece5;
+  --color-surface-raised: #faf9f6;
+  --color-surface-tinted: #e0e7d5;
+  --color-link: #466123;
   --color-focus: #42651b;
 
   --font-sans: 'Kedebideri', Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+  --font-size-caption: 0.75rem;
   --font-size-small: 0.875rem;
+  --font-size-compact: 0.9375rem;
   --font-size-body: 1rem;
+  --font-size-body-large: 1.125rem;
+  --font-size-subheading-small: 1.6875rem;
+  --font-size-subheading: 1.875rem;
+  --font-size-subtitle-small: 2rem;
+  --font-size-subtitle: 2.1875rem;
+  --font-size-section-title: clamp(1.5rem, 1.25rem + 1vw, 2rem);
   --font-size-heading: clamp(1.75rem, 3vw, 2.75rem);
   --font-size-display: clamp(2.75rem, 7.8vw, 7rem);
   --font-size-page-title: clamp(2.75rem, 5.5vw, 4.5rem);
@@ -26,7 +42,20 @@
   --font-size-action: clamp(1rem, 1.25vw, 1.125rem);
   --font-size-label: clamp(0.8125rem, 1vw, 0.875rem);
   --line-height-body: 1.65;
+  --line-height-tight: 1.1;
   --line-height-heading: 1.15;
+  --line-height-snug: 1.2;
+  --line-height-compact: 1.4;
+  --line-height-intro: 1.45;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.8;
+  --line-height-prose-small: 1.85;
+  --line-height-prose: 1.9;
+  --letter-spacing-tightest: -0.04em;
+  --letter-spacing-tight: -0.035em;
+  --letter-spacing-heading: -0.025em;
+  --letter-spacing-compact: -0.02em;
+  --letter-spacing-label: 0.065em;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -34,8 +63,21 @@
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-14: 3.5rem;
   --space-16: 4rem;
+  --space-prose: 20px;
+
+  /* Shared two-column layouts and supporting panels retain fixed pixel spacing. */
+  --layout-column-gap: 95px;
+  --layout-column-gap-medium: 45px;
+  --layout-column-gap-small: 35px;
+  --layout-section-padding: 60px 80px;
+  --layout-section-padding-small: 35px 50px;
+  --panel-padding: 35px;
+  --panel-padding-small: 27px;
+  --panel-sticky-offset: 30px;
 
   --width-content: 1240px;
   --width-prose: 70ch;

@@ -50,8 +50,8 @@ const { projects } = Astro.props;
   h2 {
     margin: 0;
     font-size: var(--font-size-heading);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
   }
 
   .all-projects {
@@ -79,7 +79,7 @@ const { projects } = Astro.props;
   .empty-projects {
     margin: 0;
     padding: var(--space-6);
-    background: #faf9f6;
+    background: var(--color-surface-raised);
     border-radius: var(--space-1);
     color: var(--color-text-muted);
   }

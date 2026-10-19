@@ -30,8 +30,8 @@ const { project } = Astro.props;
     margin-block: clamp(1.65rem, 2.14vw, 2.125rem) clamp(0.75rem, 1vw, 1rem);
     font-size: var(--font-size-project-title);
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
   }
 
@@ -39,7 +39,7 @@ const { project } = Astro.props;
     margin: 0;
     color: var(--color-text-muted);
     font-size: var(--font-size-intro);
-    line-height: 1.4;
+    line-height: var(--line-height-compact);
   }
 
   .record-footer {
@@ -59,7 +59,7 @@ const { project } = Astro.props;
     color: var(--color-text-muted);
     font-family: var(--font-mono);
     font-size: var(--font-size-label);
-    line-height: 1.5;
+    line-height: var(--line-height-normal);
   }
 
   .project-action {
@@ -73,7 +73,7 @@ const { project } = Astro.props;
     }
 
     .description {
-      font-size: 1.125rem;
+      font-size: var(--font-size-body-large);
     }
 
     .record-footer {

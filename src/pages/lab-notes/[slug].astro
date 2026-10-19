@@ -82,7 +82,7 @@ const relatedProjects = relatedIds.size > 0
     gap: 15px;
     margin-block-end: 42px;
     color: var(--color-text-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-caption);
     text-decoration: none;
   }
 
@@ -100,9 +100,9 @@ const relatedProjects = relatedIds.size > 0
     margin-block-end: 22px;
     color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    line-height: 1.5;
-    letter-spacing: 0.065em;
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-label);
   }
 
   h1 {
@@ -111,7 +111,7 @@ const relatedProjects = relatedIds.size > 0
     font-size: clamp(2.75rem, 6vw, 4.5rem);
     font-weight: 700;
     line-height: 1.08;
-    letter-spacing: -0.04em;
+    letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;
     overflow-wrap: anywhere;
   }
@@ -120,7 +120,7 @@ const relatedProjects = relatedIds.size > 0
     max-width: 700px;
     margin: 24px 0 0;
     color: var(--color-text-muted);
-    font-size: 1.125rem;
+    font-size: var(--font-size-body-large);
   }
 
   .metadata {
@@ -174,7 +174,7 @@ const relatedProjects = relatedIds.size > 0
   }
 
   .related-projects {
-    font-size: 1.125rem;
+    font-size: var(--font-size-body-large);
     margin-block-start: var(--space-12);
     padding-block-start: var(--space-8);
     border-block-start: 1px solid var(--color-border);
@@ -182,7 +182,7 @@ const relatedProjects = relatedIds.size > 0
 
   .related-projects h2 {
     margin: 0 0 var(--space-6);
-    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    font-size: var(--font-size-section-title);
     line-height: var(--line-height-heading);
   }
 
@@ -217,7 +217,7 @@ const relatedProjects = relatedIds.size > 0
     }
 
     .description {
-      font-size: 1rem;
+      font-size: var(--font-size-body);
     }
 
     .metadata {
