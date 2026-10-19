@@ -1,0 +1,38 @@
+
+> vomerlabs@0.0.1 build
+> astro build
+
+13:34:15 [content] Syncing content
+13:34:15 [content] Synced content
+13:34:15 [types] Generated 485ms
+13:34:15 [build] output: "static"
+13:34:15 [build] mode: "static"
+13:34:15 [build] directory: /home/jedidavid/Development/vomerlabs/dist/
+13:34:15 [build] Collecting build info...
+13:34:15 [build] ✓ Completed in 546ms.
+13:34:15 [build] Building static entrypoints...
+13:34:15 [vite] ✓ built in 332ms
+13:34:15 [vite] ✓ built in 16ms
+13:34:15 [build] Rearranging server assets...
+
+ generating static routes 
+13:34:15   ├─ /lab-notes/zz-verification-article/index.html (+18ms) 
+13:34:15   ├─ /lab-notes/zz-verification-older/index.html (+2ms) 
+13:34:15   ├─ /lab-notes/index.html (+2ms) 
+13:34:15   ├─ /work/vomerlabs-website/index.html (+2ms) 
+13:34:15   ├─ /work/index.html (+2ms) 
+13:34:15   ├─ /index.html (+3ms) 
+13:34:15 ✓ Completed in 50ms.
+
+ generating optimized images 
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_Z2kXsBl.webp (reused cache entry) (+1ms) (1/6)
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_1HQ1Gg.webp (reused cache entry) (+0ms) (2/6)
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_1Jyf0m.webp (reused cache entry) (+0ms) (3/6)
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_ZVkfEF.webp (reused cache entry) (+0ms) (4/6)
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_Z2tuMoo.webp (reused cache entry) (+0ms) (5/6)
+13:34:15   ▶ /_astro/index-1440.CLzDPxTT_Z11dO1.webp (reused cache entry) (+0ms) (6/6)
+13:34:15 ✓ Completed in 2ms.
+
+13:34:15 [build] ✓ Completed in 436ms.
+13:34:15 [build] 6 page(s) built in 984ms
+13:34:15 [build] Complete!

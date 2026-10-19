@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "stage": "hero",
+  "id": "hero",
+  "title": "VomerLabs homepage \u2014 assembled first viewport",
+  "comp": {
+    "path": ".impeccable/mocks/decision/working-index.png",
+    "width": 1586,
+    "height": 992
+  },
+  "components": [
+    {
+      "id": "first-viewport",
+      "name": "First viewport",
+      "medium": "HTML / CSS",
+      "note": "Assembled homepage from your selected Working Index image. Text and controls are live HTML; fonts are served locally.",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "preview": {
+        "kind": "page",
+        "path": ".impeccable/review/assembled/index.html"
+      },
+      "dependencies": [
+        ".impeccable/review/assembled/_astro/index.D-ZZQva2.css",
+        ".impeccable/review/assembled/_astro/kedebideri-regular.C5Aswn2R.ttf",
+        ".impeccable/review/assembled/_astro/kedebideri-bold.C1k2W8aR.ttf",
+        ".impeccable/review/assembled/favicon-v.svg",
+        ".impeccable/review/assembled/favicon.ico"
+      ]
+    }
+  ]
+}

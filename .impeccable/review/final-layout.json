@@ -1,0 +1,717 @@
+[
+  {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      },
+      {
+        "tag": "H2",
+        "text": "About this build"
+      },
+      {
+        "tag": "H3",
+        "text": "The approach"
+      },
+      {
+        "tag": "H3",
+        "text": "What works today"
+      },
+      {
+        "tag": "H3",
+        "text": "What’s next"
+      },
+      {
+        "tag": "H2",
+        "text": "Have something in mind?"
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 77.46875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 54,
+        "y": 115.625,
+        "w": 772.5625,
+        "h": 258.15625,
+        "font": "700 143.424px / 129.082px Kedebideri, Arial, sans-serif",
+        "fontSize": "143.424px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 906.46875,
+        "y": 163.546875,
+        "w": 479.53125,
+        "h": 210.234375,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 54,
+        "y": 437.140625,
+        "w": 1332,
+        "h": 300.125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "missing": true
+      },
+      {
+        "selector": ".featured h3",
+        "missing": true
+      },
+      {
+        "selector": ".description",
+        "x": 54,
+        "y": 598.984375,
+        "w": 1332,
+        "h": 38.09375,
+        "font": "27.216px / 38.1024px Kedebideri, Arial, sans-serif",
+        "fontSize": "27.216px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 54,
+        "y": 661.6875,
+        "w": 1332,
+        "h": 40.03125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 54,
+        "y": 737.265625,
+        "w": 1332,
+        "h": 237.84375,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 54,
+        "y": 775.421875,
+        "w": 679.3125,
+        "h": 135.6875,
+        "font": "700 54.72px / 60.192px Kedebideri, Arial, sans-serif",
+        "fontSize": "54.72px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 839.859375,
+        "y": 775.421875,
+        "w": 546.140625,
+        "h": 135.6875,
+        "font": "21.888px / 32.832px Kedebideri, Arial, sans-serif",
+        "fontSize": "21.888px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [],
+    "name": "desktop",
+    "errors": []
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      },
+      {
+        "tag": "H2",
+        "text": "About this build"
+      },
+      {
+        "tag": "H3",
+        "text": "The approach"
+      },
+      {
+        "tag": "H3",
+        "text": "What works today"
+      },
+      {
+        "tag": "H3",
+        "text": "What’s next"
+      },
+      {
+        "tag": "H2",
+        "text": "Have something in mind?"
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 111.1875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 20,
+        "y": 143.1875,
+        "w": 350,
+        "h": 93.59375,
+        "font": "700 52px / 46.8px Kedebideri, Arial, sans-serif",
+        "fontSize": "52px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 20,
+        "y": 268.78125,
+        "w": 350,
+        "h": 150.28125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 20,
+        "y": 467.0625,
+        "w": 350,
+        "h": 295.453125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "missing": true
+      },
+      {
+        "selector": ".featured h3",
+        "missing": true
+      },
+      {
+        "selector": ".description",
+        "x": 20,
+        "y": 582.640625,
+        "w": 350,
+        "h": 50.375,
+        "font": "18px / 25.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 20,
+        "y": 653.015625,
+        "w": 350,
+        "h": 75.5,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 20,
+        "y": 762.515625,
+        "w": 350,
+        "h": 312.96875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 20,
+        "y": 794.515625,
+        "w": 350,
+        "h": 70.375,
+        "font": "700 32px / 35.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "32px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 20,
+        "y": 888.890625,
+        "w": 350,
+        "h": 138.59375,
+        "font": "18px / 27px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [],
+    "name": "mobile",
+    "errors": []
+  },
+  {
+    "width": 768,
+    "scrollWidth": 768,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      },
+      {
+        "tag": "H2",
+        "text": "About this build"
+      },
+      {
+        "tag": "H3",
+        "text": "The approach"
+      },
+      {
+        "tag": "H3",
+        "text": "What works today"
+      },
+      {
+        "tag": "H3",
+        "text": "What’s next"
+      },
+      {
+        "tag": "H2",
+        "text": "Have something in mind?"
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 72,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 28.796875,
+        "y": 104,
+        "w": 710.40625,
+        "h": 165.875,
+        "font": "700 92.16px / 82.944px Kedebideri, Arial, sans-serif",
+        "fontSize": "92.16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 28.796875,
+        "y": 301.875,
+        "w": 576,
+        "h": 127.6875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 28.796875,
+        "y": 477.5625,
+        "w": 710.40625,
+        "h": 233.125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "missing": true
+      },
+      {
+        "selector": ".featured h3",
+        "missing": true
+      },
+      {
+        "selector": ".description",
+        "x": 28.796875,
+        "y": 591.5,
+        "w": 710.40625,
+        "h": 25.1875,
+        "font": "18px / 25.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 28.796875,
+        "y": 636.6875,
+        "w": 710.40625,
+        "h": 40,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 28.796875,
+        "y": 710.6875,
+        "w": 710.40625,
+        "h": 258.96875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 28.796875,
+        "y": 742.6875,
+        "w": 420.796875,
+        "h": 70.375,
+        "font": "700 32px / 35.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "32px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 28.796875,
+        "y": 837.0625,
+        "w": 546.46875,
+        "h": 84.59375,
+        "font": "18px / 27px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [],
+    "name": "tablet",
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "scrollWidth": 1280,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      },
+      {
+        "tag": "H2",
+        "text": "About this build"
+      },
+      {
+        "tag": "H3",
+        "text": "The approach"
+      },
+      {
+        "tag": "H3",
+        "text": "What works today"
+      },
+      {
+        "tag": "H3",
+        "text": "What’s next"
+      },
+      {
+        "tag": "H2",
+        "text": "Have something in mind?"
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 73.25,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 48,
+        "y": 107.15625,
+        "w": 686.71875,
+        "h": 229.46875,
+        "font": "700 127.488px / 114.739px Kedebideri, Arial, sans-serif",
+        "fontSize": "127.488px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 805.75,
+        "y": 149.34375,
+        "w": 426.25,
+        "h": 187.28125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 48,
+        "y": 392.9375,
+        "w": 1184,
+        "h": 273.8125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "missing": true
+      },
+      {
+        "selector": ".featured h3",
+        "missing": true
+      },
+      {
+        "selector": ".description",
+        "x": 48,
+        "y": 537.015625,
+        "w": 1184,
+        "h": 33.859375,
+        "font": "24.192px / 33.8688px Kedebideri, Arial, sans-serif",
+        "fontSize": "24.192px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 48,
+        "y": 592.75,
+        "w": 1184,
+        "h": 40,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 48,
+        "y": 666.75,
+        "w": 1184,
+        "h": 218.484375,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 48,
+        "y": 700.65625,
+        "w": 603.828125,
+        "h": 120.578125,
+        "font": "700 48.64px / 53.504px Kedebideri, Arial, sans-serif",
+        "fontSize": "48.64px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 746.546875,
+        "y": 700.65625,
+        "w": 485.453125,
+        "h": 120.578125,
+        "font": "19.456px / 29.184px Kedebideri, Arial, sans-serif",
+        "fontSize": "19.456px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [],
+    "name": "desktop-narrow",
+    "errors": []
+  },
+  {
+    "width": 320,
+    "scrollWidth": 320,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      },
+      {
+        "tag": "H2",
+        "text": "About this build"
+      },
+      {
+        "tag": "H3",
+        "text": "The approach"
+      },
+      {
+        "tag": "H3",
+        "text": "What works today"
+      },
+      {
+        "tag": "H3",
+        "text": "What’s next"
+      },
+      {
+        "tag": "H2",
+        "text": "Have something in mind?"
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 111.1875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 20,
+        "y": 143.1875,
+        "w": 284.65625,
+        "h": 93.59375,
+        "font": "700 52px / 46.8px Kedebideri, Arial, sans-serif",
+        "fontSize": "52px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 20,
+        "y": 268.78125,
+        "w": 284.65625,
+        "h": 235.5625,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 20,
+        "y": 552.34375,
+        "w": 280,
+        "h": 338.734375,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "missing": true
+      },
+      {
+        "selector": ".featured h3",
+        "missing": true
+      },
+      {
+        "selector": ".description",
+        "x": 20,
+        "y": 667.921875,
+        "w": 280,
+        "h": 50.375,
+        "font": "18px / 25.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 20,
+        "y": 738.296875,
+        "w": 280,
+        "h": 118.78125,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 20,
+        "y": 891.078125,
+        "w": 280,
+        "h": 375.15625,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 20,
+        "y": 923.078125,
+        "w": 280,
+        "h": 105.5625,
+        "font": "700 32px / 35.2px Kedebideri, Arial, sans-serif",
+        "fontSize": "32px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 20,
+        "y": 1052.640625,
+        "w": 280,
+        "h": 165.59375,
+        "font": "18px / 27px Kedebideri, Arial, sans-serif",
+        "fontSize": "18px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [],
+    "name": "mobile-small",
+    "errors": []
+  }
+]

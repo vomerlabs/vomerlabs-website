@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T05:18:32.133Z",
+  "title": "Design System: VomerLabs",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(15% 0.00698 88.64)",
+          "oklch(26% 0.00698 88.64)",
+          "oklch(38% 0.00698 88.64)",
+          "oklch(49% 0.00698 88.64)",
+          "oklch(61% 0.00698 88.64)",
+          "oklch(72% 0.00698 88.64)",
+          "oklch(84% 0.00698 88.64)",
+          "oklch(95% 0.00698 88.64)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Near-black Ink",
+        "tonalRamp": [
+          "oklch(15% 0.00601 121.96)",
+          "oklch(26% 0.00601 121.96)",
+          "oklch(38% 0.00601 121.96)",
+          "oklch(49% 0.00601 121.96)",
+          "oklch(61% 0.00601 121.96)",
+          "oklch(72% 0.00601 121.96)",
+          "oklch(84% 0.00601 121.96)",
+          "oklch(95% 0.00601 121.96)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Gray-green Text",
+        "tonalRamp": [
+          "oklch(15% 0.01810 127.07)",
+          "oklch(26% 0.01810 127.07)",
+          "oklch(38% 0.01810 127.07)",
+          "oklch(49% 0.01810 127.07)",
+          "oklch(61% 0.01810 127.07)",
+          "oklch(72% 0.01810 127.07)",
+          "oklch(84% 0.01810 127.07)",
+          "oklch(95% 0.01810 127.07)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Gray-green",
+        "tonalRamp": [
+          "oklch(15% 0.01840 125.44)",
+          "oklch(26% 0.01840 125.44)",
+          "oklch(38% 0.01840 125.44)",
+          "oklch(49% 0.01840 125.44)",
+          "oklch(61% 0.01840 125.44)",
+          "oklch(72% 0.01840 125.44)",
+          "oklch(84% 0.01840 125.44)",
+          "oklch(95% 0.01840 125.44)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Working Lime",
+        "tonalRamp": [
+          "oklch(15% 0.15845 125.70)",
+          "oklch(26% 0.15845 125.70)",
+          "oklch(38% 0.15845 125.70)",
+          "oklch(49% 0.15845 125.70)",
+          "oklch(61% 0.15845 125.70)",
+          "oklch(72% 0.15845 125.70)",
+          "oklch(84% 0.15845 125.70)",
+          "oklch(95% 0.15845 125.70)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Working Lime Hover",
+        "tonalRamp": [
+          "oklch(15% 0.16918 126.41)",
+          "oklch(26% 0.16918 126.41)",
+          "oklch(38% 0.16918 126.41)",
+          "oklch(49% 0.16918 126.41)",
+          "oklch(61% 0.16918 126.41)",
+          "oklch(72% 0.16918 126.41)",
+          "oklch(84% 0.16918 126.41)",
+          "oklch(95% 0.16918 126.41)"
+        ]
+      },
+      "status-background": {
+        "role": "primary",
+        "displayName": "Pale Status Lime",
+        "tonalRamp": [
+          "oklch(15% 0.03966 122.66)",
+          "oklch(26% 0.03966 122.66)",
+          "oklch(38% 0.03966 122.66)",
+          "oklch(49% 0.03966 122.66)",
+          "oklch(61% 0.03966 122.66)",
+          "oklch(72% 0.03966 122.66)",
+          "oklch(84% 0.03966 122.66)",
+          "oklch(95% 0.03966 122.66)"
+        ]
+      },
+      "status-dot": {
+        "role": "primary",
+        "displayName": "Status Green",
+        "tonalRamp": [
+          "oklch(15% 0.14929 126.56)",
+          "oklch(26% 0.14929 126.56)",
+          "oklch(38% 0.14929 126.56)",
+          "oklch(49% 0.14929 126.56)",
+          "oklch(61% 0.14929 126.56)",
+          "oklch(72% 0.14929 126.56)",
+          "oklch(84% 0.14929 126.56)",
+          "oklch(95% 0.14929 126.56)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "tonalRamp": [
+          "oklch(15% 0.01223 111.79)",
+          "oklch(26% 0.01223 111.79)",
+          "oklch(38% 0.01223 111.79)",
+          "oklch(49% 0.01223 111.79)",
+          "oklch(61% 0.01223 111.79)",
+          "oklch(72% 0.01223 111.79)",
+          "oklch(84% 0.01223 111.79)",
+          "oklch(95% 0.01223 111.79)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Inset Paper",
+        "tonalRamp": [
+          "oklch(15% 0.00958 93.57)",
+          "oklch(26% 0.00958 93.57)",
+          "oklch(38% 0.00958 93.57)",
+          "oklch(49% 0.00958 93.57)",
+          "oklch(61% 0.00958 93.57)",
+          "oklch(72% 0.00958 93.57)",
+          "oklch(84% 0.00958 93.57)",
+          "oklch(95% 0.00958 93.57)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Green",
+        "tonalRamp": [
+          "oklch(15% 0.10935 131.44)",
+          "oklch(26% 0.10935 131.44)",
+          "oklch(38% 0.10935 131.44)",
+          "oklch(49% 0.10935 131.44)",
+          "oklch(61% 0.10935 131.44)",
+          "oklch(72% 0.10935 131.44)",
+          "oklch(84% 0.10935 131.44)",
+          "oklch(95% 0.10935 131.44)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Studio statement",
+        "purpose": "Approved oversized homepage h1; mobile override at 60rem."
+      },
+      "headline": {
+        "displayName": "Studio headline",
+        "purpose": "Bold studio section h2."
+      },
+      "project-title": {
+        "displayName": "Project title",
+        "purpose": "Open record h2 with mobile override at 45rem."
+      },
+      "intro": {
+        "displayName": "Introductory text",
+        "purpose": "Studio introduction; project descriptions reuse size with line-height 1.4."
+      },
+      "body": {
+        "displayName": "Document body",
+        "purpose": "Document default; homepage build prose increases size to 1.125rem."
+      },
+      "action": {
+        "displayName": "Action link",
+        "purpose": "Shared primary and underlined link typography."
+      },
+      "label": {
+        "displayName": "Technical metadata",
+        "purpose": "Project technology metadata in system monospace."
+      },
+      "small": {
+        "displayName": "Small supporting text",
+        "purpose": "Colophon and prose captions."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "motion-duration",
+        "value": "200ms",
+        "purpose": "Action background and arrow transitions; src/styles/tokens.css."
+      },
+      {
+        "name": "motion-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shared action easing; src/styles/tokens.css."
+      },
+      {
+        "name": "reduced-motion-duration",
+        "value": "0.01ms",
+        "purpose": "Reduced-motion override for transitions and animations; src/styles/global.css."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "header-stack",
+        "value": "30rem"
+      },
+      {
+        "name": "record-and-contact-stack",
+        "value": "45rem"
+      },
+      {
+        "name": "intro-and-studio-stack",
+        "value": "60rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary email action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "Pill-shaped email link. Source: src/components/ui/ActionLink.astro; arrow: src/components/ui/ArrowIcon.astro; focus: src/styles/global.css.",
+      "html": "<a class=\"ds-action ds-primary\" href=\"mailto:hi@vomerlabs.com\"><span>Get in touch</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+    },
+    {
+      "name": "Underlined record action",
+      "kind": "button",
+      "refersTo": "action-text",
+      "description": "Flat lime underline and a shifting SVG arrow. Source: src/components/ui/ActionLink.astro; arrow: src/components/ui/ArrowIcon.astro.",
+      "html": "<a class=\"ds-action ds-text\" href=\"#build-notes\"><span>About this build</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+    },
+    {
+      "name": "Project status",
+      "kind": "chip",
+      "refersTo": "status",
+      "description": "Noninteractive written status with a decorative dot. Source: src/components/ui/ProjectStatus.astro. No hover or active state is defined.",
+      "html": "<span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-width:clamp(8rem,10.35vw,10.25rem);padding:.35em .85em;border-radius:100vw;background:var(--color-status-background,#e9f3d6);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:clamp(.875rem,1.26vw,1.25rem);font-weight:400;line-height:1.25;white-space:nowrap}.ds-dot{flex:0 0 auto;width:.6em;height:.6em;border-radius:50%;background:var(--color-status-dot,#90b947)}"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Owner-supplied SVG logo retains its proportions and olive period; visible text links stack below it on narrow screens. Source: src/components/site/SiteHeader.astro.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"/\" aria-label=\"VomerLabs home\"><img src=\"/vomerlabs-logo.svg\" alt=\"\" width=\"125\" height=\"22\" /></a><nav class=\"ds-navigation\" aria-label=\"Main navigation\"><a href=\"#work\">Work</a><a href=\"#studio\">Studio</a><a href=\"mailto:hi@vomerlabs.com\">Contact</a></nav></header>",
+      "css": ".ds-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6,1.5rem);width:100%;max-width:calc(var(--width-content,100rem) + 2 * var(--page-gutter,clamp(1.25rem,3.75vw,5rem)));margin-inline:auto;padding:clamp(1rem,1.3vw,1.5rem) var(--page-gutter,clamp(1.25rem,3.75vw,5rem));color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif)}.ds-header a{color:inherit;text-decoration:none}.ds-wordmark{display:inline-flex;align-items:center;height:1.2em;font-size:clamp(1.625rem,2.27vw,2.25rem);line-height:1.2}.ds-wordmark img{display:block;width:5em;height:auto}.ds-navigation{display:flex;align-items:center;gap:clamp(1.25rem,2.8vw,2.75rem);color:var(--color-text-muted,#62675c);font-size:clamp(1rem,1.33vw,1.3125rem);line-height:1.3}.ds-navigation a{display:inline-flex;align-items:center;min-height:clamp(2.5rem,2.78vw,2.75rem);text-underline-offset:.3em}.ds-navigation a:is(:hover,:focus-visible){color:var(--color-text,#171815);text-decoration:underline;text-decoration-color:var(--color-focus,#42651b)}.ds-wordmark:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(max-width:30rem){.ds-header{align-items:flex-start;flex-direction:column;gap:var(--space-2,.5rem)}.ds-navigation{width:100%;justify-content:space-between}}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}"
+    },
+    {
+      "name": "Open project record",
+      "kind": "custom",
+      "refersTo": "project-record",
+      "description": "Real project, semantic h2, quiet description, and responsive metadata. Source: src/components/home/FeaturedProject.astro; child patterns: src/components/ui/ProjectStatus.astro and ActionLink.astro.",
+      "html": "<section class=\"ds-record\" aria-labelledby=\"ds-project-title\"><article><h2 id=\"ds-project-title\">VomerLabs website</h2><p class=\"ds-description\">A home for the studio, its projects, and the process behind them.</p><div class=\"ds-record-footer\"><span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span><p class=\"ds-metadata\">Astro · Markdown · Plain CSS</p><div class=\"ds-project-action\"><a class=\"ds-action ds-text\" href=\"#build-notes\"><span>About this build</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a></div></div></article></section>",
+      "css": ".ds-record{padding-block:clamp(2rem,2.55vw,2.5rem) clamp(2rem,2.33vw,2.3125rem);border-block:2px solid var(--color-border,#d5d6cd);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);color:var(--color-text,#171815)}.ds-record h2{margin-block:clamp(1.65rem,2.14vw,2.125rem) clamp(.75rem,1vw,1rem);font-size:clamp(2rem,4.92vw,4.875rem);font-weight:700;line-height:1.1;letter-spacing:-.04em;text-wrap:balance}.ds-description{margin:0;color:var(--color-text-muted,#62675c);font-size:var(--font-size-intro,clamp(1.125rem,1.89vw,1.875rem));line-height:1.4}.ds-record-footer{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2.5rem);margin-block-start:clamp(1.25rem,1.71vw,1.6875rem)}.ds-metadata{display:flex;align-items:center;min-height:clamp(2.25rem,2.52vw,2.5rem);margin:0;padding-inline-start:clamp(1rem,2.4vw,2.375rem);border-inline-start:1px solid var(--color-border,#d5d6cd);color:var(--color-text-muted,#62675c);font-family:var(--font-mono,ui-monospace,SFMono-Regular,Consolas,\"Liberation Mono\",monospace);font-size:clamp(.8125rem,1.2vw,1.1875rem);line-height:1.5}.ds-project-action{margin-inline-start:auto}@media(max-width:45rem){.ds-record h2{margin-block:1.9rem var(--space-4,1rem);font-size:clamp(2rem,7vw,3rem)}.ds-description{font-size:1.125rem}.ds-record-footer{flex-wrap:wrap;gap:var(--space-4,1rem)}.ds-metadata{flex-basis:100%;order:1;min-height:0;padding:0;border:0}}.ds-status{display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-width:clamp(8rem,10.35vw,10.25rem);padding:.35em .85em;border-radius:100vw;background:var(--color-status-background,#e9f3d6);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:clamp(.875rem,1.26vw,1.25rem);font-weight:400;line-height:1.25;white-space:nowrap}.ds-dot{flex:0 0 auto;width:.6em;height:.6em;border-radius:50%;background:var(--color-status-dot,#90b947)}.ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+    },
+    {
+      "name": "Build prose",
+      "kind": "custom",
+      "refersTo": "prose",
+      "description": "Readable Markdown hierarchy and underlined links. Source: src/components/content/Prose.astro; homepage size and border: src/components/home/BuildNotes.astro. Sample text is from src/content/projects/vomerlabs-website.md.",
+      "html": "<section class=\"ds-build\" id=\"build-notes\" aria-label=\"About VomerLabs website\"><div class=\"ds-prose\"><h2>About this build</h2><p>This website is the first VomerLabs project: a place to show useful work, explain how it is made, and share what I learn. It is being built in the open, starting with the foundation and homepage.</p><h3>The approach</h3><p>Astro generates the pages as static HTML. Projects and lab notes live in Markdown or MDX files, with schemas checking their metadata. Plain CSS stays scoped to the component that owns it, with a small shared set of design tokens.</p></div></section>",
+      "css": ".ds-build{padding-block:var(--space-12,3rem) var(--space-16,4rem);border-block-start:1px solid var(--color-border,#d5d6cd);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:1.125rem;line-height:var(--line-height-body,1.65)}.ds-prose{max-width:var(--width-prose,70ch);min-width:0}.ds-prose>*{margin-block:0}.ds-prose>*+*{margin-block-start:var(--space-6,1.5rem)}.ds-prose :is(h2,h3,h4,h5,h6){margin-block:var(--space-12,3rem) var(--space-4,1rem);line-height:var(--line-height-heading,1.15);text-wrap:balance;scroll-margin-block-start:var(--space-8,2rem)}.ds-prose h2{font-size:clamp(1.5rem,1.25rem + 1vw,2rem)}.ds-prose h3{font-size:1.25rem}.ds-prose a{color:inherit;text-decoration-thickness:.08em;text-underline-offset:.2em}.ds-prose a:hover{text-decoration-thickness:.15em}.ds-prose>:first-child{margin-block-start:0}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Index",
+    "overview": "A calm, minimal, editorial home for an independent software studio. Warm off-white ground, near-black humanist type, gray-green supporting text, and thin rules make the work readable. Lime marks contact and actionable records; a softer lime distinguishes project status.\n\nThe system feels practical, curious, clear, and thoughtful. Large typography and open horizontal records create hierarchy without boxed project tiles. Content and ordinary links remain usable without JavaScript. The oversized homepage statement is an approved, deliberate expression of this world.",
+    "keyCharacteristics": [
+      "Flat warm paper and restrained lime accents.",
+      "Locally served humanist sans with mono metadata.",
+      "Oversized statements balanced by quiet supporting text.",
+      "Open records, thin dividers, and generous shared gutters.",
+      "Small, purposeful state changes and visible keyboard focus."
+    ],
+    "rules": [
+      {
+        "name": "The Useful Lime Rule",
+        "body": "Use lime for actions, selection, and written project status; keep the page ground warm and quiet.",
+        "section": "colors"
+      },
+      {
+        "name": "The Statement and Record Rule",
+        "body": "Reserve the largest tight-tracked type for a clear statement or a real project title; let supporting explanations remain regular-weight and readable.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open Record Rule",
+        "body": "Separate work with rules and spacing; preserve the unboxed record language established by the homepage.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the warm paper ground, ink hierarchy, and useful lime accents.",
+      "**Do** reuse local Kedebideri regular and bold, reserving mono for metadata and code.",
+      "**Do** keep the approved oversized statement and let surrounding whitespace support it.",
+      "**Do** show real work as open records with written status and clear ordinary links.",
+      "**Do** preserve visible keyboard focus, reduced-motion behavior, and readable source order."
+    ],
+    "donts": [
+      "**Don't** turn open project records into raised, shadowed card grids.",
+      "**Don't** introduce eyebrow labels above the project record.",
+      "**Don't** use decorative glyph characters in place of the existing inline SVG arrow.",
+      "**Don't** invent projects, articles, results, or form interactions to fill space.",
+      "**Don't** shrink the approved display scale as a generic typography normalization."
+    ]
+  }
+}

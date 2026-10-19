@@ -1,0 +1,1240 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-19T04:26:26.947Z",
+  "comp": ".impeccable/mocks/decision/working-index.png",
+  "warnings": [
+    "region page-ground: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region contact-button: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region project-status: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region project-action: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1586,
+    "height": 992
+  },
+  "aspect": 1.5988,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#f7f7e9",
+      "coverage": 0.9123
+    },
+    {
+      "hex": "#0d0d0c",
+      "coverage": 0.0601
+    },
+    {
+      "hex": "#b3b3b1",
+      "coverage": 0.0115
+    },
+    {
+      "hex": "#787878",
+      "coverage": 0.0088
+    },
+    {
+      "hex": "#c8f379",
+      "coverage": 0.0074
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0375,
+      "strength": 0.2216
+    },
+    {
+      "y": 0.175,
+      "strength": 0.4313
+    },
+    {
+      "y": 0.2375,
+      "strength": 0.3506
+    },
+    {
+      "y": 0.2625,
+      "strength": 0.7671
+    },
+    {
+      "y": 0.2875,
+      "strength": 0.3516
+    },
+    {
+      "y": 0.325,
+      "strength": 0.7574
+    },
+    {
+      "y": 0.375,
+      "strength": 0.3005
+    },
+    {
+      "y": 0.4,
+      "strength": 0.9496
+    },
+    {
+      "y": 0.5875,
+      "strength": 0.3165
+    },
+    {
+      "y": 0.6375,
+      "strength": 0.6964
+    },
+    {
+      "y": 0.7,
+      "strength": 0.2656
+    },
+    {
+      "y": 0.7625,
+      "strength": 0.2043
+    },
+    {
+      "y": 0.875,
+      "strength": 0.4301
+    },
+    {
+      "y": 0.9125,
+      "strength": 0.3187
+    },
+    {
+      "y": 0.95,
+      "strength": 0.5066
+    },
+    {
+      "y": 0.9875,
+      "strength": 0.3996
+    }
+  ],
+  "regions": [
+    {
+      "id": "page-ground",
+      "kind": "chrome",
+      "note": "Flat warm off-white page background",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 1586,
+        "h": 992
+      },
+      "aspect": 1.5988,
+      "palette": [
+        {
+          "hex": "#f7f7e9",
+          "coverage": 0.9123
+        },
+        {
+          "hex": "#0d0d0c",
+          "coverage": 0.0601
+        },
+        {
+          "hex": "#b3b3b1",
+          "coverage": 0.0115
+        },
+        {
+          "hex": "#787878",
+          "coverage": 0.0088
+        },
+        {
+          "hex": "#c8f379",
+          "coverage": 0.0074
+        }
+      ],
+      "detail": {
+        "energy": 33.506
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      }
+    },
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "note": "VomerLabs black sans serif wordmark",
+      "grid": null,
+      "box": {
+        "x": 0.0359,
+        "y": 0.0262,
+        "w": 0.1198,
+        "h": 0.0343
+      },
+      "px": {
+        "x": 57,
+        "y": 26,
+        "w": 190,
+        "h": 34
+      },
+      "aspect": 5.5882,
+      "palette": [
+        {
+          "hex": "#f6f5ed",
+          "coverage": 0.675
+        },
+        {
+          "hex": "#0d0d0d",
+          "coverage": 0.1908
+        },
+        {
+          "hex": "#cdccc8",
+          "coverage": 0.05
+        },
+        {
+          "hex": "#949392",
+          "coverage": 0.0487
+        },
+        {
+          "hex": "#515050",
+          "coverage": 0.0355
+        }
+      ],
+      "detail": {
+        "energy": 63.1002
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 9,
+          "capHeightPx": 26.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6786,
+          "advTall": 0.6786,
+          "advX": 0.6032,
+          "gap": 0.0754,
+          "xRatio": 0.7335,
+          "stemW": 0.1715,
+          "contrast": 1.1828,
+          "serif": null,
+          "densTall": 0.4174,
+          "densX": 0.5718,
+          "weight": 0.4174
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "nav-work",
+      "kind": "control",
+      "note": "Work navigation text link",
+      "grid": null,
+      "box": {
+        "x": 0.7869,
+        "y": 0.0292,
+        "w": 0.0366,
+        "h": 0.0323
+      },
+      "px": {
+        "x": 1248,
+        "y": 29,
+        "w": 58,
+        "h": 32
+      },
+      "aspect": 1.8125,
+      "palette": [
+        {
+          "hex": "#f5f5e8",
+          "coverage": 0.8545
+        },
+        {
+          "hex": "#6d726e",
+          "coverage": 0.0909
+        },
+        {
+          "hex": "#b3b3af",
+          "coverage": 0.0409
+        },
+        {
+          "hex": "#939d8d",
+          "coverage": 0.0136
+        }
+      ],
+      "detail": {
+        "energy": 9.6845
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "nav-studio",
+      "kind": "control",
+      "note": "Studio navigation text link",
+      "grid": null,
+      "box": {
+        "x": 0.8436,
+        "y": 0.0292,
+        "w": 0.046,
+        "h": 0.0323
+      },
+      "px": {
+        "x": 1338,
+        "y": 29,
+        "w": 73,
+        "h": 32
+      },
+      "aspect": 2.2813,
+      "palette": [
+        {
+          "hex": "#f6f5e9",
+          "coverage": 0.8436
+        },
+        {
+          "hex": "#7b7f7b",
+          "coverage": 0.1091
+        },
+        {
+          "hex": "#b2b6b2",
+          "coverage": 0.0473
+        }
+      ],
+      "detail": {
+        "energy": 11.6076
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "nav-contact",
+      "kind": "control",
+      "note": "Contact navigation text link",
+      "grid": null,
+      "box": {
+        "x": 0.913,
+        "y": 0.0292,
+        "w": 0.0523,
+        "h": 0.0323
+      },
+      "px": {
+        "x": 1448,
+        "y": 29,
+        "w": 83,
+        "h": 32
+      },
+      "aspect": 2.5938,
+      "palette": [
+        {
+          "hex": "#f7f6ea",
+          "coverage": 0.8247
+        },
+        {
+          "hex": "#6c736c",
+          "coverage": 0.0877
+        },
+        {
+          "hex": "#b1b7b1",
+          "coverage": 0.0877
+        }
+      ],
+      "detail": {
+        "energy": 13.1102
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "Ideas into useful things. in two lines of large heavy sans serif type",
+      "grid": null,
+      "box": {
+        "x": 0.0328,
+        "y": 0.1331,
+        "w": 0.5359,
+        "h": 0.3024
+      },
+      "px": {
+        "x": 52,
+        "y": 132,
+        "w": 850,
+        "h": 300
+      },
+      "aspect": 2.8333,
+      "palette": [
+        {
+          "hex": "#f8f7ea",
+          "coverage": 0.7326
+        },
+        {
+          "hex": "#0a0b0a",
+          "coverage": 0.2394
+        },
+        {
+          "hex": "#81817f",
+          "coverage": 0.01
+        },
+        {
+          "hex": "#353535",
+          "coverage": 0.0095
+        },
+        {
+          "hex": "#b9b9b5",
+          "coverage": 0.0085
+        }
+      ],
+      "detail": {
+        "energy": 58.9002
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 20,
+          "capHeightPx": 110.6,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6125,
+          "advTall": 0.4359,
+          "advX": 0.6195,
+          "gap": 0.0636,
+          "xRatio": 0.7073,
+          "stemW": 0.1677,
+          "contrast": 1.1553,
+          "serif": 0.994,
+          "densTall": 0.5241,
+          "densX": 0.5903,
+          "weight": 0.5241
+        },
+        "widthClass": "normal",
+        "weightClass": "medium",
+        "chosen": {
+          "family": "Kedebideri",
+          "weight": 700,
+          "fontSizePx": 158,
+          "source": "catalog",
+          "estimatedSize": true,
+          "stamp": "1a980f14d43c"
+        }
+      }
+    },
+    {
+      "id": "introduction",
+      "kind": "text",
+      "note": "VomerLabs is an independent studio where I build software, explore practical uses for AI, and share what I learn. in three lines",
+      "grid": null,
+      "box": {
+        "x": 0.6261,
+        "y": 0.1875,
+        "w": 0.3291,
+        "h": 0.124
+      },
+      "px": {
+        "x": 993,
+        "y": 186,
+        "w": 522,
+        "h": 123
+      },
+      "aspect": 4.2439,
+      "palette": [
+        {
+          "hex": "#f7f6eb",
+          "coverage": 0.8501
+        },
+        {
+          "hex": "#1f2021",
+          "coverage": 0.0541
+        },
+        {
+          "hex": "#b4b3b2",
+          "coverage": 0.0459
+        },
+        {
+          "hex": "#606060",
+          "coverage": 0.0406
+        },
+        {
+          "hex": "#8b8986",
+          "coverage": 0.0092
+        }
+      ],
+      "detail": {
+        "energy": 65.2541
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 87,
+          "capHeightPx": 21,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5948,
+          "advTall": 0.4311,
+          "advX": 0.5949,
+          "gap": 0.119,
+          "xRatio": 0.7245,
+          "stemW": 0.132,
+          "contrast": 1.0988,
+          "serif": 0.9853,
+          "densTall": 0.4333,
+          "densX": 0.4969,
+          "weight": 0.4333
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "contact-button",
+      "kind": "control",
+      "note": "Soft lime pill control with Get in touch text and a right pointing arrow",
+      "grid": null,
+      "codeDrawn": true,
+      "box": {
+        "x": 0.6274,
+        "y": 0.3468,
+        "w": 0.1412,
+        "h": 0.0726
+      },
+      "px": {
+        "x": 995,
+        "y": 344,
+        "w": 224,
+        "h": 72
+      },
+      "aspect": 3.1111,
+      "palette": [
+        {
+          "hex": "#c8f279",
+          "coverage": 0.7702
+        },
+        {
+          "hex": "#f8f7ea",
+          "coverage": 0.1842
+        },
+        {
+          "hex": "#0a1009",
+          "coverage": 0.0171
+        },
+        {
+          "hex": "#739145",
+          "coverage": 0.0165
+        },
+        {
+          "hex": "#202e14",
+          "coverage": 0.012
+        }
+      ],
+      "detail": {
+        "energy": 15.7858
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "contact-email",
+      "kind": "control",
+      "note": "hi@vomerlabs.com gray direct email link",
+      "grid": null,
+      "box": {
+        "x": 0.7787,
+        "y": 0.3639,
+        "w": 0.1381,
+        "h": 0.0353
+      },
+      "px": {
+        "x": 1235,
+        "y": 361,
+        "w": 219,
+        "h": 35
+      },
+      "aspect": 6.2571,
+      "palette": [
+        {
+          "hex": "#f6f5ea",
+          "coverage": 0.8265
+        },
+        {
+          "hex": "#747974",
+          "coverage": 0.089
+        },
+        {
+          "hex": "#adafac",
+          "coverage": 0.0845
+        }
+      ],
+      "detail": {
+        "energy": 33.9291
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "project-rule-top",
+      "kind": "chrome",
+      "note": "Thin gray horizontal rule above featured project",
+      "grid": null,
+      "box": {
+        "x": 0.0372,
+        "y": 0.4849,
+        "w": 0.9262,
+        "h": 0.003
+      },
+      "px": {
+        "x": 59,
+        "y": 481,
+        "w": 1469,
+        "h": 3
+      },
+      "aspect": 489.6667,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 11.5509
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      }
+    },
+    {
+      "id": "project-label",
+      "kind": "text",
+      "note": "FEATURED PROJECT in small spaced metadata type",
+      "grid": null,
+      "box": {
+        "x": 0.0359,
+        "y": 0.5282,
+        "w": 0.1286,
+        "h": 0.0212
+      },
+      "px": {
+        "x": 57,
+        "y": 524,
+        "w": 204,
+        "h": 21
+      },
+      "aspect": 9.7143,
+      "palette": [
+        {
+          "hex": "#f4f3eb",
+          "coverage": 0.8613
+        },
+        {
+          "hex": "#8b928a",
+          "coverage": 0.0777
+        },
+        {
+          "hex": "#bac0b9",
+          "coverage": 0.0609
+        }
+      ],
+      "detail": {
+        "energy": 33.1303
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 15,
+          "capHeightPx": 11.8,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.651,
+          "advTall": 0.651,
+          "advX": null,
+          "gap": 0.368,
+          "xRatio": null,
+          "stemW": 0.1944,
+          "contrast": 1.1594,
+          "serif": 0.3545,
+          "densTall": 0.6102,
+          "densX": null,
+          "weight": 0.6102
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "project-title",
+      "kind": "text",
+      "note": "VomerLabs website in bold black sans serif type",
+      "grid": null,
+      "box": {
+        "x": 0.0347,
+        "y": 0.5706,
+        "w": 0.4445,
+        "h": 0.0776
+      },
+      "px": {
+        "x": 55,
+        "y": 566,
+        "w": 705,
+        "h": 77
+      },
+      "aspect": 9.1558,
+      "palette": [
+        {
+          "hex": "#f7f6eb",
+          "coverage": 0.7075
+        },
+        {
+          "hex": "#0e0e0d",
+          "coverage": 0.2416
+        },
+        {
+          "hex": "#c4c3c1",
+          "coverage": 0.0188
+        },
+        {
+          "hex": "#848482",
+          "coverage": 0.0176
+        },
+        {
+          "hex": "#484845",
+          "coverage": 0.0145
+        }
+      ],
+      "detail": {
+        "energy": 101.5579
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 14,
+          "capHeightPx": 58.4,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6502,
+          "advTall": 0.6502,
+          "advX": 0.6502,
+          "gap": 0.0513,
+          "xRatio": 0.7261,
+          "stemW": 0.1575,
+          "contrast": 1.1322,
+          "serif": 1.0018,
+          "densTall": 0.4857,
+          "densX": 0.5508,
+          "weight": 0.4857
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "project-description",
+      "kind": "text",
+      "note": "A home for the studio, its projects, and the process behind them. in secondary text",
+      "grid": null,
+      "box": {
+        "x": 0.0359,
+        "y": 0.6694,
+        "w": 0.5372,
+        "h": 0.0353
+      },
+      "px": {
+        "x": 57,
+        "y": 664,
+        "w": 852,
+        "h": 35
+      },
+      "aspect": 24.3429,
+      "palette": [
+        {
+          "hex": "#f6f5eb",
+          "coverage": 0.8158
+        },
+        {
+          "hex": "#767677",
+          "coverage": 0.0971
+        },
+        {
+          "hex": "#b2b2b0",
+          "coverage": 0.0871
+        }
+      ],
+      "detail": {
+        "energy": 50.0474
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 55,
+          "capHeightPx": 21.5,
+          "inkIsDark": true,
+          "allCaps": true,
+          "advance": 0.5575,
+          "advTall": 0.3368,
+          "advX": null,
+          "gap": 0.1394,
+          "xRatio": null,
+          "stemW": 0.1334,
+          "contrast": 1.0845,
+          "serif": 0.9966,
+          "densTall": 0.5131,
+          "densX": null,
+          "weight": 0.5131
+        },
+        "widthClass": "compressed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "project-status",
+      "kind": "control",
+      "note": "Pale lime status badge with a small green dot and In progress text",
+      "grid": null,
+      "codeDrawn": true,
+      "box": {
+        "x": 0.0359,
+        "y": 0.7329,
+        "w": 0.1091,
+        "h": 0.0433
+      },
+      "px": {
+        "x": 57,
+        "y": 727,
+        "w": 173,
+        "h": 43
+      },
+      "aspect": 4.0233,
+      "palette": [
+        {
+          "hex": "#ecf8d7",
+          "coverage": 0.9109
+        },
+        {
+          "hex": "#929a84",
+          "coverage": 0.0305
+        },
+        {
+          "hex": "#1f231b",
+          "coverage": 0.0258
+        },
+        {
+          "hex": "#a8d831",
+          "coverage": 0.0164
+        },
+        {
+          "hex": "#626856",
+          "coverage": 0.0164
+        }
+      ],
+      "detail": {
+        "energy": 20.0909
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "metadata-divider",
+      "kind": "chrome",
+      "note": "Thin vertical gray rule dividing status from technical metadata",
+      "grid": null,
+      "box": {
+        "x": 0.1652,
+        "y": 0.7339,
+        "w": 0.0019,
+        "h": 0.0423
+      },
+      "px": {
+        "x": 262,
+        "y": 728,
+        "w": 3,
+        "h": 42
+      },
+      "aspect": 0.0714,
+      "palette": [
+        {
+          "hex": "#f8f6e8",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 0.5258
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      }
+    },
+    {
+      "id": "project-metadata",
+      "kind": "text",
+      "note": "Astro · Markdown · Plain CSS in quiet monospaced technical metadata",
+      "grid": null,
+      "box": {
+        "x": 0.1879,
+        "y": 0.745,
+        "w": 0.227,
+        "h": 0.0313
+      },
+      "px": {
+        "x": 298,
+        "y": 739,
+        "w": 360,
+        "h": 31
+      },
+      "aspect": 11.6129,
+      "palette": [
+        {
+          "hex": "#f7f7eb",
+          "coverage": 0.8985
+        },
+        {
+          "hex": "#c5c7c3",
+          "coverage": 0.0485
+        },
+        {
+          "hex": "#919392",
+          "coverage": 0.0417
+        },
+        {
+          "hex": "#6e796c",
+          "coverage": 0.0114
+        }
+      ],
+      "detail": {
+        "energy": 28.477
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 23,
+          "capHeightPx": 13.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6681,
+          "advTall": 0.6681,
+          "advX": 0.6681,
+          "gap": 0.1485,
+          "xRatio": 0.7575,
+          "stemW": 0.1784,
+          "contrast": 1.1487,
+          "serif": null,
+          "densTall": 0.4824,
+          "densX": 0.5538,
+          "weight": 0.4824
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "project-action",
+      "kind": "control",
+      "note": "About this build text link with right arrow and lime underline",
+      "grid": null,
+      "codeDrawn": true,
+      "box": {
+        "x": 0.8323,
+        "y": 0.7359,
+        "w": 0.133,
+        "h": 0.0433
+      },
+      "px": {
+        "x": 1320,
+        "y": 730,
+        "w": 211,
+        "h": 43
+      },
+      "aspect": 4.907,
+      "palette": [
+        {
+          "hex": "#f7f7ec",
+          "coverage": 0.8207
+        },
+        {
+          "hex": "#e8f8c8",
+          "coverage": 0.0633
+        },
+        {
+          "hex": "#161615",
+          "coverage": 0.0508
+        },
+        {
+          "hex": "#c5c3c1",
+          "coverage": 0.0374
+        },
+        {
+          "hex": "#525251",
+          "coverage": 0.0278
+        }
+      ],
+      "detail": {
+        "energy": 38.3745
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "project-rule-bottom",
+      "kind": "chrome",
+      "note": "Thin gray horizontal rule below featured project",
+      "grid": null,
+      "box": {
+        "x": 0.0372,
+        "y": 0.8145,
+        "w": 0.9262,
+        "h": 0.003
+      },
+      "px": {
+        "x": 59,
+        "y": 808,
+        "w": 1469,
+        "h": 3
+      },
+      "aspect": 489.6667,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 9.7757
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      }
+    },
+    {
+      "id": "studio-heading",
+      "kind": "text",
+      "note": "Software, practical AI, and a thoughtful process. in two lines of bold sans serif type",
+      "grid": null,
+      "box": {
+        "x": 0.0353,
+        "y": 0.8589,
+        "w": 0.4464,
+        "h": 0.128
+      },
+      "px": {
+        "x": 56,
+        "y": 852,
+        "w": 708,
+        "h": 127
+      },
+      "aspect": 5.5748,
+      "palette": [
+        {
+          "hex": "#f7f6eb",
+          "coverage": 0.7789
+        },
+        {
+          "hex": "#0f0f0e",
+          "coverage": 0.1735
+        },
+        {
+          "hex": "#717171",
+          "coverage": 0.0237
+        },
+        {
+          "hex": "#c1c1bd",
+          "coverage": 0.0136
+        },
+        {
+          "hex": "#424240",
+          "coverage": 0.0103
+        }
+      ],
+      "detail": {
+        "energy": 97.8685
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 33,
+          "capHeightPx": 43.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6179,
+          "advTall": 0.4348,
+          "advX": 0.6511,
+          "gap": 0.0698,
+          "xRatio": 0.7152,
+          "stemW": 0.1607,
+          "contrast": 1.1997,
+          "serif": 1.0208,
+          "densTall": 0.4808,
+          "densX": 0.5447,
+          "weight": 0.4808
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "studio-description",
+      "kind": "text",
+      "note": "I work at the intersection of software and practical AI, with a focus on real problems, clear thinking, and useful outcomes. This is a space to build, explore, and share what I learn along the way. in readable secondary text",
+      "grid": null,
+      "box": {
+        "x": 0.5801,
+        "y": 0.8679,
+        "w": 0.3802,
+        "h": 0.1321
+      },
+      "px": {
+        "x": 920,
+        "y": 861,
+        "w": 603,
+        "h": 131
+      },
+      "aspect": 4.6031,
+      "palette": [
+        {
+          "hex": "#f6f5ea",
+          "coverage": 0.8826
+        },
+        {
+          "hex": "#858583",
+          "coverage": 0.0637
+        },
+        {
+          "hex": "#bbbab8",
+          "coverage": 0.0537
+        }
+      ],
+      "detail": {
+        "energy": 29.3022
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 4,
+          "glyphs": 150,
+          "capHeightPx": 16.3,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5981,
+          "advTall": 0.4239,
+          "advX": 0.6123,
+          "gap": 0.1243,
+          "xRatio": 0.7141,
+          "stemW": 0.1546,
+          "contrast": 1.0929,
+          "serif": 0.679,
+          "densTall": 0.4919,
+          "densX": 0.5472,
+          "weight": 0.4919
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    }
+  ],
+  "compSha256": "21f6c861de8b34c92ae97e16f4386cb9fc147130923d229643e0c37386f6f851",
+  "regionsSource": {
+    "path": ".impeccable/build/regions.json",
+    "sha256": "821d2f034c96bad825ab83f50c1312cd856bc5ecea45b2cf5a369f91951cae1f"
+  }
+}

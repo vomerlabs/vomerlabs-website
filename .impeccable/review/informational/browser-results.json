@@ -1,0 +1,1496 @@
+{
+  "results": [
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 320,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 390,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 481,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 768,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 1280,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "About | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": "page"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/contact",
+      "name": "contact",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Contact | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": "page"
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/not-a-real-page",
+      "name": "404",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Page not found | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/",
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com",
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work",
+      "name": "work",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Work | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "page"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/work/vomerlabs-website",
+      "name": "project",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "VomerLabs website | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": "true"
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": null
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    },
+    {
+      "route": "/lab-notes",
+      "name": "notes",
+      "width": 1440,
+      "overflow": false,
+      "headings": 1,
+      "missingFragments": [],
+      "title": "Lab Notes | VomerLabs",
+      "nav": [
+        {
+          "text": "Work",
+          "href": "/work",
+          "current": null
+        },
+        {
+          "text": "Lab Notes",
+          "href": "/lab-notes",
+          "current": "page"
+        },
+        {
+          "text": "Studio",
+          "href": "/about",
+          "current": null
+        },
+        {
+          "text": "Contact",
+          "href": "/contact",
+          "current": null
+        }
+      ],
+      "emails": [
+        "mailto:hi@vomerlabs.com"
+      ],
+      "forms": 0
+    }
+  ],
+  "pageErrors": [],
+  "javaScriptEnabled": false,
+  "keyboardAndRecovery": "passed",
+  "staticOutput": "7 real pages; no client scripts",
+  "production404": {
+    "status": 404,
+    "customBody": true,
+    "noindex": true,
+    "redirect": false
+  }
+}

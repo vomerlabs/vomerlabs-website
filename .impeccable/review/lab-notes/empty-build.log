@@ -1,0 +1,28 @@
+
+> vomerlabs@0.0.1 build
+> astro build
+
+13:34:11 [content] Syncing content
+13:34:11 [WARN] [glob-loader] No files found matching "**/*.{md,mdx}" in directory "src/content/lab-notes"
+13:34:11 [content] Synced content
+13:34:11 [types] Generated 387ms
+13:34:11 [build] output: "static"
+13:34:11 [build] mode: "static"
+13:34:11 [build] directory: /home/jedidavid/Development/vomerlabs/dist/
+13:34:11 [build] Collecting build info...
+13:34:11 [build] ✓ Completed in 431ms.
+13:34:11 [build] Building static entrypoints...
+13:34:11 [vite] ✓ built in 261ms
+13:34:11 [vite] ✓ built in 14ms
+13:34:11 [build] Rearranging server assets...
+
+ generating static routes 
+13:34:11   ├─ /lab-notes/index.html (+10ms) 
+13:34:11   ├─ /work/vomerlabs-website/index.html (+4ms) 
+13:34:11   ├─ /work/index.html (+2ms) 
+13:34:11   ├─ /index.html (+3ms) 
+13:34:11 ✓ Completed in 36ms.
+
+13:34:11 [build] ✓ Completed in 349ms.
+13:34:11 [build] 4 page(s) built in 782ms
+13:34:11 [build] Complete!

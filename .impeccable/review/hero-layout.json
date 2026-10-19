@@ -1,0 +1,143 @@
+[
+  {
+    "width": 1586,
+    "scrollWidth": 1586,
+    "fonts": true,
+    "title": "VomerLabs",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Ideas into useful things."
+      },
+      {
+        "tag": "H2",
+        "text": "Featured project"
+      },
+      {
+        "tag": "H3",
+        "text": "VomerLabs website"
+      },
+      {
+        "tag": "H2",
+        "text": "Software, practical AI, and a thoughtful process."
+      }
+    ],
+    "regions": [
+      {
+        "selector": ".site-header",
+        "x": 0,
+        "y": 0,
+        "w": 1586,
+        "h": 85.21875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": "h1",
+        "x": 59.46875,
+        "y": 127.21875,
+        "w": 850.890625,
+        "h": 284.34375,
+        "font": "700 157.966px / 142.169px Kedebideri, Arial, sans-serif",
+        "fontSize": "157.966px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".summary",
+        "x": 998.375,
+        "y": 180.6875,
+        "w": 528.15625,
+        "h": 230.875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".featured",
+        "x": 59.46875,
+        "y": 481.34375,
+        "w": 1467.0625,
+        "h": 327.5625,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".section-label",
+        "x": 59.46875,
+        "y": 522.34375,
+        "w": 1467.0625,
+        "h": 18,
+        "font": "15px / 18px ui-monospace, SFMono-Regular, Consolas, \"Liberation Mono\", monospace",
+        "fontSize": "15px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".featured h3",
+        "x": 59.46875,
+        "y": 556.34375,
+        "w": 1467.0625,
+        "h": 85.796875,
+        "font": "700 78px / 85.8px Kedebideri, Arial, sans-serif",
+        "fontSize": "78px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".description",
+        "x": 59.46875,
+        "y": 658,
+        "w": 1467.0625,
+        "h": 41.953125,
+        "font": "29.9754px / 41.9656px Kedebideri, Arial, sans-serif",
+        "fontSize": "29.9754px",
+        "color": "rgb(98, 103, 92)"
+      },
+      {
+        "selector": ".record-footer",
+        "x": 59.46875,
+        "y": 726.953125,
+        "w": 1467.0625,
+        "h": 44,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio",
+        "x": 59.46875,
+        "y": 808.90625,
+        "w": 1467.0625,
+        "h": 254.796875,
+        "font": "16px / 26.4px Kedebideri, Arial, sans-serif",
+        "fontSize": "16px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio h2",
+        "x": 59.46875,
+        "y": 850.90625,
+        "w": 748.203125,
+        "h": 148.796875,
+        "font": "700 60px / 66px Kedebideri, Arial, sans-serif",
+        "fontSize": "60px",
+        "color": "rgb(23, 24, 21)"
+      },
+      {
+        "selector": ".studio p",
+        "x": 925.03125,
+        "y": 850.90625,
+        "w": 601.484375,
+        "h": 148.796875,
+        "font": "24px / 36px Kedebideri, Arial, sans-serif",
+        "fontSize": "24px",
+        "color": "rgb(98, 103, 92)"
+      }
+    ],
+    "badAnchors": [
+      "#build-notes"
+    ],
+    "name": "hero-repro",
+    "errors": []
+  }
+]

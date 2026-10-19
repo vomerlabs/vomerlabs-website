@@ -1,0 +1,228 @@
+{
+  "regions": [
+    {
+      "id": "page-ground",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1586,
+        "h": 992
+      },
+      "note": "Flat warm off-white page background",
+      "container": true
+    },
+    {
+      "id": "wordmark",
+      "kind": "text",
+      "pixelBox": {
+        "x": 57,
+        "y": 26,
+        "w": 190,
+        "h": 34
+      },
+      "note": "VomerLabs black sans serif wordmark"
+    },
+    {
+      "id": "nav-work",
+      "kind": "control",
+      "pixelBox": {
+        "x": 1248,
+        "y": 29,
+        "w": 58,
+        "h": 32
+      },
+      "note": "Work navigation text link"
+    },
+    {
+      "id": "nav-studio",
+      "kind": "control",
+      "pixelBox": {
+        "x": 1338,
+        "y": 29,
+        "w": 73,
+        "h": 32
+      },
+      "note": "Studio navigation text link"
+    },
+    {
+      "id": "nav-contact",
+      "kind": "control",
+      "pixelBox": {
+        "x": 1448,
+        "y": 29,
+        "w": 83,
+        "h": 32
+      },
+      "note": "Contact navigation text link"
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "pixelBox": {
+        "x": 52,
+        "y": 132,
+        "w": 850,
+        "h": 300
+      },
+      "note": "Ideas into useful things. in two lines of large heavy sans serif type"
+    },
+    {
+      "id": "introduction",
+      "kind": "text",
+      "pixelBox": {
+        "x": 993,
+        "y": 186,
+        "w": 522,
+        "h": 123
+      },
+      "note": "VomerLabs is an independent studio where I build software, explore practical uses for AI, and share what I learn. in three lines"
+    },
+    {
+      "id": "contact-button",
+      "kind": "control",
+      "pixelBox": {
+        "x": 995,
+        "y": 344,
+        "w": 224,
+        "h": 72
+      },
+      "note": "Soft lime pill control with Get in touch text and a right pointing arrow",
+      "codeDrawn": true
+    },
+    {
+      "id": "contact-email",
+      "kind": "control",
+      "pixelBox": {
+        "x": 1235,
+        "y": 361,
+        "w": 219,
+        "h": 35
+      },
+      "note": "hi@vomerlabs.com gray direct email link"
+    },
+    {
+      "id": "project-rule-top",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 59,
+        "y": 481,
+        "w": 1469,
+        "h": 3
+      },
+      "note": "Thin gray horizontal rule above featured project"
+    },
+    {
+      "id": "project-label",
+      "kind": "text",
+      "pixelBox": {
+        "x": 57,
+        "y": 524,
+        "w": 204,
+        "h": 21
+      },
+      "note": "FEATURED PROJECT in small spaced metadata type"
+    },
+    {
+      "id": "project-title",
+      "kind": "text",
+      "pixelBox": {
+        "x": 55,
+        "y": 566,
+        "w": 705,
+        "h": 77
+      },
+      "note": "VomerLabs website in bold black sans serif type"
+    },
+    {
+      "id": "project-description",
+      "kind": "text",
+      "pixelBox": {
+        "x": 57,
+        "y": 664,
+        "w": 852,
+        "h": 35
+      },
+      "note": "A home for the studio, its projects, and the process behind them. in secondary text"
+    },
+    {
+      "id": "project-status",
+      "kind": "control",
+      "pixelBox": {
+        "x": 57,
+        "y": 727,
+        "w": 173,
+        "h": 43
+      },
+      "note": "Pale lime status badge with a small green dot and In progress text",
+      "codeDrawn": true
+    },
+    {
+      "id": "metadata-divider",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 262,
+        "y": 728,
+        "w": 3,
+        "h": 42
+      },
+      "note": "Thin vertical gray rule dividing status from technical metadata"
+    },
+    {
+      "id": "project-metadata",
+      "kind": "text",
+      "pixelBox": {
+        "x": 298,
+        "y": 739,
+        "w": 360,
+        "h": 31
+      },
+      "note": "Astro \u00b7 Markdown \u00b7 Plain CSS in quiet monospaced technical metadata"
+    },
+    {
+      "id": "project-action",
+      "kind": "control",
+      "pixelBox": {
+        "x": 1320,
+        "y": 730,
+        "w": 211,
+        "h": 43
+      },
+      "note": "About this build text link with right arrow and lime underline",
+      "codeDrawn": true
+    },
+    {
+      "id": "project-rule-bottom",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 59,
+        "y": 808,
+        "w": 1469,
+        "h": 3
+      },
+      "note": "Thin gray horizontal rule below featured project"
+    },
+    {
+      "id": "studio-heading",
+      "kind": "text",
+      "pixelBox": {
+        "x": 56,
+        "y": 852,
+        "w": 708,
+        "h": 127
+      },
+      "note": "Software, practical AI, and a thoughtful process. in two lines of bold sans serif type"
+    },
+    {
+      "id": "studio-description",
+      "kind": "text",
+      "pixelBox": {
+        "x": 920,
+        "y": 861,
+        "w": 603,
+        "h": 131
+      },
+      "note": "I work at the intersection of software and practical AI, with a focus on real problems, clear thinking, and useful outcomes. This is a space to build, explore, and share what I learn along the way. in readable secondary text"
+    }
+  ]
+}

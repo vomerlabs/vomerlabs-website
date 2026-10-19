@@ -1,0 +1,62 @@
+[
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/home/jedidavid/Development/vomerlabs/src/pages/404.astro",
+    "line": 30,
+    "snippet": "font-size: clamp(3.25rem, 7vw, 6rem) has fluid endpoint 6rem off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "6rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/home/jedidavid/Development/vomerlabs/src/components/site/PageIntro.astro",
+    "line": 27,
+    "snippet": "font-size: clamp(3.25rem, 7vw, 6rem) has fluid endpoint 6rem off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "6rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/home/jedidavid/Development/vomerlabs/src/components/site/SiteHeader.astro",
+    "line": 37,
+    "snippet": "font-size: clamp(1.625rem, 2.27vw, 2.25rem) has fluid endpoints 1.625rem and 2.25rem off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "1.625rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/home/jedidavid/Development/vomerlabs/src/components/site/SiteHeader.astro",
+    "line": 48,
+    "snippet": "font-size: clamp(1rem, 1.33vw, 1.3125rem) has fluid endpoint 1.3125rem off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "1.3125rem"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/home/jedidavid/Development/vomerlabs/src/components/site/SiteFooter.astro",
+    "line": 46,
+    "snippet": "font-size: clamp(2rem, 3.2vw, 3rem) has fluid endpoint 3rem off the DESIGN.md type ramp",
+    "advisory": true,
+    "ignoreValue": "3rem"
+  }
+]
