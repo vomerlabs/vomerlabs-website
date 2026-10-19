@@ -1,19 +1,22 @@
 # VomerLabs
 
-An independent studio building software, exploring practical uses for AI, and sharing the process. The Astro foundation, approved Working Index homepage, Projects listing, static project details, Lab Notes templates, About, Contact, and a custom 404 are implemented. The website itself is the first project, honestly marked in progress; Lab Notes is empty until real writing is supplied; launch configuration and deployment remain a later pass.
+An independent studio building software, exploring practical uses for AI, and sharing the process. Built with Astro, strict TypeScript, plain CSS, and Markdown/MDX content collections. The site generates static HTML and needs no client framework, CMS, or backend.
+
+Home, Projects, project details, Lab Notes, note articles, About, Contact, and a custom 404 are implemented. The VomerLabs website is the first real project, marked In progress. One explicitly labeled sample note is published to preview the reading experience. Hosting and production launch configuration remain open.
 
 ## Development
 
-Use Node.js 22.22.0 or newer and npm. Install the locked dependencies with `npm ci`.
+Use Node.js 22.22.0 or newer and the locked npm dependencies:
 
 ```sh
+npm ci
 npm run dev -- --background
 npm run astro -- dev status
 npm run astro -- dev logs
 npm run astro -- dev stop
 ```
 
-The development server normally runs at `http://localhost:4321`. Use background mode as required by [AGENTS.md](AGENTS.md).
+Use background mode as required by [AGENTS.md](AGENTS.md). Astro normally starts at `http://localhost:4321`; check its output or status for the actual port.
 
 ```sh
 npm run check
@@ -21,99 +24,80 @@ npm run build
 npm run preview
 ```
 
-`check` validates Astro/TypeScript and synchronizes content types. `build` generates the static site in `dist/`. Empty collection directories are intentional until real content is added; Astro may report that no files matched their loaders.
+`check` validates Astro and TypeScript. `build` validates collection content and writes the static site to `dist/`. `preview` serves that build locally.
 
 ## Project structure
 
 ```text
 src/
-  assets/                      Images processed by Astro
+  assets/fonts/              Local Kedebideri fonts and their OFL license
   components/
-    content/Prose.astro         Markdown typography inside a scoped wrapper
-    home/                      Homepage introduction, featured projects, studio
-    lab-notes/                 Published-note preview records
-    site/                      Shared header, contact footer, and informational-page intro
-    ui/                        Action links, status badge, arrow icon
-    projects/                  Open project record shared with the homepage
-  config/site.ts               Shared name, tagline, description, language
-  content/
-    projects/                  Project Markdown/MDX entries
-    lab-notes/                 Lab-note Markdown/MDX entries
-  content.config.ts            Collection loaders and metadata schemas
-  layouts/BaseLayout.astro     HTML document, metadata, skip link, layout slots
-  lib/content.ts               Typed, sorted queries and draft filtering
-  pages/index.astro            Homepage composition and featured-project query
-  pages/projects/index.astro   Projects listing from getProjects()
-  pages/projects/[slug].astro  Static project details from collection IDs
-  pages/lab-notes/index.astro  Published notes or an honest empty state
-  pages/lab-notes/[slug].astro Static articles; drafts receive no route
-  pages/about.astro            Confirmed studio focus and working approach
-  pages/contact.astro          Direct email and conversation guidance
-  pages/404.astro              Missing-page recovery; builds dist/404.html
-  styles/
-    tokens.css                 Working Index CSS custom properties
-    fonts.css                  Locally served font-face declarations
-    global.css                 Document defaults and accessibility safeguards
-docs/content-authoring.md       Content examples and publishing conventions
-public/                        Files copied unchanged, including the V favicon
-PRODUCT.md                     Confirmed product context for impeccable
-DESIGN.md                      Implemented design tokens and component guidance
+    content/                 Formatted dates and scoped Markdown typography
+    home/                    Featured projects and recent Lab Notes sections
+    lab-notes/               Shared note preview rows
+    projects/                Shared project cards and website build preview
+    site/                    Header, footer, contact band, and page intro
+    ui/                      Buttons, action links, status, and arrow icon
+  config/site.ts             Studio identity, language, and contact email
+  content/                   Project and Lab Notes Markdown/MDX entries
+  content.config.ts          Collection loaders and metadata schemas
+  layouts/BaseLayout.astro   Document, metadata, skip link, and layout slots
+  lib/content.ts             Typed queries, sorting, and draft filtering
+  pages/                     Home, listings, details, About, Contact, and 404
+  styles/                    Global tokens, font faces, and document defaults
+public/                      Original logo, SVG favicon, and favicon fallback
+docs/content-authoring.md    Content fields, examples, and publishing rules
+docs/next-context.md         Current handoff and outstanding launch work
+PRODUCT.md                   Confirmed product context
+DESIGN.md                    Current visual system and component guidance
+.impeccable/design.json      Design-panel previews and metadata
 ```
 
-Keep route files focused on loading content and composing components. Add shared components when a real pattern repeats; group related components by purpose as the site grows. Use generated `CollectionEntry` types rather than duplicating frontmatter interfaces. No UI framework, CMS, database, or browser JavaScript is required by this foundation.
+Pages load content and compose components. Shared components follow real repeated patterns. Use generated `CollectionEntry` types instead of parallel frontmatter interfaces.
 
-## Styling boundaries
+## Routes and content
 
-- Write page and component styles in their own Astro `<style>` blocks; Astro scopes them by default.
-- Import `tokens.css`, `fonts.css`, and `global.css` only through `BaseLayout`. Tokens define shared values; global CSS owns box sizing, document defaults, focus visibility, selection, and reduced-motion support. Font-face declarations are the other document-wide exception.
-- Keep typography, cards, navigation, and other component presentation out of global CSS. There is no shared `components.css` or global utility-class layer.
-- Styles from a parent do not automatically reach child components or slotted Markdown. `Prose` deliberately uses `.prose :global(...)` selectors anchored to its scoped wrapper. Keep Markdown presentation there and shell presentation in the shell components.
-- Put source images in `src/assets/` and render them through Astro's image tooling. Reserve `public/` for files that must be served unchanged. The layout uses the authored `favicon-v.svg`.
-- The shared header uses the owner-supplied `public/vomerlabs-logo.svg`, scaled proportionally within the established header line box. Its link keeps the accessible name “VomerLabs home”.
-- The Working Index uses the proposal's warm ground, near-black text, and restrained lime accent, with darker secondary text for contrast. Kedebideri regular and bold are served locally from `src/assets/fonts/`; their SIL Open Font License is stored alongside them. The bold face is preloaded, and both faces use `font-display: swap` with sans-serif fallbacks.
-- Font source: [Kedebideri on Google Fonts](https://fonts.google.com/specimen/Kedebideri); license source: [Google Fonts repository](https://github.com/google/fonts/tree/main/ofl/kedebideri). No third-party font request is made by visitors.
+| Route | Purpose |
+| --- | --- |
+| `/` | Studio introduction, featured projects, studio overview, and three latest published notes |
+| `/projects` | All projects |
+| `/projects/[slug]` | Project metadata and rendered Markdown/MDX |
+| `/lab-notes` | All published notes, or an empty state |
+| `/lab-notes/[slug]` | Published article, optional cover and metadata, and related projects |
+| `/about` | Studio focus, approach, and guiding principles |
+| `/contact` | Selectable email link and conversation guidance |
+| `/404` | Missing-page recovery with `noindex`; generates `dist/404.html` |
 
-See Astro's [project structure](https://docs.astro.build/en/basics/project-structure/), [scoped styles](https://docs.astro.build/en/guides/styling/), and [content collections](https://docs.astro.build/en/guides/content-collections/) guides.
+The current content is available at `/projects/vomerlabs-website` and `/lab-notes/sample-keeping-a-website-simple`. The note is sample content, not an additional claim of real studio work; replace it or set `draft: true` when it is no longer needed.
+
+Home and Projects share `ProjectCard`, using h3 and h2 card titles respectively. Cards include status, category, description, tags, a secondary Learn more button, optional external links, and a supplied cover or the website-specific build preview. Home and Lab Notes share `NotePreview`, with dates, optional estimated reading time, descriptions, topic chips, and h3/h2 titles. Each listing keeps its own empty state.
+
+`getProjects()` sorts newest first. `getFeaturedProjects()` selects featured entries and sorts by `featuredOrder`, then date. `getPublishedLabNotes()` excludes drafts and supplies both note listings and static article paths. Equal dates use entry IDs for stable ordering. Dates do not schedule publication. See [content authoring](docs/content-authoring.md) for schemas, images, related projects, and publishing.
+
+Legacy `/work` and `/work/[slug]` routes redirect to Projects through `astro.config.mjs`. The static build emits HTML redirects; production status codes depend on hosting configuration.
+
+## Styling and shared components
+
+- Keep page and component presentation in scoped Astro `<style>` blocks.
+- Import `tokens.css`, `fonts.css`, and `global.css` through `BaseLayout` only. Global CSS owns document defaults, box sizing, selection, keyboard focus, and reduced-motion safeguards.
+- Shared values live in `src/styles/tokens.css`. Use global names such as `--color-text` and `--space-4` directly; avoid page or component aliases for the same value. Keep one-off values local and preserve distinct units and responsive formulas.
+- `Prose` anchors its global Markdown selectors to a scoped wrapper. Project details use the default variant; Lab Notes uses `variant="article"`.
+- `Button` accepts a required `href`, a label slot, `variant="primary" | "secondary"` (primary by default), and standard anchor attributes. Home uses primary; project cards use secondary. `ActionLink` supplies the existing primary and text variants used in detail, empty, and recovery views.
+- Use Astro-processed source images from `src/assets/`. Serve original files such as `public/vomerlabs-logo.svg` unchanged. Preserve the logo's proportions and accessible home-link label.
+- Kedebideri regular and bold are served locally with `font-display: swap`; the bold face is preloaded. The OFL license is stored with the fonts. Visitors make no third-party font request.
+
+See [UI usage and token conventions](src/components/ui/README.md) and [DESIGN.md](DESIGN.md). Astro references: [styling](https://docs.astro.build/en/guides/styling/), [content collections](https://docs.astro.build/en/guides/content-collections/), and [routing](https://docs.astro.build/en/guides/routing/).
 
 ## Layout interface
 
-`BaseLayout` requires `title` and `description`. It accepts optional `canonical` and `sharingImage: { src, alt }` values. The default slot renders inside `<main id="main-content">`; optional `header`, `footer`, and `head` slots support future shell components and page-specific metadata. Pages own their heading structure.
+`BaseLayout` requires `title` and `description`. Optional props are `canonical`, `sharingImage: { src, alt }`, and `showContactBand` (default `true`). The default slot renders inside `<main id="main-content">`; named `header`, `footer`, and `head` slots supply the shell and additional metadata. Pages own their headings.
 
-The layout appends the site name to page titles, avoiding a duplicate on the homepage. Set the verified production `site` URL in `astro.config.mjs` at launch to generate absolute canonical URLs automatically. Until then, no domain is assumed; supply absolute URLs if explicitly using canonical or sharing-image props. Provide an image's public URL or processed image `.src`, not the image metadata object.
+The layout renders `ContactBand` after the main content and before the footer. Contact uses `showContactBand={false}`. `SiteFooter` accepts `topHref` for each page's Back to top target and `showDivider` for its optional top separator; Contact enables the separator. `StudioPageIntro` supplies the shared About, Contact, Projects, and Lab Notes heroes with `id`, `label`, `description`, a heading slot, and optional `showDivider` (default `true`). The two indexes disable that hero divider.
 
-## Content and planned routes
+The layout appends the studio name to page titles while avoiding duplication on Home. A verified Astro `site` URL enables automatic canonical URLs. Until configured, no domain is assumed. Pass a public image URL or processed image `.src` to `sharingImage`, rather than an image metadata object.
 
-See [content authoring](docs/content-authoring.md) for schema fields, examples, image paths, sorting, and draft handling. Examples stay in documentation so they cannot be published accidentally. The projects collection contains the real website entry; Lab Notes is empty until writing is ready.
+## Launch work
 
-The homepage lists projects returned by `getFeaturedProjects()`. Both it and the Projects index use `src/components/projects/ProjectCard.astro`, with status, category, description, tags, a preview when available, and a secondary “Learn more” link to the project detail. The homepage uses h3 card titles beneath Featured projects; the Projects index uses h2 titles and lists every entry returned by `getProjects()`. Each listing retains its own empty state. `WebsiteBuildPreview.astro` lives alongside the card and provides the real website build diagram.
+Choose the host and verified production URL, then configure canonical/sharing metadata, sitemap/robots, social imagery, and static-host 404 behavior. Preserve missing-page HTTP 404 responses rather than rewriting every unknown URL to a successful page. Verify delivery for `hi@vomerlabs.com`; the repository currently supplies direct email links and no form, analytics, or response-time promise.
 
-| Route | Status and responsibility |
-| --- | --- |
-| `/` | Implemented: introduction, featured project, studio, contact |
-| `/projects` | Implemented: project listing |
-| `/projects/[slug]` | Implemented: static project details generated from collection IDs |
-| `/lab-notes` | Implemented: published note listing and empty state |
-| `/lab-notes/[slug]` | Implemented: static article template from published collection IDs |
-| `/about` | Implemented: studio focus and working approach |
-| `/contact` | Implemented: direct email and contact guidance |
-| `/404` | Implemented: helpful missing-page response, noindex |
-
-The current project is available at `/projects/vomerlabs-website`. Project detail pages render Markdown/MDX through the scoped `Prose` component and show category, publication date, optional update date, tags, and written status. Covers use Astro image processing and the required alternative text. Demo and source actions appear only when supplied. Header Projects and Lab Notes links indicate their current section; Studio opens `/about`, and Contact opens `/contact`, both with current-page indication. Primary email actions still open `hi@vomerlabs.com` directly. Each page has a working Back to top link. Lab Notes uses `getPublishedLabNotes()` for both its listing and static paths, so drafts receive neither links nor routes in development or production. There are no published articles yet; the index offers a direct path to Projects. Article pages support Markdown/MDX, UTC dates, optional update date/topics, processed covers, related projects, and return navigation. Missing related-project references are omitted from the rendered links; keep authoring references valid. Any future note surfaces must use the same published-note helper. Consult Astro's [routing guide](https://docs.astro.build/en/guides/routing/) before adding pages.
-
-## Informational pages and missing URLs
-
-About stays focused on the studio, as the owner requested. It uses the confirmed description and approach without a personal biography, credentials, or invented results. Contact provides a visible, selectable email link and prompts for a project, question, or collaboration. There is no form or response-time promise. Email delivery still needs verification at launch.
-
-`PageIntro` carries the established index introduction into About and Contact. The footer accepts `showInvitation` (default `true`); Contact sets it to `false` so its primary email task appears once. Existing pages retain their normal footer. The homepage Studio section and all existing fragment IDs remain in place.
-
-Astro emits `dist/404.html` for the custom missing-page response. It includes home/projects recovery links and `noindex`, with no automatic redirect or client script. Unknown URLs return this page with a 404 status in Astro development/preview; configure and verify the eventual static host's custom-404 handling at deployment rather than adding a catch-all 200 rewrite.
-
-## Next phase and launch
-
-Continue launch preparation with impeccable from the supplied proposal, `PRODUCT.md`, and the established Working Index visual system in `DESIGN.md`. Its `.impeccable/design.json` companion contains tokens and component previews for the design panel. The project records a comp-first workflow in `.impeccable/config.json`. The selected homepage comp, its comparisons, and their exact imagegen prompts are development artifacts in `.impeccable/mocks/`; none are delivered as website imagery. Add additional real projects, writing, and an author biography when supplied.
-
-Hosting and deployment remain undecided. The output is a static `dist/` directory with no server adapter requirement. Before launch, choose and document the host, configure the real production URL, add sitemap/robots and sharing assets, and verify email delivery. The provided email is wired as a direct link; this repository cannot verify the mailbox's delivery configuration. Do not deploy example claims, invented contact details, or draft notes.
-
-Home and the Lab Notes index share `src/components/lab-notes/NotePreview.astro`: full-row links with publication date, reading time estimated at 200 words per minute, title, description, and topic chips. The homepage shows its three latest published notes using h3 titles; the index lists all published notes using h2 titles. Both retain their existing empty states and draft filtering. The supplied sample remains explicitly labeled as a sample.
-
-Project routes use `/projects` and `/projects/[slug]`. Legacy `/work` and `/work/[slug]` URLs redirect to the matching Projects pages through `astro.config.mjs`. In this static build, Astro emits HTML redirects; server-level redirect status codes depend on the eventual hosting adapter or configuration.
+Add real projects and writing when supplied, and replace or hide the sample note before a production release. Keep About focused on the studio without invented biography, credentials, or results. The selected Working Index identity and existing review artifacts remain the baseline; see [the continuation handoff](docs/next-context.md) for current constraints.

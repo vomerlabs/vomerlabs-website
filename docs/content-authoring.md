@@ -2,7 +2,7 @@
 
 Content lives in `src/content/projects/` and `src/content/lab-notes/`. Both `.md` and `.mdx` are supported; use Markdown unless embedded Astro components are useful. MDX support does not require a client framework.
 
-These examples are templates, not real VomerLabs work. Copy an example only when replacing its fields and body with accurate content. The homepage currently features the real `vomerlabs-website.md` entry and links to its dedicated project page for the build notes. The same entry also appears at `/projects` and `/projects/vomerlabs-website`. Project detail pages render the full body. The Lab Notes index and article template are implemented; the index stays empty until real writing is published.
+The examples below are templates, not real VomerLabs work. Replace their fields and body with accurate content before publishing. The real `vomerlabs-website.md` project appears on Home, the Projects index, and its detail page at `/projects/vomerlabs-website`. The published `sample-keeping-a-website-simple.md` note previews the Lab Notes layout and is explicitly labeled as sample content; it appears on Home, the Lab Notes index, and its article page. Replace it with real writing or set `draft: true` when the preview is no longer needed.
 
 ## IDs and URLs
 
@@ -39,7 +39,7 @@ Follow the frontmatter with only the sections relevant to the work, such as “T
 | `coverImageAlt` | Required, nonempty alternative text when a cover is supplied |
 | `demoUrl`, `repositoryUrl` | Optional absolute HTTP or HTTPS URLs |
 
-Project details show category, publication date, optional update date, and nonempty tags alongside the written status. Dates are formatted in UTC to preserve the authored calendar day. Demo and source links appear only when their URLs are supplied and open through ordinary same-tab navigation. The Projects index and homepage share the same open record, including status and tags.
+Project details show category, publication date, optional update date, and nonempty tags alongside the written status. Dates are formatted in UTC to preserve the authored calendar day. Demo and source links appear only when their URLs are supplied and open through ordinary same-tab navigation. Home and the Projects index share `ProjectCard`, including status, category, description, tags, and a Learn more link. Cards show a supplied cover image or the website-specific build preview when applicable.
 
 Omit unavailable links and images entirely; do not use empty strings. Optional frontmatter fields should be omitted rather than assigned empty YAML values. Projects do not have a draft field: every project entry is considered publishable, even if its status is `in-progress`. Keep unpublished project material outside the collection until it is ready to show.
 
@@ -69,7 +69,7 @@ For example, `relatedProjects: [useful-tool]` refers to `src/content/projects/us
 
 Start note body headings at `##`; the article template owns the `h1`. Published notes appear newest first with their title, summary, date, and nonempty tags. Article pages show publication and optional update dates in UTC, optional topics and cover, the full Markdown/MDX body, and links to existing referenced projects. Missing referenced projects do not produce broken links, but should be corrected before publication. Duplicate references render once. There is no search, filtering, or browser runtime.
 
-To publish a note, replace the template with accurate writing, then explicitly set `draft: false` (or omit `draft`, which defaults to false). Confirm it appears at `/lab-notes` and its stable detail URL. Drafts remain absent from both the index and generated article routes, including in development. With no published notes, the index shows “No notes published yet.” and a link to Projects. The homepage composition is unchanged; publishing a note does not currently add a homepage preview.
+To publish a note, replace the template with accurate writing, then explicitly set `draft: false` (or omit `draft`, which defaults to false). Confirm it appears at `/lab-notes` and its stable detail URL. Home shows the three latest published notes; the index shows all published notes. Both use `NotePreview` rows with dates, topic chips, and estimated reading time at 200 words per minute, omitted when the body is absent. Home uses h3 row titles, while the index uses h2 titles. Drafts remain absent from both lists and generated article routes, including in development. With no published notes, Home and the index show their own empty states; the index includes a link to Projects.
 
 ## Images
 
@@ -80,7 +80,7 @@ coverImage: ../../assets/useful-tool.webp
 coverImageAlt: "Describe the visible interface and the information it conveys."
 ```
 
-The collection's `image()` schema resolves the local file into image metadata. The project and note detail templates pass it to Astro's responsive `<Image>` component along with `coverImageAlt`. Covers are shown above the project body without cropping. No cover or placeholder is rendered when the field is omitted. Missing images or missing cover alternatives fail content validation. Informative images inside the Markdown body also need meaningful alternative text.
+The collection's `image()` schema resolves the local file into image metadata. Project cards and both detail templates pass covers to Astro's responsive `<Image>` component with `coverImageAlt`. Detail pages display covers without cropping and omit them when absent. Cards omit the cover when absent, except the VomerLabs website card, which uses its build-process diagram. Missing images or missing cover alternatives fail content validation. Informative images inside the Markdown body also need meaningful alternative text.
 
 Wrap rendered Markdown/MDX in `Prose` to contain typography:
 
@@ -95,7 +95,7 @@ const { Content } = await render(entry);
 <Prose><Content /></Prose>
 ```
 
-The import path depends on the consuming file. The wrapper's styles cover headings, paragraphs, lists, links, images, quotes, tables, and code. Keep embedded interactive components' appearance inside their own scoped styles.
+The import path depends on the consuming file. The wrapper's styles cover headings, paragraphs, lists, links, images, quotes, tables, and code. Project details use the default variant; Lab Notes articles use `<Prose variant="article">` for their narrower reading measure and article typography. Keep embedded interactive components' appearance inside their own scoped styles.
 
 ## Queries and validation
 

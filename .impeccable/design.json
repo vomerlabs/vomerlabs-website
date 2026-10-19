@@ -1,12 +1,13 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T05:18:32.133Z",
+  "generatedAt": "2026-10-19T12:41:44.828Z",
   "title": "Design System: VomerLabs",
   "extensions": {
     "colorMeta": {
       "background": {
         "role": "neutral",
-        "displayName": "Warm Paper",
+        "displayName": "Background",
+        "canonical": "#f5f3ee",
         "tonalRamp": [
           "oklch(15% 0.00698 88.64)",
           "oklch(26% 0.00698 88.64)",
@@ -20,7 +21,8 @@
       },
       "text": {
         "role": "neutral",
-        "displayName": "Near-black Ink",
+        "displayName": "Text",
+        "canonical": "#171815",
         "tonalRamp": [
           "oklch(15% 0.00601 121.96)",
           "oklch(26% 0.00601 121.96)",
@@ -34,7 +36,8 @@
       },
       "text-muted": {
         "role": "neutral",
-        "displayName": "Gray-green Text",
+        "displayName": "Text Muted",
+        "canonical": "#62675c",
         "tonalRamp": [
           "oklch(15% 0.01810 127.07)",
           "oklch(26% 0.01810 127.07)",
@@ -46,9 +49,55 @@
           "oklch(95% 0.01810 127.07)"
         ]
       },
+      "text-prose": {
+        "role": "neutral",
+        "displayName": "Text Prose",
+        "canonical": "#4f5548",
+        "tonalRamp": [
+          "oklch(15% 0.02214 127.54)",
+          "oklch(26% 0.02214 127.54)",
+          "oklch(38% 0.02214 127.54)",
+          "oklch(49% 0.02214 127.54)",
+          "oklch(61% 0.02214 127.54)",
+          "oklch(72% 0.02214 127.54)",
+          "oklch(84% 0.02214 127.54)",
+          "oklch(95% 0.02214 127.54)"
+        ]
+      },
+      "text-tinted": {
+        "role": "secondary",
+        "displayName": "Text Tinted",
+        "canonical": "#5b694e",
+        "tonalRamp": [
+          "oklch(15% 0.04481 130.19)",
+          "oklch(26% 0.04481 130.19)",
+          "oklch(38% 0.04481 130.19)",
+          "oklch(49% 0.04481 130.19)",
+          "oklch(61% 0.04481 130.19)",
+          "oklch(72% 0.04481 130.19)",
+          "oklch(84% 0.04481 130.19)",
+          "oklch(95% 0.04481 130.19)"
+        ]
+      },
+      "text-tinted-muted": {
+        "role": "secondary",
+        "displayName": "Text Tinted Muted",
+        "canonical": "#5b6750",
+        "tonalRamp": [
+          "oklch(15% 0.03843 130.17)",
+          "oklch(26% 0.03843 130.17)",
+          "oklch(38% 0.03843 130.17)",
+          "oklch(49% 0.03843 130.17)",
+          "oklch(61% 0.03843 130.17)",
+          "oklch(72% 0.03843 130.17)",
+          "oklch(84% 0.03843 130.17)",
+          "oklch(95% 0.03843 130.17)"
+        ]
+      },
       "muted": {
         "role": "neutral",
-        "displayName": "Quiet Gray-green",
+        "displayName": "Muted",
+        "canonical": "#8c9185",
         "tonalRamp": [
           "oklch(15% 0.01840 125.44)",
           "oklch(26% 0.01840 125.44)",
@@ -62,7 +111,8 @@
       },
       "accent": {
         "role": "primary",
-        "displayName": "Working Lime",
+        "displayName": "Accent",
+        "canonical": "#c6f277",
         "tonalRamp": [
           "oklch(15% 0.15845 125.70)",
           "oklch(26% 0.15845 125.70)",
@@ -76,7 +126,8 @@
       },
       "accent-hover": {
         "role": "primary",
-        "displayName": "Working Lime Hover",
+        "displayName": "Accent Hover",
+        "canonical": "#b4e45f",
         "tonalRamp": [
           "oklch(15% 0.16918 126.41)",
           "oklch(26% 0.16918 126.41)",
@@ -89,8 +140,9 @@
         ]
       },
       "status-background": {
-        "role": "primary",
-        "displayName": "Pale Status Lime",
+        "role": "secondary",
+        "displayName": "Status Background",
+        "canonical": "#e9f3d6",
         "tonalRamp": [
           "oklch(15% 0.03966 122.66)",
           "oklch(26% 0.03966 122.66)",
@@ -103,8 +155,9 @@
         ]
       },
       "status-dot": {
-        "role": "primary",
-        "displayName": "Status Green",
+        "role": "secondary",
+        "displayName": "Status Dot",
+        "canonical": "#90b947",
         "tonalRamp": [
           "oklch(15% 0.14929 126.56)",
           "oklch(26% 0.14929 126.56)",
@@ -118,7 +171,8 @@
       },
       "border": {
         "role": "neutral",
-        "displayName": "Paper Rule",
+        "displayName": "Border",
+        "canonical": "#d5d6cd",
         "tonalRamp": [
           "oklch(15% 0.01223 111.79)",
           "oklch(26% 0.01223 111.79)",
@@ -130,9 +184,40 @@
           "oklch(95% 0.01223 111.79)"
         ]
       },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Border Subtle",
+        "canonical": "#d7d8cf",
+        "tonalRamp": [
+          "oklch(15% 0.01221 111.78)",
+          "oklch(26% 0.01221 111.78)",
+          "oklch(38% 0.01221 111.78)",
+          "oklch(49% 0.01221 111.78)",
+          "oklch(61% 0.01221 111.78)",
+          "oklch(72% 0.01221 111.78)",
+          "oklch(84% 0.01221 111.78)",
+          "oklch(95% 0.01221 111.78)"
+        ]
+      },
+      "border-tinted": {
+        "role": "secondary",
+        "displayName": "Border Tinted",
+        "canonical": "#bbc8ac",
+        "tonalRamp": [
+          "oklch(15% 0.04090 127.65)",
+          "oklch(26% 0.04090 127.65)",
+          "oklch(38% 0.04090 127.65)",
+          "oklch(49% 0.04090 127.65)",
+          "oklch(61% 0.04090 127.65)",
+          "oklch(72% 0.04090 127.65)",
+          "oklch(84% 0.04090 127.65)",
+          "oklch(95% 0.04090 127.65)"
+        ]
+      },
       "surface": {
         "role": "neutral",
-        "displayName": "Inset Paper",
+        "displayName": "Surface",
+        "canonical": "#eeece5",
         "tonalRamp": [
           "oklch(15% 0.00958 93.57)",
           "oklch(26% 0.00958 93.57)",
@@ -144,9 +229,55 @@
           "oklch(95% 0.00958 93.57)"
         ]
       },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Surface Raised",
+        "canonical": "#faf9f6",
+        "tonalRamp": [
+          "oklch(15% 0.00411 91.45)",
+          "oklch(26% 0.00411 91.45)",
+          "oklch(38% 0.00411 91.45)",
+          "oklch(49% 0.00411 91.45)",
+          "oklch(61% 0.00411 91.45)",
+          "oklch(72% 0.00411 91.45)",
+          "oklch(84% 0.00411 91.45)",
+          "oklch(95% 0.00411 91.45)"
+        ]
+      },
+      "surface-tinted": {
+        "role": "secondary",
+        "displayName": "Surface Tinted",
+        "canonical": "#e0e7d5",
+        "tonalRamp": [
+          "oklch(15% 0.02514 124.28)",
+          "oklch(26% 0.02514 124.28)",
+          "oklch(38% 0.02514 124.28)",
+          "oklch(49% 0.02514 124.28)",
+          "oklch(61% 0.02514 124.28)",
+          "oklch(72% 0.02514 124.28)",
+          "oklch(84% 0.02514 124.28)",
+          "oklch(95% 0.02514 124.28)"
+        ]
+      },
+      "link": {
+        "role": "primary",
+        "displayName": "Link",
+        "canonical": "#466123",
+        "tonalRamp": [
+          "oklch(15% 0.09435 129.35)",
+          "oklch(26% 0.09435 129.35)",
+          "oklch(38% 0.09435 129.35)",
+          "oklch(49% 0.09435 129.35)",
+          "oklch(61% 0.09435 129.35)",
+          "oklch(72% 0.09435 129.35)",
+          "oklch(84% 0.09435 129.35)",
+          "oklch(95% 0.09435 129.35)"
+        ]
+      },
       "focus": {
         "role": "primary",
-        "displayName": "Focus Green",
+        "displayName": "Focus",
+        "canonical": "#42651b",
         "tonalRamp": [
           "oklch(15% 0.10935 131.44)",
           "oklch(26% 0.10935 131.44)",
@@ -157,40 +288,83 @@
           "oklch(84% 0.10935 131.44)",
           "oklch(95% 0.10935 131.44)"
         ]
+      },
+      "secondary-hover": {
+        "role": "secondary",
+        "displayName": "Secondary Hover",
+        "canonical": "#3f4e31",
+        "tonalRamp": [
+          "oklch(15% 0.05015 130.60)",
+          "oklch(26% 0.05015 130.60)",
+          "oklch(38% 0.05015 130.60)",
+          "oklch(49% 0.05015 130.60)",
+          "oklch(61% 0.05015 130.60)",
+          "oklch(72% 0.05015 130.60)",
+          "oklch(84% 0.05015 130.60)",
+          "oklch(95% 0.05015 130.60)"
+        ]
       }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Studio statement",
-        "purpose": "Approved oversized homepage h1; mobile override at 60rem."
+      "hero-display": {
+        "displayName": "Hero Display",
+        "purpose": "Compact two-line homepage statement."
       },
-      "headline": {
-        "displayName": "Studio headline",
-        "purpose": "Bold studio section h2."
+      "hero-intro": {
+        "displayName": "Hero Intro",
+        "purpose": "Homepage studio introduction."
       },
-      "project-title": {
-        "displayName": "Project title",
-        "purpose": "Open record h2 with mobile override at 45rem."
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Featured projects section heading."
       },
-      "intro": {
-        "displayName": "Introductory text",
-        "purpose": "Studio introduction; project descriptions reuse size with line-height 1.4."
+      "page-title": {
+        "displayName": "Page Title",
+        "purpose": "Shared informational and index hero titles."
+      },
+      "detail-title": {
+        "displayName": "Detail Title",
+        "purpose": "Project details and missing-page titles."
+      },
+      "card-title": {
+        "displayName": "Card Title",
+        "purpose": "Project-card headings at h2 or h3."
+      },
+      "note-title": {
+        "displayName": "Note Title",
+        "purpose": "Note-row headings at h2 or h3."
       },
       "body": {
-        "displayName": "Document body",
-        "purpose": "Document default; homepage build prose increases size to 1.125rem."
+        "displayName": "Body",
+        "purpose": "Document defaults."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Article, About, and Contact reading text."
+      },
+      "subheading": {
+        "displayName": "Subheading",
+        "purpose": "Reading-section h2 headings."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Primary and secondary rectangular navigation buttons."
       },
       "action": {
-        "displayName": "Action link",
-        "purpose": "Shared primary and underlined link typography."
+        "displayName": "Action",
+        "purpose": "Pill and text action links."
       },
       "label": {
-        "displayName": "Technical metadata",
-        "purpose": "Project technology metadata in system monospace."
+        "displayName": "Label",
+        "purpose": "Existing uppercase page and article labels."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Monospace topic chips."
       },
       "small": {
-        "displayName": "Small supporting text",
-        "purpose": "Colophon and prose captions."
+        "displayName": "Small",
+        "purpose": "Footer supporting copy."
       }
     },
     "shadows": [],
@@ -198,124 +372,175 @@
       {
         "name": "motion-duration",
         "value": "200ms",
-        "purpose": "Action background and arrow transitions; src/styles/tokens.css."
+        "purpose": "Shared action and note-row transitions."
       },
       {
         "name": "motion-ease",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Shared action easing; src/styles/tokens.css."
+        "purpose": "Shared action and note-arrow easing."
       },
       {
-        "name": "reduced-motion-duration",
-        "value": "0.01ms",
-        "purpose": "Reduced-motion override for transitions and animations; src/styles/global.css."
+        "name": "button-duration",
+        "value": "180ms",
+        "purpose": "Local Button background transition; disabled for reduced motion."
       }
     ],
     "breakpoints": [
+      {
+        "name": "contact-small",
+        "value": "380px"
+      },
       {
         "name": "header-stack",
         "value": "30rem"
       },
       {
-        "name": "record-and-contact-stack",
+        "name": "shared-mobile",
+        "value": "650px"
+      },
+      {
+        "name": "build-preview-stack",
+        "value": "40rem"
+      },
+      {
+        "name": "home-stack",
+        "value": "700px"
+      },
+      {
+        "name": "card-padding",
         "value": "45rem"
       },
       {
-        "name": "intro-and-studio-stack",
+        "name": "notes-footer-stack",
+        "value": "48rem"
+      },
+      {
+        "name": "shared-medium",
+        "value": "900px"
+      },
+      {
+        "name": "project-stack",
         "value": "60rem"
       }
     ]
   },
   "components": [
     {
-      "name": "Primary email action",
+      "name": "Primary navigation button",
       "kind": "button",
-      "refersTo": "action-primary",
-      "description": "Pill-shaped email link. Source: src/components/ui/ActionLink.astro; arrow: src/components/ui/ArrowIcon.astro; focus: src/styles/global.css.",
-      "html": "<a class=\"ds-action ds-primary\" href=\"mailto:hi@vomerlabs.com\"><span>Get in touch</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a>",
-      "css": ".ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+      "refersTo": "button-primary",
+      "description": "Lime primary link used by the homepage hero. Source: src/components/ui/Button.astro.",
+      "html": "<div class=\"ds-preview-button-primary\"><a class=\"ds-button ds-button--primary\" href=\"/projects/\"><span>Explore projects</span><svg\n    viewBox=\"0 0 24 24\"\n    width=\"1em\"\n    height=\"1em\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    aria-hidden=\"true\"\n    focusable=\"false\"\n  >\n    <path d=\"M5 19 19 5M5 5h14v14\"></path>\n  </svg></a></div>",
+      "css": ".ds-preview-button-primary{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-button-primary :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-button-primary .ds-button{display: inline-flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: var(--space-6);\n    min-height: 44px;\n    max-width: 100%;\n    width: fit-content;\n    padding: 14px 20px;\n    border-radius: 0;\n    font-family: var(--font-sans);\n    font-size: var(--font-size-small);\n    line-height: var(--line-height-body);\n    text-decoration: none;\n    transition: background-color 180ms;\n    border-radius: var(--space-1);}\n.ds-preview-button-primary .ds-button--primary{background: var(--color-accent);\n    color: var(--color-text);}\n.ds-preview-button-primary .ds-button--primary:hover{background: var(--color-accent-hover);}\n.ds-preview-button-primary .ds-button--secondary{background: var(--color-text);\n    color: var(--color-background);}\n.ds-preview-button-primary .ds-button--secondary:hover{background: #3f4e31;}\n.ds-preview-button-primary .ds-button:focus-visible{outline: 3px solid var(--color-focus);\n    outline-offset: 6px;}\n.ds-preview-button-primary svg{flex-shrink: 0;}\n@media (max-width: 650px){.ds-preview-button-primary .ds-button{padding: 13px 19px;}\n}\n@media (prefers-reduced-motion: reduce){.ds-preview-button-primary .ds-button{transition: none;}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-button-primary *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     },
     {
-      "name": "Underlined record action",
+      "name": "Secondary navigation button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ink link used for project-card Learn more actions. Source: src/components/ui/Button.astro.",
+      "html": "<div class=\"ds-preview-button-secondary\"><a class=\"ds-button ds-button--secondary\" href=\"/projects/vomerlabs-website\"><span>Learn more</span><svg\n    viewBox=\"0 0 24 24\"\n    width=\"1em\"\n    height=\"1em\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    aria-hidden=\"true\"\n    focusable=\"false\"\n  >\n    <path d=\"M5 19 19 5M5 5h14v14\"></path>\n  </svg></a></div>",
+      "css": ".ds-preview-button-secondary{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-button-secondary :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-button-secondary .ds-button{display: inline-flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: var(--space-6);\n    min-height: 44px;\n    max-width: 100%;\n    width: fit-content;\n    padding: 14px 20px;\n    border-radius: 0;\n    font-family: var(--font-sans);\n    font-size: var(--font-size-small);\n    line-height: var(--line-height-body);\n    text-decoration: none;\n    transition: background-color 180ms;\n    border-radius: var(--space-1);}\n.ds-preview-button-secondary .ds-button--primary{background: var(--color-accent);\n    color: var(--color-text);}\n.ds-preview-button-secondary .ds-button--primary:hover{background: var(--color-accent-hover);}\n.ds-preview-button-secondary .ds-button--secondary{background: var(--color-text);\n    color: var(--color-background);}\n.ds-preview-button-secondary .ds-button--secondary:hover{background: #3f4e31;}\n.ds-preview-button-secondary .ds-button:focus-visible{outline: 3px solid var(--color-focus);\n    outline-offset: 6px;}\n.ds-preview-button-secondary svg{flex-shrink: 0;}\n@media (max-width: 650px){.ds-preview-button-secondary .ds-button{padding: 13px 19px;}\n}\n@media (prefers-reduced-motion: reduce){.ds-preview-button-secondary .ds-button{transition: none;}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-button-secondary *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Primary action link",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "Pill recovery action used on the missing-page view. Source: src/components/ui/ActionLink.astro.",
+      "html": "<div class=\"ds-preview-action-primary\"><a class=\"ds-action ds-primary\" href=\"/\"><span>Go home</span><span class=\"ds-arrow\"><svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></span></a></div>",
+      "css": ".ds-preview-action-primary{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-action-primary :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-action-primary .ds-action{display: inline-flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 0.75em;\n    min-height: clamp(2.5rem, 2.78vw, 2.75rem);\n    color: var(--color-text);\n    font-size: var(--font-size-action);\n    line-height: var(--line-height-snug);\n    text-decoration: none;}\n.ds-preview-action-primary .ds-primary{gap: 0.58em;\n    padding: 0.75em 1em;\n    border-radius: 100vw;\n    background: var(--color-accent);\n    transition: background-color var(--motion-duration) var(--motion-ease);}\n.ds-preview-action-primary .ds-primary:hover{background: var(--color-accent-hover);}\n.ds-preview-action-primary .ds-text{padding-block: 0.2em;\n    background: linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 100% 1px no-repeat;}\n.ds-preview-action-primary .ds-arrow{display: flex;\n    transition: transform var(--motion-duration) var(--motion-ease);}\n.ds-preview-action-primary .ds-action:is(:hover, :focus-visible) .ds-arrow{transform: translateX(0.15em);}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-action-primary *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Underlined action link",
       "kind": "button",
       "refersTo": "action-text",
-      "description": "Flat lime underline and a shifting SVG arrow. Source: src/components/ui/ActionLink.astro; arrow: src/components/ui/ArrowIcon.astro.",
-      "html": "<a class=\"ds-action ds-text\" href=\"#build-notes\"><span>About this build</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a>",
-      "css": ".ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+      "description": "Text action used in detail and empty-state navigation. Source: src/components/ui/ActionLink.astro.",
+      "html": "<div class=\"ds-preview-action-text\"><a class=\"ds-action ds-text\" href=\"/projects\"><span>Back to Projects</span><span class=\"ds-arrow\"><svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></span></a></div>",
+      "css": ".ds-preview-action-text{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-action-text :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-action-text .ds-action{display: inline-flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 0.75em;\n    min-height: clamp(2.5rem, 2.78vw, 2.75rem);\n    color: var(--color-text);\n    font-size: var(--font-size-action);\n    line-height: var(--line-height-snug);\n    text-decoration: none;}\n.ds-preview-action-text .ds-primary{gap: 0.58em;\n    padding: 0.75em 1em;\n    border-radius: 100vw;\n    background: var(--color-accent);\n    transition: background-color var(--motion-duration) var(--motion-ease);}\n.ds-preview-action-text .ds-primary:hover{background: var(--color-accent-hover);}\n.ds-preview-action-text .ds-text{padding-block: 0.2em;\n    background: linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 100% 1px no-repeat;}\n.ds-preview-action-text .ds-arrow{display: flex;\n    transition: transform var(--motion-duration) var(--motion-ease);}\n.ds-preview-action-text .ds-action:is(:hover, :focus-visible) .ds-arrow{transform: translateX(0.15em);}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-action-text *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     },
     {
       "name": "Project status",
       "kind": "chip",
       "refersTo": "status",
-      "description": "Noninteractive written status with a decorative dot. Source: src/components/ui/ProjectStatus.astro. No hover or active state is defined.",
-      "html": "<span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span>",
-      "css": ".ds-status{display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-width:clamp(8rem,10.35vw,10.25rem);padding:.35em .85em;border-radius:100vw;background:var(--color-status-background,#e9f3d6);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:clamp(.875rem,1.26vw,1.25rem);font-weight:400;line-height:1.25;white-space:nowrap}.ds-dot{flex:0 0 auto;width:.6em;height:.6em;border-radius:50%;background:var(--color-status-dot,#90b947)}"
+      "description": "Written status with a decorative dot. Source: src/components/ui/ProjectStatus.astro.",
+      "html": "<div class=\"ds-preview-status\"><span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span></div>",
+      "css": ".ds-preview-status{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-status :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-status .ds-status{display: inline-flex;\n    align-items: center;\n    gap: 0.65em;\n    justify-content: center;\n    min-width: 8rem;\n    padding: 0.35em 0.85em;\n    border-radius: 100vw;\n    background: var(--color-status-background);\n    color: var(--color-text);\n    font-size: var(--font-size-small);\n    line-height: 1.25;\n    white-space: nowrap;}\n.ds-preview-status .ds-dot{flex: 0 0 auto;\n    width: 0.6em;\n    height: 0.6em;\n    border-radius: 50%;\n    background: var(--color-status-dot);}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-status *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     },
     {
       "name": "Header navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "Owner-supplied SVG logo retains its proportions and olive period; visible text links stack below it on narrow screens. Source: src/components/site/SiteHeader.astro.",
-      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"/\" aria-label=\"VomerLabs home\"><img src=\"/vomerlabs-logo.svg\" alt=\"\" width=\"125\" height=\"22\" /></a><nav class=\"ds-navigation\" aria-label=\"Main navigation\"><a href=\"#work\">Work</a><a href=\"#studio\">Studio</a><a href=\"mailto:hi@vomerlabs.com\">Contact</a></nav></header>",
-      "css": ".ds-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-6,1.5rem);width:100%;max-width:calc(var(--width-content,100rem) + 2 * var(--page-gutter,clamp(1.25rem,3.75vw,5rem)));margin-inline:auto;padding:clamp(1rem,1.3vw,1.5rem) var(--page-gutter,clamp(1.25rem,3.75vw,5rem));color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif)}.ds-header a{color:inherit;text-decoration:none}.ds-wordmark{display:inline-flex;align-items:center;height:1.2em;font-size:clamp(1.625rem,2.27vw,2.25rem);line-height:1.2}.ds-wordmark img{display:block;width:5em;height:auto}.ds-navigation{display:flex;align-items:center;gap:clamp(1.25rem,2.8vw,2.75rem);color:var(--color-text-muted,#62675c);font-size:clamp(1rem,1.33vw,1.3125rem);line-height:1.3}.ds-navigation a{display:inline-flex;align-items:center;min-height:clamp(2.5rem,2.78vw,2.75rem);text-underline-offset:.3em}.ds-navigation a:is(:hover,:focus-visible){color:var(--color-text,#171815);text-decoration:underline;text-decoration-color:var(--color-focus,#42651b)}.ds-wordmark:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(max-width:30rem){.ds-header{align-items:flex-start;flex-direction:column;gap:var(--space-2,.5rem)}.ds-navigation{width:100%;justify-content:space-between}}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}"
+      "description": "Persistent native navigation with current-section indication. Source: src/components/site/SiteHeader.astro.",
+      "html": "<div class=\"ds-preview-navigation\"><header class=\"ds-site-header\"><nav aria-label=\"Main navigation\"><a href=\"/projects\" aria-current=\"page\">Projects</a><a href=\"/lab-notes\">Lab Notes</a><a href=\"/about\">About</a><a href=\"/contact\">Contact</a></nav></header></div>",
+      "css": ".ds-preview-navigation{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-navigation :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-navigation .ds-site-header{display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: var(--space-6);\n    width: 100%;\n    max-width: var(--width-content);\n    margin-inline: auto;\n    padding: clamp(1rem, 1.3vw, 1.5rem) var(--page-gutter);}\n.ds-preview-navigation a{color: inherit;\n    text-decoration: none;}\n.ds-preview-navigation .ds-wordmark{display: inline-flex;\n    align-items: center;\n    height: 1.2em;\n    font-size: clamp(1.5rem, 1.9vw, 1.875rem);\n    line-height: var(--line-height-snug);}\n.ds-preview-navigation .ds-wordmark img{display: block;\n    width: 5em;\n    height: auto;}\n.ds-preview-navigation nav{display: flex;\n    align-items: center;\n    gap: clamp(1.25rem, 2.8vw, 2.75rem);\n    color: var(--color-text-muted);\n    font-size: var(--font-size-body);\n    line-height: 1.3;}\n.ds-preview-navigation nav a{display: inline-flex;\n    align-items: center;\n    min-height: clamp(2.5rem, 2.78vw, 2.75rem);\n    text-underline-offset: 0.3em;}\n.ds-preview-navigation nav a:is(:hover, :focus-visible, [aria-current]){color: var(--color-text);\n    text-decoration: underline;\n    text-decoration-color: var(--color-focus);}\n@media (max-width: 30rem){.ds-preview-navigation .ds-site-header{align-items: flex-start;\n      flex-direction: column;\n      gap: var(--space-2);}\n.ds-preview-navigation nav{width: 100%;\n      justify-content: space-between;}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-navigation *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     },
     {
-      "name": "Open project record",
-      "kind": "custom",
-      "refersTo": "project-record",
-      "description": "Real project, semantic h2, quiet description, and responsive metadata. Source: src/components/home/FeaturedProject.astro; child patterns: src/components/ui/ProjectStatus.astro and ActionLink.astro.",
-      "html": "<section class=\"ds-record\" aria-labelledby=\"ds-project-title\"><article><h2 id=\"ds-project-title\">VomerLabs website</h2><p class=\"ds-description\">A home for the studio, its projects, and the process behind them.</p><div class=\"ds-record-footer\"><span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span><p class=\"ds-metadata\">Astro · Markdown · Plain CSS</p><div class=\"ds-project-action\"><a class=\"ds-action ds-text\" href=\"#build-notes\"><span>About this build</span><span class=\"ds-arrow\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></span></a></div></div></article></section>",
-      "css": ".ds-record{padding-block:clamp(2rem,2.55vw,2.5rem) clamp(2rem,2.33vw,2.3125rem);border-block:2px solid var(--color-border,#d5d6cd);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);color:var(--color-text,#171815)}.ds-record h2{margin-block:clamp(1.65rem,2.14vw,2.125rem) clamp(.75rem,1vw,1rem);font-size:clamp(2rem,4.92vw,4.875rem);font-weight:700;line-height:1.1;letter-spacing:-.04em;text-wrap:balance}.ds-description{margin:0;color:var(--color-text-muted,#62675c);font-size:var(--font-size-intro,clamp(1.125rem,1.89vw,1.875rem));line-height:1.4}.ds-record-footer{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2.5rem);margin-block-start:clamp(1.25rem,1.71vw,1.6875rem)}.ds-metadata{display:flex;align-items:center;min-height:clamp(2.25rem,2.52vw,2.5rem);margin:0;padding-inline-start:clamp(1rem,2.4vw,2.375rem);border-inline-start:1px solid var(--color-border,#d5d6cd);color:var(--color-text-muted,#62675c);font-family:var(--font-mono,ui-monospace,SFMono-Regular,Consolas,\"Liberation Mono\",monospace);font-size:clamp(.8125rem,1.2vw,1.1875rem);line-height:1.5}.ds-project-action{margin-inline-start:auto}@media(max-width:45rem){.ds-record h2{margin-block:1.9rem var(--space-4,1rem);font-size:clamp(2rem,7vw,3rem)}.ds-description{font-size:1.125rem}.ds-record-footer{flex-wrap:wrap;gap:var(--space-4,1rem)}.ds-metadata{flex-basis:100%;order:1;min-height:0;padding:0;border:0}}.ds-status{display:inline-flex;align-items:center;justify-content:center;gap:.65em;min-width:clamp(8rem,10.35vw,10.25rem);padding:.35em .85em;border-radius:100vw;background:var(--color-status-background,#e9f3d6);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:clamp(.875rem,1.26vw,1.25rem);font-weight:400;line-height:1.25;white-space:nowrap}.ds-dot{flex:0 0 auto;width:.6em;height:.6em;border-radius:50%;background:var(--color-status-dot,#90b947)}.ds-action{display:inline-flex;align-items:center;justify-content:space-between;gap:.75em;min-height:clamp(2.5rem,2.78vw,2.75rem);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:var(--font-size-action,clamp(1rem,1.52vw,1.5rem));font-weight:400;line-height:1.2;text-decoration:none}.ds-primary{gap:.58em;padding:.75em 1em;border-radius:100vw;background:var(--color-accent,#c6f277);transition:background-color var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-primary:hover{background:var(--color-accent-hover,#b4e45f)}.ds-text{padding-block:.2em;background:linear-gradient(var(--color-accent,#c6f277),var(--color-accent,#c6f277)) left bottom/100% 1px no-repeat}.ds-arrow{display:flex;transition:transform var(--motion-duration,200ms) var(--motion-ease,cubic-bezier(.16,1,.3,1))}.ds-action:is(:hover,:focus-visible) .ds-arrow{transform:translateX(.15em)}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-action,.ds-arrow{transition-duration:0.01ms!important}}"
+      "name": "Project topic chips",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Descriptive tags; these are not filters. Source: src/components/projects/ProjectCard.astro.",
+      "html": "<div class=\"ds-preview-tag\"><article class=\"ds-project-item\"><ul class=\"ds-project-tags\" role=\"list\" aria-label=\"Tools and topics\"><li>Astro</li><li>Markdown</li><li>Plain CSS</li></ul></article></div>",
+      "css": ".ds-preview-tag{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-tag :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-tag .ds-project-item{display: grid;\n    gap: var(--space-12);\n    padding: var(--space-8);\n    background: var(--color-surface-raised);\n    border-radius: var(--space-1);\n    color: var(--color-text);}\n.ds-preview-tag .ds-with-preview{grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);\n    align-items: center;}\n.ds-preview-tag .ds-project-copy{min-width: 0;}\n.ds-preview-tag .ds-project-meta{display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: var(--space-3);\n    margin-block-end: var(--space-6);}\n.ds-preview-tag .ds-category{color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-label);}\n.ds-preview-tag .ds-card-title{margin: 0;\n    font-size: clamp(1.5rem, 2.5vw, 2rem);\n    line-height: var(--line-height-snug);\n    letter-spacing: var(--letter-spacing-heading);\n    text-wrap: balance;}\n.ds-preview-tag .ds-description{max-width: 65ch;\n    margin: var(--space-3) 0 0;\n    color: var(--color-text-muted);}\n.ds-preview-tag .ds-project-title{display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    gap: var(--space-4);\n    color: inherit;\n    text-decoration: none;}\n.ds-preview-tag .ds-project-title svg{flex-shrink: 0;\n    font-size: var(--font-size-body);\n    color: var(--color-text-muted);\n    transform: rotate(-45deg);}\n.ds-preview-tag .ds-project-tags{display: flex;\n    flex-wrap: wrap;\n    gap: var(--space-2);\n    margin: var(--space-6) 0 0;\n    padding: 0;\n    list-style: none;}\n.ds-preview-tag .ds-project-tags li{padding: 0.125rem var(--space-2);\n    background: var(--color-surface);\n    border-radius: var(--space-1);\n    color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-caption);}\n.ds-preview-tag .ds-project-actions{display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: var(--space-4) var(--space-6);\n    margin-block-start: var(--space-8);}\n.ds-preview-tag .ds-extra-link{display: inline-flex;\n    align-items: center;\n    gap: var(--space-3);\n    min-height: 2.75rem;\n    color: var(--color-text);\n    text-underline-offset: 0.3em;}\n.ds-preview-tag .ds-project-title:is(:hover, :focus-visible){text-decoration: underline;\n    text-underline-offset: 0.2em;\n    text-decoration-thickness: 1px;}\n.ds-preview-tag .ds-project-cover{display: block;}\n.ds-preview-tag .ds-project-cover img{display: block;\n    width: 100%;\n    height: auto;\n    border-radius: var(--space-1);}\n@media (max-width: 60rem){.ds-preview-tag .ds-with-preview{grid-template-columns: minmax(0, 1fr);\n      gap: var(--space-8);}\n}\n@media (max-width: 45rem){.ds-preview-tag .ds-project-item{padding: var(--space-6) var(--space-4);}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-tag *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     },
     {
-      "name": "Build prose",
+      "name": "Shared project card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Current website project, reused on Home and Projects. Sources: ProjectCard, ProjectStatus, Button, and WebsiteBuildPreview.",
+      "html": "<div class=\"ds-preview-project-card\"><article class=\"ds-project-item ds-with-preview\" aria-labelledby=\"ds-project-title\"><div class=\"ds-project-copy\"><div class=\"ds-project-meta\"><span class=\"ds-status\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>In progress</span><span class=\"ds-category\">Website</span></div><h3 class=\"ds-card-title\" id=\"ds-project-title\"><a class=\"ds-project-title\" href=\"/projects/vomerlabs-website\">VomerLabs website<svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></a></h3><p class=\"ds-description\">A home for the studio, its projects, and the process behind them.</p><ul class=\"ds-project-tags\" role=\"list\" aria-label=\"Tools and topics\"><li>Astro</li><li>Markdown</li><li>Plain CSS</li></ul><div class=\"ds-project-actions\"><a class=\"ds-button ds-button--secondary\" href=\"/projects/vomerlabs-website\"><span>Learn more</span><svg\n    viewBox=\"0 0 24 24\"\n    width=\"1em\"\n    height=\"1em\"\n    fill=\"none\"\n    stroke=\"currentColor\"\n    stroke-width=\"1.5\"\n    aria-hidden=\"true\"\n    focusable=\"false\"\n  >\n    <path d=\"M5 19 19 5M5 5h14v14\"></path>\n  </svg></a></div></div><figure class=\"ds-build-preview\"><figcaption>From content to page</figcaption><ol class=\"ds-build-flow\" role=\"list\" aria-label=\"Website build process\"><li class=\"ds-flow-step\"><span class=\"ds-step-label\">Content</span><strong>Markdown</strong><span class=\"ds-step-detail\">.md / .mdx</span><span class=\"ds-flow-arrow\"><svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></span></li><li class=\"ds-flow-step ds-build-step\"><span class=\"ds-step-label\">Build</span><strong>Astro</strong><span class=\"ds-step-detail\">Static output</span><span class=\"ds-flow-arrow\"><svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></span></li><li class=\"ds-flow-step\"><span class=\"ds-step-label\">Pages</span><strong>HTML</strong><span class=\"ds-step-detail\">Ready to read</span></li></ol><p>Content lives in Markdown. Plain CSS shapes the pages.</p></figure></article></div>",
+      "css": ".ds-preview-project-card{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-project-card :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-project-card .ds-project-item{display: grid;\n    gap: var(--space-12);\n    padding: var(--space-8);\n    background: var(--color-surface-raised);\n    border-radius: var(--space-1);\n    color: var(--color-text);}\n.ds-preview-project-card .ds-with-preview{grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);\n    align-items: center;}\n.ds-preview-project-card .ds-project-copy{min-width: 0;}\n.ds-preview-project-card .ds-project-meta{display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: var(--space-3);\n    margin-block-end: var(--space-6);}\n.ds-preview-project-card .ds-category{color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-label);}\n.ds-preview-project-card .ds-card-title{margin: 0;\n    font-size: clamp(1.5rem, 2.5vw, 2rem);\n    line-height: var(--line-height-snug);\n    letter-spacing: var(--letter-spacing-heading);\n    text-wrap: balance;}\n.ds-preview-project-card .ds-description{max-width: 65ch;\n    margin: var(--space-3) 0 0;\n    color: var(--color-text-muted);}\n.ds-preview-project-card .ds-project-title{display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    gap: var(--space-4);\n    color: inherit;\n    text-decoration: none;}\n.ds-preview-project-card .ds-project-title svg{flex-shrink: 0;\n    font-size: var(--font-size-body);\n    color: var(--color-text-muted);\n    transform: rotate(-45deg);}\n.ds-preview-project-card .ds-project-tags{display: flex;\n    flex-wrap: wrap;\n    gap: var(--space-2);\n    margin: var(--space-6) 0 0;\n    padding: 0;\n    list-style: none;}\n.ds-preview-project-card .ds-project-tags li{padding: 0.125rem var(--space-2);\n    background: var(--color-surface);\n    border-radius: var(--space-1);\n    color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-caption);}\n.ds-preview-project-card .ds-project-actions{display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: var(--space-4) var(--space-6);\n    margin-block-start: var(--space-8);}\n.ds-preview-project-card .ds-extra-link{display: inline-flex;\n    align-items: center;\n    gap: var(--space-3);\n    min-height: 2.75rem;\n    color: var(--color-text);\n    text-underline-offset: 0.3em;}\n.ds-preview-project-card .ds-project-title:is(:hover, :focus-visible){text-decoration: underline;\n    text-underline-offset: 0.2em;\n    text-decoration-thickness: 1px;}\n.ds-preview-project-card .ds-project-cover{display: block;}\n.ds-preview-project-card .ds-project-cover img{display: block;\n    width: 100%;\n    height: auto;\n    border-radius: var(--space-1);}\n@media (max-width: 60rem){.ds-preview-project-card .ds-with-preview{grid-template-columns: minmax(0, 1fr);\n      gap: var(--space-8);}\n}\n@media (max-width: 45rem){.ds-preview-project-card .ds-project-item{padding: var(--space-6) var(--space-4);}\n}\n\n.ds-preview-project-card .ds-status{display: inline-flex;\n    align-items: center;\n    gap: 0.65em;\n    justify-content: center;\n    min-width: 8rem;\n    padding: 0.35em 0.85em;\n    border-radius: 100vw;\n    background: var(--color-status-background);\n    color: var(--color-text);\n    font-size: var(--font-size-small);\n    line-height: 1.25;\n    white-space: nowrap;}\n.ds-preview-project-card .ds-dot{flex: 0 0 auto;\n    width: 0.6em;\n    height: 0.6em;\n    border-radius: 50%;\n    background: var(--color-status-dot);}\n\n.ds-preview-project-card .ds-button{display: inline-flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: var(--space-6);\n    min-height: 44px;\n    max-width: 100%;\n    width: fit-content;\n    padding: 14px 20px;\n    border-radius: 0;\n    font-family: var(--font-sans);\n    font-size: var(--font-size-small);\n    line-height: var(--line-height-body);\n    text-decoration: none;\n    transition: background-color 180ms;\n    border-radius: var(--space-1);}\n.ds-preview-project-card .ds-button--primary{background: var(--color-accent);\n    color: var(--color-text);}\n.ds-preview-project-card .ds-button--primary:hover{background: var(--color-accent-hover);}\n.ds-preview-project-card .ds-button--secondary{background: var(--color-text);\n    color: var(--color-background);}\n.ds-preview-project-card .ds-button--secondary:hover{background: #3f4e31;}\n.ds-preview-project-card .ds-button:focus-visible{outline: 3px solid var(--color-focus);\n    outline-offset: 6px;}\n.ds-preview-project-card svg{flex-shrink: 0;}\n@media (max-width: 650px){.ds-preview-project-card .ds-button{padding: 13px 19px;}\n}\n@media (prefers-reduced-motion: reduce){.ds-preview-project-card .ds-button{transition: none;}\n}\n\n.ds-preview-project-card .ds-build-preview{display: flex;\n    flex-direction: column;\n    justify-content: center;\n    gap: var(--space-8);\n    margin: 0;\n    padding: var(--space-6);\n    background: var(--color-surface);\n    border-radius: var(--space-1);\n    color: var(--color-text);}\n.ds-preview-project-card .ds-build-preview figcaption{font-size: var(--font-size-body);\n    font-weight: 700;}\n.ds-preview-project-card .ds-build-preview .ds-build-flow{display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: var(--space-6);\n    margin: 0;\n    padding: 0;\n    list-style: none;}\n.ds-preview-project-card .ds-build-preview .ds-flow-step{position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    gap: var(--space-2);\n    padding: var(--space-4) var(--space-3);\n    border: 1px solid var(--color-border);\n    border-radius: var(--space-1);\n    background: var(--color-surface-raised);}\n.ds-preview-project-card .ds-build-preview .ds-build-step{border-color: var(--color-text);\n    background: var(--color-text);\n    color: var(--color-background);}\n.ds-preview-project-card .ds-build-preview strong{font-size: var(--font-size-body);\n    line-height: var(--line-height-snug);}\n.ds-preview-project-card .ds-build-preview .ds-step-label,.ds-preview-project-card .ds-build-preview .ds-step-detail{font-family: var(--font-mono);\n    font-size: var(--font-size-caption);\n    line-height: var(--line-height-normal);}\n.ds-preview-project-card .ds-build-preview .ds-step-label{color: var(--color-text-muted);}\n.ds-preview-project-card .ds-build-preview .ds-build-step .ds-step-label{color: var(--color-accent);}\n.ds-preview-project-card .ds-build-preview .ds-flow-arrow{position: absolute;\n    inset-inline-start: calc(100% + 0.25rem);\n    inset-block-start: 50%;\n    display: flex;\n    width: 1rem;\n    color: var(--color-text-muted);\n    transform: translateY(-50%);}\n.ds-preview-project-card .ds-build-preview p{margin: 0;\n    color: var(--color-text-muted);\n    font-size: var(--font-size-small);\n    line-height: 1.6;}\n@media (max-width: 40rem){.ds-preview-project-card .ds-build-preview{gap: var(--space-6);\n      padding: var(--space-4);}\n.ds-preview-project-card .ds-build-preview .ds-build-flow{grid-template-columns: minmax(0, 1fr);}\n.ds-preview-project-card .ds-build-preview .ds-flow-step{display: grid;\n      grid-template-columns: minmax(0, 1fr) auto;\n      align-items: baseline;\n      gap: var(--space-1) var(--space-2);}\n.ds-preview-project-card .ds-build-preview .ds-step-label{grid-column: 1 / -1;}\n.ds-preview-project-card .ds-build-preview .ds-flow-arrow{inset-inline-start: 50%;\n      inset-block-start: calc(100% + 0.25rem);\n      transform: translateX(-50%) rotate(90deg);}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-project-card *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Shared note row",
+      "kind": "card",
+      "refersTo": "note-row",
+      "description": "Published sample note, reused on Home and Lab Notes. Source: src/components/lab-notes/NotePreview.astro.",
+      "html": "<div class=\"ds-preview-note-row\"><a class=\"ds-note-link\" href=\"/lab-notes/sample-keeping-a-website-simple\" aria-labelledby=\"ds-note-title\"><div class=\"ds-note-meta\"><time datetime=\"2026-10-19T00:00:00.000Z\">Oct 19, 2026</time><span class=\"ds-reading-time\" aria-label=\"Estimated reading time: 3 minutes\">3 min read</span></div><div class=\"ds-note-copy\"><h3 class=\"ds-note-title\" id=\"ds-note-title\">Sample note: keeping a small website simple</h3><p class=\"ds-note-description\">A preview of Lab Notes, with a short reflection on shared styles, readable pages, and building only what is needed.</p><ul class=\"ds-note-topics\" role=\"list\" aria-label=\"Topics\"><li>Sample</li><li>Astro</li><li>Design</li></ul></div><span class=\"ds-note-arrow\"><svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 24 24\"\n  width=\"1em\"\n  height=\"1em\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"1.5\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n  aria-hidden=\"true\"\n  focusable=\"false\"\n>\n  <path d=\"M4 12h15m-6-6 6 6-6 6\" />\n</svg></span></a></div>",
+      "css": ".ds-preview-note-row{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-note-row :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-note-row .ds-note-link{display: grid;\n    grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr) 1rem;\n    align-items: baseline;\n    gap: var(--space-6);\n    padding: var(--space-6);\n    background: var(--color-surface-raised);\n    border-radius: var(--space-1);\n    color: inherit;\n    text-decoration: none;\n    transition: background-color var(--motion-duration) var(--motion-ease);}\n.ds-preview-note-row .ds-note-meta{display: flex;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: var(--space-2) var(--space-3);\n    color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-caption);\n    font-variant-numeric: tabular-nums;}\n.ds-preview-note-row .ds-note-meta time{color: var(--color-text);}\n.ds-preview-note-row .ds-reading-time{padding: var(--space-1) var(--space-2);\n    background: var(--color-surface);\n    border-radius: var(--space-1);\n    white-space: nowrap;}\n.ds-preview-note-row .ds-note-title{margin: 0;\n    font-size: clamp(1.125rem, 1.5vw, 1.375rem);\n    line-height: var(--line-height-compact);\n    letter-spacing: -0.015em;\n    text-wrap: pretty;}\n.ds-preview-note-row .ds-note-description{max-width: 70ch;\n    margin: var(--space-2) 0 0;\n    color: var(--color-text-muted);\n    font-size: var(--font-size-compact);\n    line-height: var(--line-height-body);}\n.ds-preview-note-row .ds-note-topics{display: flex;\n    flex-wrap: wrap;\n    gap: var(--space-2);\n    margin: var(--space-3) 0 0;\n    padding: 0;\n    list-style: none;}\n.ds-preview-note-row .ds-note-topics li{padding: 0.125rem var(--space-2);\n    background: var(--color-surface);\n    border-radius: var(--space-1);\n    color: var(--color-text-muted);\n    font-family: var(--font-mono);\n    font-size: var(--font-size-caption);}\n.ds-preview-note-row .ds-note-arrow{display: inline-flex;\n    color: var(--color-text-muted);\n    transition: transform var(--motion-duration) var(--motion-ease);}\n.ds-preview-note-row .ds-note-link:is(:hover, :focus-visible){background: var(--color-surface);}\n.ds-preview-note-row .ds-note-link:is(:hover, :focus-visible) .ds-note-title{text-decoration: underline;\n    text-decoration-thickness: 1px;\n    text-underline-offset: 0.2em;}\n.ds-preview-note-row .ds-note-link:is(:hover, :focus-visible) .ds-note-arrow{transform: translateX(0.15em);}\n@media (max-width: 48rem){.ds-preview-note-row .ds-note-link{grid-template-columns: minmax(0, 1fr) 1rem;\n      gap: var(--space-4) var(--space-3);\n      padding: var(--space-6) var(--space-4);}\n.ds-preview-note-row .ds-note-meta{grid-column: 1 / -1;}\n.ds-preview-note-row .ds-note-copy{grid-column: 1;}\n.ds-preview-note-row .ds-note-arrow{grid-column: 2;\n      grid-row: 2;}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-note-row *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Article prose",
       "kind": "custom",
       "refersTo": "prose",
-      "description": "Readable Markdown hierarchy and underlined links. Source: src/components/content/Prose.astro; homepage size and border: src/components/home/BuildNotes.astro. Sample text is from src/content/projects/vomerlabs-website.md.",
-      "html": "<section class=\"ds-build\" id=\"build-notes\" aria-label=\"About VomerLabs website\"><div class=\"ds-prose\"><h2>About this build</h2><p>This website is the first VomerLabs project: a place to show useful work, explain how it is made, and share what I learn. It is being built in the open, starting with the foundation and homepage.</p><h3>The approach</h3><p>Astro generates the pages as static HTML. Projects and lab notes live in Markdown or MDX files, with schemas checking their metadata. Plain CSS stays scoped to the component that owns it, with a small shared set of design tokens.</p></div></section>",
-      "css": ".ds-build{padding-block:var(--space-12,3rem) var(--space-16,4rem);border-block-start:1px solid var(--color-border,#d5d6cd);color:var(--color-text,#171815);font-family:var(--font-sans,Kedebideri,Arial,sans-serif);font-size:1.125rem;line-height:var(--line-height-body,1.65)}.ds-prose{max-width:var(--width-prose,70ch);min-width:0}.ds-prose>*{margin-block:0}.ds-prose>*+*{margin-block-start:var(--space-6,1.5rem)}.ds-prose :is(h2,h3,h4,h5,h6){margin-block:var(--space-12,3rem) var(--space-4,1rem);line-height:var(--line-height-heading,1.15);text-wrap:balance;scroll-margin-block-start:var(--space-8,2rem)}.ds-prose h2{font-size:clamp(1.5rem,1.25rem + 1vw,2rem)}.ds-prose h3{font-size:1.25rem}.ds-prose a{color:inherit;text-decoration-thickness:.08em;text-underline-offset:.2em}.ds-prose a:hover{text-decoration-thickness:.15em}.ds-prose>:first-child{margin-block-start:0}.ds-action:focus-visible,.ds-navigation a:focus-visible,.ds-record a:focus-visible,.ds-prose a:focus-visible{outline:2px solid var(--color-focus,#42651b);outline-offset:4px}"
+      "description": "Current Lab Notes reading styles. Source: src/components/content/Prose.astro; excerpt from the published sample note.",
+      "html": "<div class=\"ds-preview-prose\"><div class=\"ds-prose ds-article-prose\"><h2>Start with the useful part</h2><p>A studio website has a fairly simple job: explain what the studio does, show the projects, and make it easy to get in touch. Everything else should help one of those things happen.</p><blockquote>A useful constraint makes the next decision easier.</blockquote><p>You can inspect the <a href=\"/projects/vomerlabs-website\">VomerLabs website project</a> for the build description.</p></div></div>",
+      "css": ".ds-preview-prose{color:var(--color-text);font-family:var(--font-sans);font-size:var(--font-size-body);line-height:var(--line-height-body)}\n.ds-preview-prose :focus-visible{outline:2px solid var(--color-focus);outline-offset:4px}\n.ds-preview-prose .ds-prose{max-width: var(--width-prose);\n    min-width: 0;}\n.ds-preview-prose .ds-prose > *{margin-block: 0;}\n.ds-preview-prose .ds-prose > * + *{margin-block-start: var(--space-6);}\n.ds-preview-prose .ds-prose :is(h2, h3, h4, h5, h6){margin-block: var(--space-12) var(--space-4);\n    line-height: var(--line-height-heading);\n    text-wrap: balance;\n    scroll-margin-block-start: var(--space-8);}\n.ds-preview-prose .ds-prose h2{font-size: var(--font-size-section-title);}\n.ds-preview-prose .ds-prose h3{font-size: 1.25rem;}\n.ds-preview-prose .ds-prose a{color: inherit;\n    text-decoration-thickness: 0.08em;\n    text-underline-offset: 0.2em;}\n.ds-preview-prose .ds-prose a:hover{text-decoration-thickness: 0.15em;}\n.ds-preview-prose .ds-prose :is(ul, ol){padding-inline-start: var(--space-6);}\n.ds-preview-prose .ds-prose li + li{margin-block-start: var(--space-2);}\n.ds-preview-prose .ds-prose :is(img, video, svg){display: block;\n    max-width: 100%;\n    height: auto;}\n.ds-preview-prose .ds-prose figure{margin-inline: 0;}\n.ds-preview-prose .ds-prose figcaption{margin-block-start: var(--space-2);\n    color: var(--color-text-muted);\n    font-size: var(--font-size-small);}\n.ds-preview-prose .ds-prose blockquote{margin-inline: 0;\n    padding-inline-start: var(--space-6);\n    border-inline-start: 1px solid var(--color-muted);\n    color: var(--color-text-muted);}\n.ds-preview-prose .ds-prose :is(code, pre){font-family: var(--font-mono);\n    font-size: 0.9em;}\n.ds-preview-prose .ds-prose :not(pre) > code{padding: 0.15em 0.3em;\n    background: var(--color-surface);\n    overflow-wrap: anywhere;}\n.ds-preview-prose .ds-prose pre{padding: var(--space-6);\n    overflow-x: auto;}\n.ds-preview-prose .ds-prose table{display: block;\n    max-width: 100%;\n    overflow-x: auto;\n    border-collapse: collapse;\n    font-variant-numeric: tabular-nums;}\n.ds-preview-prose .ds-prose :is(th, td){padding: var(--space-3) var(--space-4);\n    border-block-end: 1px solid var(--color-border);\n    text-align: start;}\n.ds-preview-prose .ds-prose hr{border: 0;\n    border-block-start: 1px solid var(--color-border);}\n.ds-preview-prose .ds-prose > :first-child{margin-block-start: 0;}\n.ds-preview-prose .ds-article-prose{max-width: 700px;\n    color: var(--color-text-prose);\n    font-size: var(--font-size-body);\n    line-height: var(--line-height-prose);\n    overflow-wrap: anywhere;}\n.ds-preview-prose .ds-article-prose > *{margin-block: 0;}\n.ds-preview-prose .ds-article-prose h2{margin-block: 42px 18px;\n    color: var(--color-text);\n    font-size: var(--font-size-subheading);\n    line-height: var(--line-height-snug);\n    letter-spacing: var(--letter-spacing-tightest);}\n.ds-preview-prose .ds-article-prose h3{margin-block: 28px 13px;\n    color: var(--color-text);\n    font-size: 1.4375rem;\n    line-height: var(--line-height-tight);\n    letter-spacing: var(--letter-spacing-tightest);}\n.ds-preview-prose .ds-article-prose p{margin-block-end: var(--space-prose);}\n.ds-preview-prose .ds-article-prose a{color: var(--color-link);\n    text-underline-offset: 3px;}\n.ds-preview-prose .ds-article-prose :is(ul, ol){margin-block: var(--space-prose);\n    padding-inline-start: 22px;}\n.ds-preview-prose .ds-article-prose li{margin-block: 0 10px;\n    padding-inline-start: 5px;}\n.ds-preview-prose .ds-article-prose li + li{margin-block-start: 0;}\n.ds-preview-prose .ds-article-prose pre{margin-block: 1em;\n    padding: 20px;\n    border: 1px solid var(--color-border-subtle);\n    background: #e6e9df;\n    font-size: var(--font-size-caption);\n    line-height: var(--line-height-relaxed);}\n.ds-preview-prose .ds-article-prose pre code{font-size: inherit;}\n.ds-preview-prose .ds-article-prose :not(pre) > code{padding: 2px 5px;\n    background: #e8eae2;\n    font-size: 0.85em;}\n.ds-preview-prose .ds-article-prose blockquote{margin: 25px 0;\n    padding-inline-start: 22px;\n    border-inline-start: 3px solid #95ae70;\n    color: inherit;}\n.ds-preview-prose .ds-article-prose > :first-child{margin-block-start: 0;}\n@media (max-width: 650px){.ds-preview-prose .ds-article-prose{font-size: var(--font-size-compact);\n      line-height: var(--line-height-prose-small);}\n.ds-preview-prose .ds-article-prose h2{margin-block-start: 32px;\n      font-size: var(--font-size-subheading-small);}\n.ds-preview-prose .ds-article-prose > :first-child{margin-block-start: 0;}\n}\n\n@media(prefers-reduced-motion:reduce){.ds-preview-prose *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}"
     }
   ],
   "narrative": {
     "northStar": "The Working Index",
-    "overview": "A calm, minimal, editorial home for an independent software studio. Warm off-white ground, near-black humanist type, gray-green supporting text, and thin rules make the work readable. Lime marks contact and actionable records; a softer lime distinguishes project status.\n\nThe system feels practical, curious, clear, and thoughtful. Large typography and open horizontal records create hierarchy without boxed project tiles. Content and ordinary links remain usable without JavaScript. The oversized homepage statement is an approved, deliberate expression of this world.",
+    "overview": "A calm, practical studio index on warm paper. Near-black humanist type, gray-green supporting text, pale content surfaces, and thin rules make the work readable. Lime identifies primary actions and selection; softer green supports written project status and informational panels.\n\nThe studio feels curious, clear, independent, and thoughtful. A compact two-line homepage statement sits alongside a geometric Think / Build / Share diagram. Project cards and note rows present real content through ordinary links. Pages remain readable and navigable without client-side JavaScript.",
     "keyCharacteristics": [
-      "Flat warm paper and restrained lime accents.",
-      "Locally served humanist sans with mono metadata.",
-      "Oversized statements balanced by quiet supporting text.",
-      "Open records, thin dividers, and generous shared gutters.",
-      "Small, purposeful state changes and visible keyboard focus."
+      "Warm paper, ink, and restrained lime accents.",
+      "Local Kedebideri with monospace metadata and code.",
+      "Compact fluid headings and generous shared gutters.",
+      "Flat pale cards, quiet panels, and thin section rules.",
+      "Native links, visible keyboard focus, and reduced-motion support."
     ],
     "rules": [
       {
         "name": "The Useful Lime Rule",
-        "body": "Use lime for actions, selection, and written project status; keep the page ground warm and quiet.",
+        "body": "Use lime for primary actions, selection, and project status; keep the document ground warm and quiet.",
         "section": "colors"
       },
       {
-        "name": "The Statement and Record Rule",
-        "body": "Reserve the largest tight-tracked type for a clear statement or a real project title; let supporting explanations remain regular-weight and readable.",
-        "section": "typography"
-      },
-      {
-        "name": "The Open Record Rule",
-        "body": "Separate work with rules and spacing; preserve the unboxed record language established by the homepage.",
+        "name": "The Flat Surface Rule",
+        "body": "Use the established pale surfaces and rules to separate content; keep project cards and reading panels free of added shadows.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** preserve the warm paper ground, ink hierarchy, and useful lime accents.",
-      "**Do** reuse local Kedebideri regular and bold, reserving mono for metadata and code.",
-      "**Do** keep the approved oversized statement and let surrounding whitespace support it.",
-      "**Do** show real work as open records with written status and clear ordinary links.",
-      "**Do** preserve visible keyboard focus, reduced-motion behavior, and readable source order."
+      "**Do** preserve warm paper, ink hierarchy, gray-green supporting text, and useful lime accents.",
+      "**Do** use global tokens directly for shared values and keep one-off presentation scoped.",
+      "**Do** retain the compact two-line homepage statement, readable prose measures, and local Kedebideri fonts.",
+      "**Do** reuse the current pale project cards and note rows with correct heading levels.",
+      "**Do** preserve native links, keyboard focus, reduced motion, and readable mobile source order."
     ],
     "donts": [
-      "**Don't** turn open project records into raised, shadowed card grids.",
-      "**Don't** introduce eyebrow labels above the project record.",
-      "**Don't** use decorative glyph characters in place of the existing inline SVG arrow.",
-      "**Don't** invent projects, articles, results, or form interactions to fill space.",
-      "**Don't** shrink the approved display scale as a generic typography normalization."
+      "**Don't** add shadows or depth effects to the established flat cards and panels.",
+      "**Don't** introduce page or component aliases for values already represented by shared tokens.",
+      "**Don't** substitute decorative glyphs for the existing SVG arrows or alter the supplied logo.",
+      "**Don't** invent projects, articles, biography, results, or form behavior to fill space.",
+      "**Don't** treat historical layouts or sample content as the current production brief."
     ]
   }
 }
