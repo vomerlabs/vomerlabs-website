@@ -1,0 +1,96 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  /** Destination for this navigation button. */
+  href: string;
+  /** Primary uses accent green; secondary uses ink. */
+  variant?: "primary" | "secondary";
+}
+
+const {
+  href,
+  variant = "primary",
+  class: className,
+  ...attributes
+} = Astro.props;
+---
+
+<a
+  {...attributes}
+  href={href}
+  class:list={["button", `button--${variant}`, className]}
+>
+  <span><slot /></span>
+  <svg
+    viewBox="0 0 24 24"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M5 19 19 5M5 5h14v14"></path>
+  </svg>
+</a>
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    min-height: 44px;
+    max-width: 100%;
+    width: fit-content;
+    padding: 14px 20px;
+    border-radius: 0;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-body);
+    text-decoration: none;
+    transition: background-color 180ms;
+    border-radius: var(--space-1);
+  }
+
+  .button--primary {
+    background: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .button--primary:hover {
+    background: var(--color-accent-hover);
+  }
+
+  .button--secondary {
+    background: var(--color-text);
+    color: var(--color-background);
+  }
+
+  .button--secondary:hover {
+    background: #3f4e31;
+  }
+
+  .button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 6px;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 650px) {
+    .button {
+      padding: 13px 19px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button {
+      transition: none;
+    }
+  }
+</style>

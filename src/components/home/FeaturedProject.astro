@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ProjectRecord from '../projects/ProjectRecord.astro';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+---
+
+<section id="projects" aria-label="Featured project">
+  <ProjectRecord project={project} />
+</section>

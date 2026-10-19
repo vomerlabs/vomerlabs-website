@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/site/SiteHeader.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import StudioPageIntro from '../../components/site/StudioPageIntro.astro';
+import NotePreview from '../../components/lab-notes/NotePreview.astro';
+import ActionLink from '../../components/ui/ActionLink.astro';
+import { getPublishedLabNotes } from '../../lib/content';
+
+const notes = await getPublishedLabNotes();
+---
+
+<BaseLayout title="Lab Notes" description="Build notes, technical writing, and lessons from VomerLabs projects.">
+  <SiteHeader slot="header" />
+  <StudioPageIntro id="notes-title" label="AN OPEN NOTEBOOK" description="What I’m making, what I’m learning, and the decisions in between. A place to think out loud and leave something useful behind." showDivider={false}>
+    Notes along<br />the way.
+  </StudioPageIntro>
+  {notes.length > 0 ? (
+    <ul class="notes" role="list" aria-label="Published notes">
+      {notes.map((note) => <li><NotePreview note={note} /></li>)}
+    </ul>
+  ) : (
+    <section class="empty-notes" aria-labelledby="empty-title">
+      <div>
+        <h2 id="empty-title">No notes published yet.</h2>
+        <p>Build notes and technical writing will appear here when they are ready to share.</p>
+      </div>
+      <ActionLink href="/projects" variant="text">Explore projects</ActionLink>
+    </section>
+  )}
+  <SiteFooter slot="footer" topHref="#notes-title" />
+</BaseLayout>
+
+<style>
+  .notes {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-16);
+    padding: 0;
+    list-style: none;
+  }
+
+  .notes > li {
+    min-width: 0;
+  }
+
+  .empty-notes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-8);
+    margin-block-end: var(--space-16);
+    padding-block: var(--space-12);
+    border-block: 2px solid var(--color-border);
+  }
+
+  .empty-notes h2 {
+    margin: 0 0 var(--space-4);
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    line-height: var(--line-height-heading);
+  }
+
+  .empty-notes p {
+    max-width: 60ch;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 45rem) {
+    .empty-notes {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+  }
+</style>

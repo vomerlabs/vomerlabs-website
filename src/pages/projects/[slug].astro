@@ -1,0 +1,177 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/site/SiteHeader.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import ProjectStatus from '../../components/ui/ProjectStatus.astro';
+import ActionLink from '../../components/ui/ActionLink.astro';
+import Prose from '../../components/content/Prose.astro';
+import { getProjects } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const projects = await getProjects();
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { project } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZone: 'UTC' });
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <SiteHeader slot="header" />
+  <article aria-labelledby="project-title">
+    <header class="introduction">
+      <a class="back-link" href="/projects">All projects</a>
+      <h1 id="project-title">{data.title}</h1>
+      <p class="description">{data.description}</p>
+    </header>
+    {data.coverImage && (
+      <div class="cover">
+        <Image src={data.coverImage} alt={data.coverImageAlt!} layout="full-width" />
+      </div>
+    )}
+    <div class="project-body">
+      <aside aria-label="Project details">
+        <ProjectStatus status={data.status} />
+        <dl>
+          <div><dt>Category</dt><dd>{data.category}</dd></div>
+          <div>
+            <dt>Published</dt>
+            <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+          </div>
+          {data.updatedAt && (
+            <div>
+              <dt>Updated</dt>
+              <dd><time datetime={data.updatedAt.toISOString()}>{dateFormatter.format(data.updatedAt)}</time></dd>
+            </div>
+          )}
+          {data.tags.length > 0 && (
+            <div><dt>Tools &amp; topics</dt><dd>{data.tags.join(' · ')}</dd></div>
+          )}
+        </dl>
+        {(data.demoUrl || data.repositoryUrl) && (
+          <nav class="project-links" aria-label="Project links">
+            {data.demoUrl && <ActionLink href={data.demoUrl} variant="text">View demo</ActionLink>}
+            {data.repositoryUrl && <ActionLink href={data.repositoryUrl} variant="text">View source</ActionLink>}
+          </nav>
+        )}
+      </aside>
+      <div class="body-content">
+        <Prose><Content /></Prose>
+        <nav class="reading-footer" aria-label="After this project">
+          <ActionLink href="/projects" variant="text">Back to Projects</ActionLink>
+        </nav>
+      </div>
+    </div>
+  </article>
+  <SiteFooter slot="footer" topHref="#project-title" />
+</BaseLayout>
+
+<style>
+  .introduction {
+    padding-block: var(--space-12);
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--color-text-muted);
+    text-underline-offset: 0.3em;
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  h1 {
+    max-width: 20ch;
+    margin-block: var(--space-6) var(--space-4);
+    font-size: var(--font-size-page-title);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .description {
+    max-width: 52ch;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-intro);
+    line-height: 1.4;
+  }
+
+  .cover {
+    margin-block-end: var(--space-12);
+  }
+
+  .cover :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    padding-block: var(--space-12) var(--space-16);
+    border-block-start: 1px solid var(--color-border);
+  }
+
+  aside {
+    min-width: 0;
+  }
+
+  dl {
+    display: grid;
+    gap: var(--space-6);
+    margin-block: var(--space-8) 0;
+    font-size: var(--font-size-small);
+  }
+
+  dt {
+    color: var(--color-text-muted);
+  }
+
+  dd {
+    margin: var(--space-1) 0 0;
+    font-family: var(--font-mono);
+    overflow-wrap: anywhere;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    margin-block-start: var(--space-8);
+  }
+
+  .body-content {
+    min-width: 0;
+    font-size: 1.125rem;
+  }
+
+  .reading-footer {
+    margin-block-start: var(--space-12);
+  }
+
+  @media (max-width: 60rem) {
+    .project-body {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+
+    dl {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    }
+  }
+</style>

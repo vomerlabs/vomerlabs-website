@@ -1,16 +1,73 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/site/SiteHeader.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import HomepageNotes from '../components/home/HomepageNotes.astro';
+import FeaturedProjects from '../components/home/FeaturedProjects.astro';
+import ArrowIcon from '../components/ui/ArrowIcon.astro';
+import Button from '../components/ui/Button.astro';
+import { getFeaturedProjects, getPublishedLabNotes } from '../lib/content';
+import { site } from '../config/site';
+
+const featuredProjects = await getFeaturedProjects();
+const notes = (await getPublishedLabNotes()).slice(0, 3);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={site.name} description={site.description}>
+  <SiteHeader slot="header" />
+    <div class="homepage">
+
+    <section class="home-hero" aria-labelledby="intro-title">
+      <div class="hero-heading">
+        <h1 id="intro-title">Ideas into<br /><span>useful things.</span></h1>
+        <div class="process-graphic" role="img" aria-label="Think, build, and share: a connected process"><svg viewBox="0 0 320 180" fill="none" aria-hidden="true"><path d="M60 88H260M70 97C90 165 230 165 250 97" stroke="currentColor" stroke-width="1"/><circle cx="60" cy="88" r="25" fill="var(--color-background)" stroke="currentColor"/><circle cx="160" cy="88" r="25" fill="var(--color-accent)"/><circle cx="260" cy="88" r="25" fill="var(--color-background)" stroke="currentColor"/><path d="M51 88h18m-9-9v18M151 88l6 6 13-15M252 88h16m-6-6 6 6-6 6" stroke="var(--color-text)" stroke-width="2"/><path d="M151 88l6 6 13-15" stroke="var(--color-text)" stroke-width="2"/></svg><div><span>Think</span><span>Build</span><span>Share</span></div></div>
+      </div>
+      <div class="hero-summary">
+        <p class="home-lead">{site.description}</p>
+        <Button class="home-action" href="/projects/" variant="primary">Explore projects</Button>
+      </div>
+    </section>
+    <FeaturedProjects projects={featuredProjects} />
+    <section class="home-studio"><h2>Software, practical AI,<br />and a thoughtful process.</h2><div><p>I work at the intersection of software and practical AI, with a focus on real problems, clear thinking, and useful outcomes. This is a space to build, explore, and share what I learn along the way.</p><a class="home-link" href="/about">A little about the studio <ArrowIcon /></a></div></section><HomepageNotes notes={notes} id="home-notes" />
+    </div>
+  <SiteFooter slot="footer" />
+</BaseLayout>
+
+<style>
+  .homepage { --home-ink: #171815; --home-muted: #535d4d; --home-rule: #c9cec0; color: var(--home-ink); padding-bottom: 1.5rem; }
+  .homepage h2 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.65rem); line-height: 1.15; letter-spacing: -0.025em; text-wrap: balance; }
+  .homepage p { margin: 0; max-width: 65ch; }
+  .homepage svg { flex-shrink: 0; }
+  .homepage ::selection { color: #171815; background: #c6f277; }
+  .home-lead { font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); font-weight: 400; line-height: 1.65; letter-spacing: normal; color: var(--home-muted); text-wrap: pretty; }
+  .home-link { display: inline-flex; align-items: center; gap: 1rem; min-height: 44px; width: fit-content; color: inherit; font-size: 1rem; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.3em; }
+  .home-link:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+  .home-link:hover { text-decoration-thickness: 2px; }
+  .home-studio { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 3.5rem 0; }
+  .home-studio p { font-size: 1.0625rem; line-height: 1.8; color: var(--home-muted); }
+  .home-studio .home-link { margin-top: 1rem; }
+  .homepage :global(.home-notes) { --home-notes-ink: var(--home-ink); --home-notes-muted: var(--home-muted); --home-notes-rule: var(--home-rule); border-top: 1px solid var(--home-rule); }
+  .homepage { --home-ink: var(--color-text); --home-muted: var(--color-text-muted); --home-rule: var(--color-border); background: var(--color-background); padding-block-end: 1rem; }
+  .home-hero { padding-block: 4rem 3.5rem; }
+  .hero-heading { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.85fr); gap: 3rem; align-items: center; }
+  .home-hero h1 { margin: 0; font-size: clamp(2.25rem, 1.5rem + 3vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; }
+  .hero-summary { margin-top: 2rem; }
+  .hero-summary .home-lead { max-width: 55ch; }
+  .hero-summary .home-action { margin-top: 1.75rem; }
+  .process-graphic { max-width: 16.25rem; width: 100%; justify-self: end; color: var(--color-text-muted); }
+  .process-graphic > svg { display: block; width: 100%; }
+  .process-graphic > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-1); margin: -0.75rem 0 0; font-size: var(--font-size-body); line-height: 1.4; text-align: center; color: var(--color-text-muted); }
+  .homepage .home-studio h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+  .homepage .home-studio .home-link { color: var(--color-text); }
+  .homepage :global(.home-notes a) { color: var(--color-text); }
+  @media (max-width: 700px) {
+  .home-studio { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding-block: 2.5rem; }
+  .home-hero { padding-block: 2.5rem; }
+  .hero-heading { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .hero-summary { margin-top: 2rem; }
+  .process-graphic { justify-self: center; max-width: 13.75rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+  .homepage * { transition: none !important; animation: none !important; }
+  }
+</style>

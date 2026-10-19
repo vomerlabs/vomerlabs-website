@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  status: CollectionEntry<'projects'>['data']['status'];
+}
+
+const { status } = Astro.props;
+const labels = {
+  live: 'Live',
+  prototype: 'Prototype',
+  experiment: 'Experiment',
+  'in-progress': 'In progress',
+};
+---
+
+<span class="status"><span class="dot" aria-hidden="true"></span>{labels[status]}</span>
+
+<style>
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65em;
+    justify-content: center;
+    min-width: 8rem;
+    padding: 0.35em 0.85em;
+    border-radius: 100vw;
+    background: var(--color-status-background);
+    color: var(--color-text);
+    font-size: var(--font-size-small);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .dot {
+    flex: 0 0 auto;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    background: var(--color-status-dot);
+  }
+</style>

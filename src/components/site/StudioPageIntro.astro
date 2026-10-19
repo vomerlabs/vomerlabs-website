@@ -1,0 +1,71 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  description: string;
+  showDivider?: boolean;
+}
+
+const { id, label, description, showDivider = true } = Astro.props;
+---
+
+<header class:list={['page-hero', { 'without-divider': !showDivider }]}>
+  <span class="label">{label}</span>
+  <h1 id={id}><slot /></h1>
+  <p>{description}</p>
+</header>
+
+<style>
+  .page-hero {
+    padding-block: 64px 55px;
+    border-block-end: 1px solid #d7d8cf;
+  }
+
+  .without-divider {
+    border-block-end: 0;
+  }
+
+  .label {
+    display: block;
+    margin-block-end: 25px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.065em;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 0;
+    font-size: clamp(3.125rem, 6vw, 4.875rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  p {
+    max-width: 620px;
+    margin: 25px 0 0;
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 650px) {
+    .page-hero {
+      padding-block: 45px 36px;
+    }
+
+    h1 {
+      font-size: 3.25rem;
+    }
+
+    p {
+      margin-block-start: 22px;
+      font-size: 0.9375rem;
+    }
+  }
+</style>

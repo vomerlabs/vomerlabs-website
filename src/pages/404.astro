@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/site/SiteHeader.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import ActionLink from '../components/ui/ActionLink.astro';
+---
+
+<BaseLayout title="Page not found" description="This page could not be found. Return home or explore projects from VomerLabs.">
+  <meta slot="head" name="robots" content="noindex" />
+  <SiteHeader slot="header" />
+  <section class="recovery" aria-labelledby="missing-title">
+    <h1 id="missing-title">Page not found.</h1>
+    <p>That address doesn’t point to a page on VomerLabs. Head home or browse the projects to find your way.</p>
+    <div class="actions">
+      <ActionLink href="/">Go home</ActionLink>
+      <ActionLink href="/projects" variant="text">Explore projects</ActionLink>
+    </div>
+  </section>
+  <SiteFooter slot="footer" topHref="#missing-title" />
+</BaseLayout>
+
+<style>
+  .recovery {
+    padding-block: clamp(3rem, 6vw, 6rem) var(--space-16);
+  }
+
+  h1 {
+    max-width: 16ch;
+    margin: 0;
+    font-size: var(--font-size-page-title);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  p {
+    max-width: 52ch;
+    margin-block: var(--space-6) 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-intro);
+    line-height: 1.45;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-6) var(--space-8);
+    margin-block-start: var(--space-8);
+  }
+</style>

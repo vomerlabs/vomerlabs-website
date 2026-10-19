@@ -1,0 +1,117 @@
+---
+import ArrowIcon from '../ui/ArrowIcon.astro';
+---
+
+<section class="contact-band-wrap" aria-labelledby="contact-band-title">
+  <div class="contact-band">
+    <span class="contact-label">SOMETHING ON YOUR MIND?</span>
+    <div class="contact-heading">
+      <h2 id="contact-band-title">Good things start<br />with a conversation<span>.</span></h2>
+      <a class="round-link" href="/contact/" aria-label="Get in touch"><ArrowIcon /></a>
+    </div>
+    <p>A project, a question, or an idea worth exploring. Let’s talk.</p>
+  </div>
+</section>
+
+<style>
+  .contact-band-wrap {
+    width: 100%;
+    max-width: var(--width-content);
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+  }
+
+  .contact-band {
+    padding: 45px 40px 42px;
+    background: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .contact-label {
+    display: block;
+    margin-block-end: 22px;
+    color: #3d4f2d;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.065em;
+    line-height: 1.5;
+  }
+
+  .contact-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .contact-band h2 {
+    margin: 0;
+    font-size: clamp(2.125rem, 4.8vw, 3.5rem);
+    line-height: 1.09;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .contact-band h2 > span {
+    color: #647f37;
+  }
+
+  .contact-band > p {
+    margin: 20px 0 0;
+    color: #445431;
+    font-size: var(--font-size-body);
+  }
+
+  .round-link {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #819c53;
+    border-radius: 50%;
+    color: inherit;
+    font-size: 2.1875rem;
+    text-decoration: none;
+    transition: background-color var(--motion-duration) var(--motion-ease);
+  }
+
+  .round-link :global(svg) {
+    transform: rotate(-45deg);
+  }
+
+  .round-link:is(:hover, :focus-visible) {
+    background: #aedd5d;
+  }
+
+  @media (max-width: 650px) {
+    .contact-band {
+      padding: 30px 23px;
+    }
+
+    .contact-heading {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .contact-band h2 {
+      font-size: 2.0625rem;
+    }
+
+    .round-link {
+      width: 49px;
+      height: 49px;
+      font-size: 1.5625rem;
+    }
+
+    .contact-band > p {
+      max-width: 245px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .contact-band h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>

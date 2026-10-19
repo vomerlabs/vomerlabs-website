@@ -1,0 +1,49 @@
+<section id="studio" class="studio" aria-labelledby="studio-title">
+  <h2 id="studio-title">Software, practical AI,<br class="desktop-break" /> and a thoughtful process.</h2>
+  <p>I work at the intersection of software and practical AI, with a focus on real problems, clear thinking, and useful outcomes. This is a space to build, explore, and share what I learn along the way.</p>
+</section>
+
+<style>
+  .studio {
+    display: grid;
+    grid-template-columns: minmax(0, 51fr) minmax(0, 41fr);
+    gap: 8%;
+    padding-block: clamp(2rem, 2.65vw, 2.625rem) var(--space-16);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: var(--font-size-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+
+  p {
+    margin: 0;
+    padding-block-start: 0.2em;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-action);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 60rem) {
+    .studio {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      padding-block-end: var(--space-12);
+    }
+
+    h2 {
+      max-width: 25ch;
+    }
+
+    .desktop-break {
+      display: none;
+    }
+
+    p {
+      max-width: 60ch;
+    }
+  }
+</style>

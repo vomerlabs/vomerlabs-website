@@ -1,0 +1,93 @@
+---
+import ActionLink from '../ui/ActionLink.astro';
+import { site } from '../../config/site';
+---
+
+<section class="introduction" aria-labelledby="intro-title">
+  <h1 id="intro-title"><span>Ideas into</span>{' '}<span>useful things.</span></h1>
+  <div class="summary">
+    <p>{site.description}</p>
+    <div class="contact">
+      <ActionLink href={`mailto:${site.email}`}>Get in touch</ActionLink>
+      <a class="email" href={`mailto:${site.email}`}>{site.email}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .introduction {
+    display: grid;
+    grid-template-columns: minmax(0, 58fr) minmax(0, 36fr);
+    gap: 6%;
+    padding-block: clamp(2rem, 2.65vw, 2.625rem) clamp(3rem, 4.4vw, 4.375rem);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: var(--font-size-display);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+
+  h1 span {
+    display: block;
+    white-space: nowrap;
+    transform: scaleX(0.95);
+    transform-origin: left;
+  }
+
+  .summary {
+    align-self: end;
+    padding-block-end: 0.25rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: var(--font-size-intro);
+    line-height: 1.45;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4) clamp(1rem, 1.7vw, 1.6875rem);
+    margin-block-start: clamp(1.5rem, 2vw, 2rem);
+  }
+
+  .email {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-action);
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+  }
+
+  .email:is(:hover, :focus-visible) {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 60rem) {
+    .introduction {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      padding-block: var(--space-8) var(--space-12);
+    }
+
+    h1 {
+      font-size: clamp(2.75rem, 10.5vw, 5rem);
+    }
+
+    .summary {
+      max-width: 36rem;
+    }
+
+    p {
+      font-size: var(--font-size-intro);
+    }
+  }
+</style>

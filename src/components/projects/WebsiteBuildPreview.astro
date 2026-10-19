@@ -1,0 +1,133 @@
+---
+import ArrowIcon from '../ui/ArrowIcon.astro';
+const steps = [
+  { label: 'Content', name: 'Markdown', detail: '.md / .mdx' },
+  { label: 'Build', name: 'Astro', detail: 'Static output' },
+  { label: 'Pages', name: 'HTML', detail: 'Ready to read' },
+];
+---
+
+<figure class="build-preview">
+  <figcaption>From content to page</figcaption>
+  <ol class="build-flow" role="list" aria-label="Website build process">
+    {steps.map((step, index) => (
+      <li class:list={['flow-step', { 'build-step': index === 1 }]}>
+        <span class="step-label">{step.label}</span>
+        <strong>{step.name}</strong>
+        <span class="step-detail">{step.detail}</span>
+        {index < steps.length - 1 && <span class="flow-arrow"><ArrowIcon /></span>}
+      </li>
+    ))}
+  </ol>
+  <p>Content lives in Markdown. Plain CSS shapes the pages.</p>
+</figure>
+
+<style>
+  .build-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-8);
+    margin: 0;
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border-radius: var(--space-1);
+    color: var(--color-text);
+  }
+
+  figcaption {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .build-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .flow-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+    background: #faf9f6;
+  }
+
+  .build-step {
+    border-color: var(--color-text);
+    background: var(--color-text);
+    color: var(--color-background);
+  }
+
+  strong {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .step-label, .step-detail {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .step-label {
+    color: var(--color-text-muted);
+  }
+
+  .build-step .step-label {
+    color: var(--color-accent);
+  }
+
+  .flow-arrow {
+    position: absolute;
+    inset-inline-start: calc(100% + 0.25rem);
+    inset-block-start: 50%;
+    display: flex;
+    width: 1rem;
+    color: var(--color-text-muted);
+    transform: translateY(-50%);
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 40rem) {
+    .build-preview {
+      gap: var(--space-6);
+      padding: var(--space-4);
+    }
+
+    .build-flow {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: var(--space-1) var(--space-2);
+    }
+
+    .step-label {
+      grid-column: 1 / -1;
+    }
+
+    .flow-arrow {
+      inset-inline-start: 50%;
+      inset-block-start: calc(100% + 0.25rem);
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+</style>

@@ -1,0 +1,232 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/site/SiteHeader.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import Prose from '../../components/content/Prose.astro';
+import FormattedDate from '../../components/content/FormattedDate.astro';
+import ActionLink from '../../components/ui/ActionLink.astro';
+import ArrowIcon from '../../components/ui/ArrowIcon.astro';
+import { getProjects, getPublishedLabNotes } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const notes = await getPublishedLabNotes();
+  return notes.map((note) => ({ params: { slug: note.id }, props: { note } }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { note } = Astro.props;
+const { data } = note;
+const { Content } = await render(note);
+const relatedIds = new Set(data.relatedProjects.map(({ id }) => id));
+const relatedProjects = relatedIds.size > 0
+  ? (await getProjects()).filter((project) => relatedIds.has(project.id))
+  : [];
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <SiteHeader slot="header" />
+  <article class="note" aria-labelledby="note-title">
+    <header class="introduction">
+      <a class="back-link" href="/lab-notes"><span class="back-arrow"><ArrowIcon /></span><span>All Lab Notes</span></a>
+      <span class="label">FROM THE LAB</span>
+      <h1 id="note-title">{data.title}</h1>
+      <p class="description">{data.description}</p>
+      <dl class="metadata">
+        <div><dt class="visually-hidden">Published</dt><dd><FormattedDate date={data.publishedAt} /></dd></div>
+        {data.updatedAt && <div><dt>Updated</dt><dd><FormattedDate date={data.updatedAt} /></dd></div>}
+        {data.tags.length > 0 && <div><dt class="visually-hidden">Topics</dt><dd>{data.tags.join(' / ')}</dd></div>}
+      </dl>
+    </header>
+    {data.coverImage && (
+      <div class="cover">
+        <Image src={data.coverImage} alt={data.coverImageAlt!} layout="full-width" />
+      </div>
+    )}
+    <div class="note-reading">
+      <div class="reading-column">
+        <div class="body-content"><Prose variant="article"><Content /></Prose></div>
+        {relatedProjects.length > 0 && (
+          <section class="related-projects" aria-labelledby="related-title">
+            <h2 id="related-title">{relatedProjects.length === 1 ? 'Related project' : 'Related projects'}</h2>
+            <ul>
+              {relatedProjects.map((project) => (
+                <li>
+                  <ActionLink href={`/projects/${project.id}`} variant="text">{project.data.title}</ActionLink>
+                  <p>{project.data.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        <nav class="reading-footer" aria-label="After this note">
+          <ActionLink href="/lab-notes" variant="text">Back to Lab Notes</ActionLink>
+        </nav>
+      </div>
+    </div>
+  </article>
+  <SiteFooter slot="footer" topHref="#note-title" />
+</BaseLayout>
+
+<style>
+  .introduction {
+    max-width: 1000px;
+    padding-block: 40px 44px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-block-end: 42px;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .back-arrow {
+    display: flex;
+    transform: rotate(180deg);
+  }
+
+  .label {
+    display: block;
+    margin-block-end: 22px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.065em;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 0;
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .description {
+    max-width: 700px;
+    margin: 24px 0 0;
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+  }
+
+  .metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+    margin: 30px 0 0;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metadata div {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4em;
+    min-width: 0;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .cover :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .note-reading {
+    max-width: 800px;
+    margin-inline: auto;
+    padding-block: 50px 80px;
+  }
+
+  .reading-column {
+    max-width: 700px;
+    min-width: 0;
+  }
+
+  .related-projects {
+    font-size: 1.125rem;
+    margin-block-start: var(--space-12);
+    padding-block-start: var(--space-8);
+    border-block-start: 1px solid var(--color-border);
+  }
+
+  .related-projects h2 {
+    margin: 0 0 var(--space-6);
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    line-height: var(--line-height-heading);
+  }
+
+  .related-projects ul {
+    display: grid;
+    gap: var(--space-8);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .related-projects p {
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-muted);
+  }
+
+  .reading-footer {
+    margin-block-start: var(--space-12);
+  }
+
+  @media (max-width: 650px) {
+    .introduction {
+      padding-block: 30px;
+    }
+
+    .back-link {
+      margin-block-end: 30px;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    .metadata {
+      gap: 15px;
+      font-size: 0.5625rem;
+    }
+
+    .note-reading {
+      padding-block: 35px 50px;
+    }
+  }
+</style>

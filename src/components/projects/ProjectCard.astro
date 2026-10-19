@@ -1,0 +1,212 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import ArrowIcon from "../ui/ArrowIcon.astro";
+import Button from "../ui/Button.astro";
+import ProjectStatus from "../ui/ProjectStatus.astro";
+import WebsiteBuildPreview from "./WebsiteBuildPreview.astro";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+  headingLevel?: 2 | 3;
+}
+
+const { project, headingLevel = 2 } = Astro.props;
+const Heading = `h${headingLevel}` as "h2" | "h3";
+---
+
+<article
+  class:list={[
+    "project-item",
+    {
+      "with-preview":
+        project.data.coverImage ||
+        project.id === "vomerlabs-website",
+    },
+  ]}
+  aria-labelledby={`project-card-${project.id}`}
+>
+  <div class="project-copy">
+    <div class="project-meta">
+      <ProjectStatus status={project.data.status} />
+      <span class="category">{project.data.category}</span>
+    </div>
+    <Heading class="card-title" id={`project-card-${project.id}`}>
+      <a class="project-title" href={`/projects/${project.id}`}>
+        {project.data.title}
+        <ArrowIcon />
+      </a>
+    </Heading>
+    <p class="description">{project.data.description}</p>
+    {project.data.tags.length > 0 && (
+      <ul
+        class="project-tags"
+        role="list"
+        aria-label="Tools and topics"
+      >
+        {project.data.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )}
+    <div class="project-actions">
+      <Button href={`/projects/${project.id}`} variant="secondary">
+        Learn more
+      </Button>
+      {project.data.demoUrl && (
+        <a class="extra-link" href={project.data.demoUrl}>
+          View demo <ArrowIcon />
+        </a>
+      )}
+      {project.data.repositoryUrl && (
+        <a class="extra-link" href={project.data.repositoryUrl}>
+          View source <ArrowIcon />
+        </a>
+      )}
+    </div>
+  </div>
+  {project.data.coverImage ? (
+    <a
+      class="project-cover"
+      href={`/projects/${project.id}`}
+      aria-label={`Read about ${project.data.title}`}
+    >
+      <Image
+        src={project.data.coverImage}
+        alt={project.data.coverImageAlt!}
+        layout="full-width"
+      />
+    </a>
+  ) : (
+    project.id === "vomerlabs-website" && <WebsiteBuildPreview />
+  )}
+</article>
+
+<style>
+  .project-item {
+    display: grid;
+    gap: var(--space-12);
+    padding: var(--space-8);
+    background: #faf9f6;
+    border-radius: var(--space-1);
+    color: var(--color-text);
+  }
+
+  .with-preview {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+
+  .project-copy {
+    min-width: 0;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    margin-block-end: var(--space-6);
+  }
+
+  .category {
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-label);
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .description {
+    max-width: 65ch;
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-muted);
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-4);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .project-title :global(svg) {
+    flex-shrink: 0;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    transform: rotate(-45deg);
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-6) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .project-tags li {
+    padding: 0.125rem var(--space-2);
+    background: var(--color-surface);
+    border-radius: var(--space-1);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4) var(--space-6);
+    margin-block-start: var(--space-8);
+  }
+
+  .extra-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 2.75rem;
+    color: var(--color-text);
+    text-underline-offset: 0.3em;
+  }
+
+  .project-title:is(:hover, :focus-visible) {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  .project-cover {
+    display: block;
+  }
+
+  .project-cover :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--space-1);
+  }
+
+  @media (max-width: 60rem) {
+    .with-preview {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-8);
+    }
+  }
+
+  @media (max-width: 45rem) {
+    .project-item {
+      padding: var(--space-6) var(--space-4);
+    }
+  }
+</style>

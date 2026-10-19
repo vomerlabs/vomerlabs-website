@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ActionLink from '../ui/ActionLink.astro';
+import ProjectStatus from '../ui/ProjectStatus.astro';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-record" aria-labelledby={`project-${project.id}`}>
+    <h2 id={`project-${project.id}`}>{project.data.title}</h2>
+    <p class="description">{project.data.description}</p>
+    <div class="record-footer">
+      <ProjectStatus status={project.data.status} />
+      <p class="metadata">{project.data.tags.join(' · ')}</p>
+      <div class="project-action"><ActionLink href={`/projects/${project.id}`} variant="text">About this build</ActionLink></div>
+    </div>
+</article>
+
+<style>
+  .project-record {
+    padding-block: clamp(2rem, 2.55vw, 2.5rem) clamp(2rem, 2.33vw, 2.3125rem);
+    border-block: 2px solid var(--color-border);
+  }
+
+  h2 {
+    margin-block: clamp(1.65rem, 2.14vw, 2.125rem) clamp(0.75rem, 1vw, 1rem);
+    font-size: var(--font-size-project-title);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  .description {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-intro);
+    line-height: 1.4;
+  }
+
+  .record-footer {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 2.5rem);
+    margin-block-start: clamp(1.25rem, 1.71vw, 1.6875rem);
+  }
+
+  .metadata {
+    display: flex;
+    align-items: center;
+    min-height: clamp(2.25rem, 2.52vw, 2.5rem);
+    margin: 0;
+    padding-inline-start: clamp(1rem, 2.4vw, 2.375rem);
+    border-inline-start: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-label);
+    line-height: 1.5;
+  }
+
+  .project-action {
+    margin-inline-start: auto;
+  }
+
+  @media (max-width: 45rem) {
+    h2 {
+      margin-block: 1.9rem var(--space-4);
+      font-size: var(--font-size-project-title);
+    }
+
+    .description {
+      font-size: 1.125rem;
+    }
+
+    .record-footer {
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .metadata {
+      flex-basis: 100%;
+      order: 1;
+      min-height: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .project-action {
+      margin-inline-start: auto;
+    }
+  }
+</style>

@@ -1,0 +1,220 @@
+---
+interface Props {
+  variant?: 'default' | 'article';
+}
+
+const { variant = 'default' } = Astro.props;
+---
+
+<div class:list={['prose', { 'article-prose': variant === 'article' }]}>
+  <slot />
+</div>
+
+<style>
+  /* Markdown is rendered outside this component's scope; anchor every global
+     descendant selector to this local wrapper so it cannot affect the shell. */
+  .prose {
+    max-width: var(--width-prose);
+    min-width: 0;
+  }
+
+  .prose > :global(*) {
+    margin-block: 0;
+  }
+
+  .prose > :global(* + *) {
+    margin-block-start: var(--space-6);
+  }
+
+  .prose :global(:is(h2, h3, h4, h5, h6)) {
+    margin-block: var(--space-12) var(--space-4);
+    line-height: var(--line-height-heading);
+    text-wrap: balance;
+    scroll-margin-block-start: var(--space-8);
+  }
+
+  .prose :global(h2) {
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  }
+
+  .prose :global(h3) {
+    font-size: 1.25rem;
+  }
+
+  .prose :global(a) {
+    color: inherit;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.2em;
+  }
+
+  .prose :global(a:hover) {
+    text-decoration-thickness: 0.15em;
+  }
+
+  .prose :global(:is(ul, ol)) {
+    padding-inline-start: var(--space-6);
+  }
+
+  .prose :global(li + li) {
+    margin-block-start: var(--space-2);
+  }
+
+  .prose :global(:is(img, video, svg)) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose :global(figure) {
+    margin-inline: 0;
+  }
+
+  .prose :global(figcaption) {
+    margin-block-start: var(--space-2);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+  }
+
+  .prose :global(blockquote) {
+    margin-inline: 0;
+    padding-inline-start: var(--space-6);
+    border-inline-start: 1px solid var(--color-muted);
+    color: var(--color-text-muted);
+  }
+
+  .prose :global(:is(code, pre)) {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  .prose :global(:not(pre) > code) {
+    padding: 0.15em 0.3em;
+    background: var(--color-surface);
+    overflow-wrap: anywhere;
+  }
+
+  .prose :global(pre) {
+    padding: var(--space-6);
+    overflow-x: auto;
+  }
+
+  .prose :global(table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .prose :global(:is(th, td)) {
+    padding: var(--space-3) var(--space-4);
+    border-block-end: 1px solid var(--color-border);
+    text-align: start;
+  }
+
+  .prose :global(hr) {
+    border: 0;
+    border-block-start: 1px solid var(--color-border);
+  }
+
+  .prose > :global(:first-child) {
+    margin-block-start: 0;
+  }
+
+  .article-prose {
+    max-width: 700px;
+    color: #4f5548;
+    font-size: 1rem;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+  }
+
+  .article-prose > :global(*) {
+    margin-block: 0;
+  }
+
+  .article-prose :global(h2) {
+    margin-block: 42px 18px;
+    color: var(--color-text);
+    font-size: 1.875rem;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+  }
+
+  .article-prose :global(h3) {
+    margin-block: 28px 13px;
+    color: var(--color-text);
+    font-size: 1.4375rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .article-prose :global(p) {
+    margin-block-end: 20px;
+  }
+
+  .article-prose :global(a) {
+    color: #466123;
+    text-underline-offset: 3px;
+  }
+
+  .article-prose :global(:is(ul, ol)) {
+    margin-block: 20px;
+    padding-inline-start: 22px;
+  }
+
+  .article-prose :global(li) {
+    margin-block: 0 10px;
+    padding-inline-start: 5px;
+  }
+
+  .article-prose :global(li + li) {
+    margin-block-start: 0;
+  }
+
+  .article-prose :global(pre) {
+    margin-block: 1em;
+    padding: 20px;
+    border: 1px solid #d7d8cf;
+    background: #e6e9df;
+    font-size: 0.75rem;
+    line-height: 1.8;
+  }
+
+  .article-prose :global(pre code) {
+    font-size: inherit;
+  }
+
+  .article-prose :global(:not(pre) > code) {
+    padding: 2px 5px;
+    background: #e8eae2;
+    font-size: 0.85em;
+  }
+
+  .article-prose :global(blockquote) {
+    margin: 25px 0;
+    padding-inline-start: 22px;
+    border-inline-start: 3px solid #95ae70;
+    color: inherit;
+  }
+
+  .article-prose > :global(:first-child) {
+    margin-block-start: 0;
+  }
+
+  @media (max-width: 650px) {
+    .article-prose {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+    }
+
+    .article-prose :global(h2) {
+      margin-block-start: 32px;
+      font-size: 1.6875rem;
+    }
+
+    .article-prose > :global(:first-child) {
+      margin-block-start: 0;
+    }
+  }
+</style>

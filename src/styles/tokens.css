@@ -1,0 +1,57 @@
+/* Shared values for the Working Index visual system. */
+:root {
+  color-scheme: light;
+
+  --color-background: #f5f3ee;
+  --color-text: #171815;
+  --color-text-muted: #62675c;
+  --color-muted: #8c9185;
+  --color-accent: #c6f277;
+  --color-accent-hover: #b4e45f;
+  --color-status-background: #e9f3d6;
+  --color-status-dot: #90b947;
+  --color-border: #d5d6cd;
+  --color-surface: #eeece5;
+  --color-focus: #42651b;
+
+  --font-sans: 'Kedebideri', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-heading: clamp(1.75rem, 3vw, 2.75rem);
+  --font-size-display: clamp(2.75rem, 7.8vw, 7rem);
+  --font-size-page-title: clamp(2.75rem, 5.5vw, 4.5rem);
+  --font-size-project-title: clamp(1.75rem, 4vw, 3.5rem);
+  --font-size-intro: clamp(1.125rem, 1.55vw, 1.375rem);
+  --font-size-action: clamp(1rem, 1.25vw, 1.125rem);
+  --font-size-label: clamp(0.8125rem, 1vw, 0.875rem);
+  --line-height-body: 1.65;
+  --line-height-heading: 1.15;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --width-content: 1240px;
+  --width-prose: 70ch;
+  --page-gutter: 20px;
+  --motion-duration: 200ms;
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-gutter: 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --page-gutter: 22px;
+  }
+}

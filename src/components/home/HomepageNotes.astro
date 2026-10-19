@@ -1,0 +1,100 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import NotePreview from '../lab-notes/NotePreview.astro';
+import ArrowIcon from '../ui/ArrowIcon.astro';
+
+interface Props {
+  notes: CollectionEntry<'lab-notes'>[];
+  id?: string;
+}
+
+const { notes, id = 'home-notes' } = Astro.props;
+
+---
+
+<section class="home-notes" aria-labelledby={`${id}-title`}>
+  <div class="notes-heading">
+    <h2 id={`${id}-title`}>Recent Lab Notes</h2>
+    <a class="all-notes" href="/lab-notes">Browse all lab notes <ArrowIcon /></a>
+  </div>
+  {notes.length ? (
+    <ul class="home-note-list" role="list">
+      {notes.map((note) => (
+        <li><NotePreview note={note} headingLevel={3} idPrefix={id} /></li>
+      ))}
+    </ul>
+  ) : (
+    <p class="notes-empty">The notebook is open. New writing will appear here when it’s ready to share.</p>
+  )}
+</section>
+
+<style>
+  .home-notes {
+    padding-block: var(--home-notes-space, 3.5rem);
+    color: var(--home-notes-ink, var(--color-text));
+  }
+
+  .notes-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-6);
+    margin-block-end: var(--space-8);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .all-notes {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 2.75rem;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.35em;
+  }
+
+  .all-notes:is(:hover, :focus-visible) {
+    text-decoration-thickness: 2px;
+  }
+
+  .home-note-list {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .notes-empty {
+    max-width: 70ch;
+    margin: 0;
+    padding: var(--space-6);
+    background: #faf9f6;
+    border-radius: var(--space-1);
+    color: var(--home-notes-muted, var(--color-text-muted));
+    line-height: 1.75;
+  }
+
+  @media (max-width: 48rem) {
+    .home-notes {
+      padding-block: 2.5rem;
+    }
+
+    .notes-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: var(--space-2);
+      margin-block-end: var(--space-6);
+    }
+
+  }
+</style>

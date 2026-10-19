@@ -1,0 +1,55 @@
+---
+import ArrowIcon from './ArrowIcon.astro';
+
+interface Props {
+  href: string;
+  variant?: 'primary' | 'text';
+}
+
+const { href, variant = 'primary' } = Astro.props;
+---
+
+<a href={href} class:list={['action', variant]}>
+  <span><slot /></span>
+  <span class="arrow"><ArrowIcon /></span>
+</a>
+
+<style>
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75em;
+    min-height: clamp(2.5rem, 2.78vw, 2.75rem);
+    color: var(--color-text);
+    font-size: var(--font-size-action);
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .primary {
+    gap: 0.58em;
+    padding: 0.75em 1em;
+    border-radius: 100vw;
+    background: var(--color-accent);
+    transition: background-color var(--motion-duration) var(--motion-ease);
+  }
+
+  .primary:hover {
+    background: var(--color-accent-hover);
+  }
+
+  .text {
+    padding-block: 0.2em;
+    background: linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 100% 1px no-repeat;
+  }
+
+  .arrow {
+    display: flex;
+    transition: transform var(--motion-duration) var(--motion-ease);
+  }
+
+  .action:is(:hover, :focus-visible) .arrow {
+    transform: translateX(0.15em);
+  }
+</style>

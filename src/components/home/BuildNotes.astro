@@ -1,0 +1,23 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import Prose from '../content/Prose.astro';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<section id="build-notes" class="build-notes" aria-label={`About ${project.data.title}`}>
+  <Prose><Content /></Prose>
+</section>
+
+<style>
+  .build-notes {
+    padding-block: var(--space-12) var(--space-16);
+    border-block-start: 1px solid var(--color-border);
+    font-size: 1.125rem;
+  }
+</style>

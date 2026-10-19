@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/site/SiteHeader.astro';
+import SiteFooter from '../../components/site/SiteFooter.astro';
+import StudioPageIntro from '../../components/site/StudioPageIntro.astro';
+import ProjectCard from '../../components/projects/ProjectCard.astro';
+import { getProjects } from '../../lib/content';
+
+const projects = await getProjects();
+---
+
+<BaseLayout title="Projects" description="Projects from VomerLabs, with their current status and the process behind them.">
+  <SiteHeader slot="header" />
+  <StudioPageIntro id="projects-title" label="THE PROJECT NOTEBOOK" description="A growing collection of things I’m building. Each project starts with a question, a problem, or a small idea worth following." showDivider={false}>
+    Projects, with a reason<br />behind them.
+  </StudioPageIntro>
+  {projects.length > 0 ? (
+    <ul class="projects" aria-label="Projects">
+      {projects.map((project) => (
+        <li><ProjectCard project={project} /></li>
+      ))}
+    </ul>
+  ) : (
+    <p class="empty-projects">Projects will appear here when they are ready to share.</p>
+  )}
+  <SiteFooter slot="footer" topHref="#projects-title" />
+</BaseLayout>
+
+<style>
+  .projects {
+    display: grid;
+    gap: var(--space-6);
+    margin: 0 0 var(--space-16);
+    padding: 0;
+    list-style: none;
+  }
+
+  .projects li {
+    min-width: 0;
+  }
+
+  .empty-projects {
+    margin: 0 0 var(--space-16);
+    padding-block: var(--space-8);
+    border-block: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+</style>

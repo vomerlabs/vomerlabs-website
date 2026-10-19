@@ -1,0 +1,222 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/site/SiteHeader.astro";
+import SiteFooter from "../components/site/SiteFooter.astro";
+import StudioPageIntro from "../components/site/StudioPageIntro.astro";
+import ArrowIcon from "../components/ui/ArrowIcon.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with VomerLabs about a project, a question, or an idea to explore."
+  showContactBand={false}
+>
+  <SiteHeader slot="header" />
+  <StudioPageIntro
+    id="contact-title"
+    label="GET IN TOUCH"
+    description="A project you’re thinking about, a problem worth solving, or simply a shared curiosity. There’s room for a conversation."
+  >
+    Let’s make<br />something useful.
+  </StudioPageIntro>
+  <div class="contact-content">
+    <section class="contact-invitation" aria-labelledby="email-title">
+      <h2 id="email-title">Start with a hello.</h2>
+      <p>
+        You don’t need a polished brief. A few words about what you have in
+        mind, who it’s for, and where you are in the process is a good start.
+      </p>
+      <a class="email-link" href={`mailto:${site.email}`}>
+        {site.email}<span class="arrow"><ArrowIcon /></span>
+      </a>
+      <p class="email-fallback">Prefer to copy it? {site.email}</p>
+      <p>
+        This opens your email app. You can also copy the address into your
+        preferred email service.
+      </p>
+    </section>
+    <aside class="contact-aside" aria-labelledby="context-title">
+      <span class="eyebrow">A USEFUL STARTING POINT</span>
+      <h2 id="context-title">A little context helps.</h2>
+      <ol class="conversation-prompts" role="list">
+        <li>
+          <span class="prompt-number" aria-hidden="true">01</span>
+          <p>What are you trying to build or improve?</p>
+        </li>
+        <li>
+          <span class="prompt-number" aria-hidden="true">02</span>
+          <p>Who will use it?</p>
+        </li>
+        <li>
+          <span class="prompt-number" aria-hidden="true">03</span>
+          <p>Do you have a timeline in mind?</p>
+        </li>
+        <li>
+          <span class="prompt-number" aria-hidden="true">04</span>
+          <p>What have you tried so far?</p>
+        </li>
+      </ol>
+      <p class="closing-note">A QUESTION IS A GOOD START, TOO.</p>
+    </aside>
+  </div>
+  <SiteFooter slot="footer" topHref="#contact-title" showDivider />
+</BaseLayout>
+
+<style>
+  .contact-content :is(h2, p) {
+    margin: 0;
+  }
+
+  .contact-content h2 {
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  .eyebrow,
+  .prompt-number {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.065em;
+    line-height: 1.5;
+  }
+
+  .eyebrow {
+    display: block;
+    margin-bottom: 30px;
+    color: var(--color-text-muted);
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 95px;
+    padding-block: 60px 80px;
+  }
+
+  .contact-invitation {
+    min-width: 0;
+    max-width: 700px;
+    color: #4f5548;
+    font-size: 1rem;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-invitation h2 {
+    color: var(--color-text);
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .contact-invitation p {
+    margin-bottom: 20px;
+  }
+
+  .email-link {
+    font-size: clamp(1.125rem, 2.7vw, 1.9375rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-text);
+    margin-block: 18px;
+    overflow-wrap: anywhere;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .contact-aside {
+    position: sticky;
+    top: 30px;
+    background: #e0e7d5;
+    padding: 35px;
+    align-self: start;
+  }
+
+  .conversation-prompts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .conversation-prompts li {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #bbc8ac;
+  }
+
+  .prompt-number {
+    flex-shrink: 0;
+    color: #5b694e;
+  }
+
+  .conversation-prompts p {
+    min-width: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-aside .closing-note {
+    margin-top: 30px;
+    color: #5b6750;
+    font-size: 0.75rem;
+  }
+
+  .arrow {
+    display: flex;
+    flex-shrink: 0;
+    transform: rotate(-45deg);
+  }
+
+  .contact-invitation .email-fallback {
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  .contact-aside h2 {
+    font-size: 2.1875rem;
+    line-height: 1.15;
+  }
+
+  @media (max-width: 900px) {
+    .contact-content {
+      gap: 45px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      padding-block: 35px 50px;
+      gap: 35px;
+    }
+
+    .contact-invitation {
+      font-size: 0.9375rem;
+      line-height: 1.85;
+    }
+
+    .contact-invitation h2 {
+      font-size: 1.6875rem;
+    }
+
+    .contact-aside {
+      position: static;
+      padding: 27px;
+    }
+
+    .contact-aside h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
