@@ -39,24 +39,20 @@ import { site } from "../config/site";
     <aside class="contact-aside" aria-labelledby="context-title">
       <span class="eyebrow">A USEFUL STARTING POINT</span>
       <h2 id="context-title">A little context helps.</h2>
-      <ol class="conversation-prompts" role="list">
+      <ul class="conversation-prompts" role="list">
         <li>
-          <span class="prompt-number" aria-hidden="true">01</span>
           <p>What are you trying to build or improve?</p>
         </li>
         <li>
-          <span class="prompt-number" aria-hidden="true">02</span>
           <p>Who will use it?</p>
         </li>
         <li>
-          <span class="prompt-number" aria-hidden="true">03</span>
           <p>Do you have a timeline in mind?</p>
         </li>
         <li>
-          <span class="prompt-number" aria-hidden="true">04</span>
           <p>What have you tried so far?</p>
         </li>
-      </ol>
+      </ul>
       <p class="closing-note">A QUESTION IS A GOOD START, TOO.</p>
     </aside>
   </div>
@@ -76,8 +72,7 @@ import { site } from "../config/site";
     overflow-wrap: anywhere;
   }
 
-  .eyebrow,
-  .prompt-number {
+  .eyebrow {
     font-family: var(--font-mono);
     font-size: var(--font-size-caption);
     letter-spacing: var(--letter-spacing-label);
@@ -152,9 +147,15 @@ import { site } from "../config/site";
     border-top: 1px solid var(--color-border-tinted);
   }
 
-  .prompt-number {
+  .conversation-prompts li::before {
+    content: '';
     flex-shrink: 0;
-    color: var(--color-text-tinted);
+    align-self: flex-start;
+    width: 0.375rem;
+    height: 0.375rem;
+    margin-block-start: 0.4rem;
+    border-radius: 50%;
+    background: var(--color-text-tinted);
   }
 
   .conversation-prompts p {

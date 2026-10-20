@@ -20,8 +20,7 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
     "project-item",
     {
       "with-preview":
-        project.data.coverImage ||
-        project.id === "vomerlabs-website",
+        project.data.coverImage || project.id === "vomerlabs-website",
     },
   ]}
   aria-labelledby={`project-card-${project.id}`}
@@ -38,48 +37,52 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
       </a>
     </Heading>
     <p class="description">{project.data.description}</p>
-    {project.data.tags.length > 0 && (
-      <ul
-        class="project-tags"
-        role="list"
-        aria-label="Tools and topics"
-      >
-        {project.data.tags.map((tag) => (
-          <li>{tag}</li>
-        ))}
-      </ul>
-    )}
+    {
+      project.data.tags.length > 0 && (
+        <ul class="project-tags" role="list" aria-label="Tools and topics">
+          {project.data.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+      )
+    }
     <div class="project-actions">
       <Button href={`/projects/${project.id}`} variant="secondary">
-        Learn more
+        About this project
       </Button>
-      {project.data.demoUrl && (
-        <a class="extra-link" href={project.data.demoUrl}>
-          View demo <ArrowIcon />
-        </a>
-      )}
-      {project.data.repositoryUrl && (
-        <a class="extra-link" href={project.data.repositoryUrl}>
-          View source <ArrowIcon />
-        </a>
-      )}
+      {
+        project.data.demoUrl && (
+          <a class="extra-link" href={project.data.demoUrl}>
+            View demo <ArrowIcon />
+          </a>
+        )
+      }
+      {
+        project.data.repositoryUrl && (
+          <a class="extra-link" href={project.data.repositoryUrl}>
+            View source <ArrowIcon />
+          </a>
+        )
+      }
     </div>
   </div>
-  {project.data.coverImage ? (
-    <a
-      class="project-cover"
-      href={`/projects/${project.id}`}
-      aria-label={`Read about ${project.data.title}`}
-    >
-      <Image
-        src={project.data.coverImage}
-        alt={project.data.coverImageAlt!}
-        layout="full-width"
-      />
-    </a>
-  ) : (
-    project.id === "vomerlabs-website" && <WebsiteBuildPreview />
-  )}
+  {
+    project.data.coverImage ? (
+      <a
+        class="project-cover"
+        href={`/projects/${project.id}`}
+        aria-label={`Read about ${project.data.title}`}
+      >
+        <Image
+          src={project.data.coverImage}
+          alt={project.data.coverImageAlt!}
+          layout="full-width"
+        />
+      </a>
+    ) : (
+      project.id === "vomerlabs-website" && <WebsiteBuildPreview />
+    )
+  }
 </article>
 
 <style>

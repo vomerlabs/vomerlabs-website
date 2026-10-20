@@ -1,0 +1,205 @@
+{
+  "reports": [
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "Sample note: keeping a small website simple",
+      "header": {
+        "fontSize": "72px",
+        "lineHeight": "79.2px",
+        "letterSpacing": "-2.88px",
+        "color": "rgb(23, 24, 21)"
+      },
+      "description": {
+        "fontSize": "22px",
+        "lineHeight": "30.8px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "metadata": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "backLinkHeight": 44,
+      "columnWidth": 566.71875,
+      "columnCentered": true,
+      "related": true,
+      "removedLabel": true,
+      "previewLeftovers": false,
+      "content": {
+        "code": true,
+        "table": true,
+        "quote": true,
+        "lists": 2
+      }
+    },
+    {
+      "width": 960,
+      "scrollWidth": 945,
+      "title": "Sample note: keeping a small website simple",
+      "header": {
+        "fontSize": "52.8px",
+        "lineHeight": "58.08px",
+        "letterSpacing": "-2.112px",
+        "color": "rgb(23, 24, 21)"
+      },
+      "description": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "metadata": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "backLinkHeight": 44,
+      "columnWidth": 566.71875,
+      "columnCentered": true,
+      "related": true,
+      "removedLabel": true,
+      "previewLeftovers": false,
+      "content": {
+        "code": true,
+        "table": true,
+        "quote": true,
+        "lists": 2
+      }
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Sample note: keeping a small website simple",
+      "header": {
+        "fontSize": "44px",
+        "lineHeight": "48.4px",
+        "letterSpacing": "-1.76px",
+        "color": "rgb(23, 24, 21)"
+      },
+      "description": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "metadata": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "backLinkHeight": 44,
+      "columnWidth": 346,
+      "columnCentered": true,
+      "related": true,
+      "removedLabel": true,
+      "previewLeftovers": false,
+      "content": {
+        "code": true,
+        "table": true,
+        "quote": true,
+        "lists": 2
+      }
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "title": "Sample note: keeping a small website simple",
+      "header": {
+        "fontSize": "44px",
+        "lineHeight": "48.4px",
+        "letterSpacing": "-1.76px",
+        "color": "rgb(23, 24, 21)"
+      },
+      "description": {
+        "fontSize": "18px",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "metadata": {
+        "fontSize": "14px",
+        "lineHeight": "21px",
+        "letterSpacing": "normal",
+        "color": "rgb(98, 103, 92)"
+      },
+      "backLinkHeight": 44,
+      "columnWidth": 276,
+      "columnCentered": true,
+      "related": true,
+      "removedLabel": true,
+      "previewLeftovers": false,
+      "content": {
+        "code": true,
+        "table": true,
+        "quote": true,
+        "lists": 2
+      }
+    }
+  ],
+  "optionalStates": [
+    {
+      "name": "minimal",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "labels": [
+        "Published"
+      ],
+      "cover": false,
+      "imageLoaded": false,
+      "related": false,
+      "title": "Temporary minimal layout check"
+    },
+    {
+      "name": "minimal",
+      "width": 320,
+      "scrollWidth": 320,
+      "labels": [
+        "Published"
+      ],
+      "cover": false,
+      "imageLoaded": false,
+      "related": false,
+      "title": "Temporary minimal layout check"
+    },
+    {
+      "name": "rich",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "labels": [
+        "Published",
+        "Updated",
+        "Topics"
+      ],
+      "cover": true,
+      "imageLoaded": true,
+      "related": false,
+      "title": "Temporary layout check with a longer title to verify wrapping on narrow screens"
+    },
+    {
+      "name": "rich",
+      "width": 320,
+      "scrollWidth": 320,
+      "labels": [
+        "Published",
+        "Updated",
+        "Topics"
+      ],
+      "cover": true,
+      "imageLoaded": true,
+      "related": false,
+      "title": "Temporary layout check with a longer title to verify wrapping on narrow screens"
+    }
+  ],
+  "keyboardFocus": {
+    "focused": true,
+    "outline": "solid"
+  },
+  "enterNavigation": true,
+  "javascriptDisabled": true,
+  "exceptions": []
+}

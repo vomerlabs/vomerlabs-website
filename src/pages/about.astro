@@ -25,27 +25,26 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
     <aside class="about-panel" aria-label="Studio principles">
       <span class="eyebrow">A FEW GUIDING IDEAS</span>
       <h2>Stay curious.<br />Make it useful.<br />Share the process.</h2>
-      <div class="principle">
-        <span class="mono">01</span>
-        <div>
-          <h3>Start with the problem.</h3>
-          <p>Understand what someone needs before deciding what to build.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <span class="mono">02</span>
-        <div>
-          <h3>Keep things clear.</h3>
-          <p>Simple tools, direct writing, and decisions with a reason behind them.</p>
-        </div>
-      </div>
-      <div class="principle">
-        <span class="mono">03</span>
-        <div>
-          <h3>Leave room to learn.</h3>
-          <p>Build, test, reflect, and be willing to change direction.</p>
-        </div>
-      </div>
+      <ul class="principles" role="list">
+        <li class="principle">
+          <div>
+            <h3>Start with the problem.</h3>
+            <p>Understand what someone needs before deciding what to build.</p>
+          </div>
+        </li>
+        <li class="principle">
+          <div>
+            <h3>Keep things clear.</h3>
+            <p>Simple tools, direct writing, and decisions with a reason behind them.</p>
+          </div>
+        </li>
+        <li class="principle">
+          <div>
+            <h3>Leave room to learn.</h3>
+            <p>Build, test, reflect, and be willing to change direction.</p>
+          </div>
+        </li>
+      </ul>
     </aside>
   </div>
   <SiteFooter slot="footer" topHref="#about-title" />
@@ -64,8 +63,7 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
     overflow-wrap: anywhere;
   }
 
-  .eyebrow,
-  .mono {
+  .eyebrow {
     font-family: var(--font-mono);
     font-size: var(--font-size-caption);
     letter-spacing: var(--letter-spacing-label);
@@ -133,6 +131,12 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
     line-height: var(--line-height-heading);
   }
 
+  .principles {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .principle {
     border-top: 1px solid var(--color-border-tinted);
     padding-top: 20px;
@@ -142,10 +146,14 @@ import StudioPageIntro from '../components/site/StudioPageIntro.astro';
     font-size: 0.8125rem;
   }
 
-  .principle .mono {
+  .principle::before {
+    content: '';
     flex-shrink: 0;
-    padding-top: 3px;
-    color: var(--color-text-tinted);
+    width: 0.375rem;
+    height: 0.375rem;
+    margin-block-start: 0.4rem;
+    border-radius: 50%;
+    background: var(--color-text-tinted);
   }
 
   .principle h3 {

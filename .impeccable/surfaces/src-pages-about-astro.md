@@ -22,3 +22,5 @@ FIRST VIEWPORT: Current masthead above the reference's BEHIND VOMERLABS label, A
 FORM: Owner-pinned reference reproduction. The shared `BaseLayout` main now gives every route About's 1240px outer cap and responsive source gutters; `StudioPageIntro` shares the introduction with Contact. Prose/panel columns are 1.25fr / 1fr with a 95px gap (45px at <=900px); stack at <=650px. Panel is sticky at top:30px above that breakpoint. Preserve source sizes and spacing while using Kedebideri 400/700. No new runtime or font assets.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Owner refinement: replace the principle numbers with 6px round bullets and use an unordered list. Preserve copy, rules, panel styling, and responsive layout. Astro check and build pass; desktop (1440px) and mobile (500px) captures confirm aligned bullets and readable wrapping.

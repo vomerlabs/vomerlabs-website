@@ -210,7 +210,7 @@ Use the palette by role. Most frontmatter color names map directly to `--color-<
 
 - **Warm Paper** (`background`): document ground and text on ink buttons.
 - **Near-black Ink** (`text`): headings, body text, action labels, and secondary button fill.
-- **Gray-green Text** (`text-muted`): supporting text, dates, tags, navigation, and footer copy. `text-prose` is the distinct long-reading text color used in About, Contact, and articles.
+- **Gray-green Text** (`text-muted`): supporting text, dates, tags, navigation, and footer copy. `text-prose` is the distinct long-reading text color used in About and Contact. Project and Lab Notes prose share the document's ink color.
 - **Working Lime** (`accent`, `accent-hover`): primary actions, text selection, and text-action underlines.
 - **Pale Status Lime / Status Green** (`status-background`, `status-dot`): the written project-status badge and its decorative dot.
 - **Paper Rules** (`border`, `border-subtle`): shared section rules and the slightly different page-intro/code borders. Preserve their distinct values.
@@ -219,7 +219,7 @@ Use the palette by role. Most frontmatter color names map directly to `--color-<
 - **Reading Link / Focus Green** (`link`, `focus`): prose links and global keyboard outlines.
 - **Quiet Border** (`muted`): the default prose blockquote rule. **Olive Hover** (`secondary-hover`): the secondary Button's hover fill.
 
-ContactBand retains local green tones for its label (#3d4f2d), supporting copy (#445431), heading period (#647f37), circular-link border (#819c53), and hover fill (#aedd5d). Article code uses local #e6e9df and #e8eae2 backgrounds, with #95ae70 for its blockquote rule. The original logo's olive period (#688343) belongs to the supplied asset. Keep these established exceptions distinct from the shared palette.
+ContactBand retains local green tones for its label (#3d4f2d), supporting copy (#445431), heading period (#647f37), circular-link border (#819c53), and hover fill (#aedd5d). Lab Notes inherits the shared Projects prose palette: ink text and links, inset inline-code backgrounds, muted quotations and a 1px muted quotation rule. Highlighted code retains its renderer's theme. The original logo's olive period (#688343) belongs to the supplied asset. Keep these established exceptions distinct from the shared palette.
 
 **The Useful Lime Rule.** Use lime for primary actions, selection, and project status; keep the document ground warm and quiet.
 
@@ -229,7 +229,7 @@ Kedebideri regular (400) and bold (700) are served locally from `src/assets/font
 
 - **Homepage:** `hero-display` scales from 36–64px at the default root size, with 1.1 leading and -0.025em tracking. It keeps the explicit two-line statement. `hero-intro` scales from 16–18px at 1.65 leading and a 55ch measure. Process labels use the body size at 1.4 leading.
 - **Shared page intro:** `page-title` belongs to About, Contact, Projects, and Lab Notes. At 650px and below it becomes 52px; supporting copy changes from 17px to 15px. Labels use 12px mono at 1.5 leading and 0.065em tracking.
-- **Detail and recovery titles:** project detail and 404 use `detail-title`. Lab Notes articles have a separate `clamp(2.75rem, 6vw, 4.5rem)` title at 1.08 leading, becoming 44px on mobile.
+- **Detail and recovery titles:** project detail and 404 use `detail-title`. Lab Notes articles now match project detail with `--font-size-page-title` (`clamp(2.75rem, 5.5vw, 4.5rem)`), 1.1 leading, -0.04em tracking, a 20ch maximum measure, and shared 24px/16px title margins.
 - **Section headings:** Featured projects uses `heading`; the homepage studio heading uses `clamp(1.75rem, 3vw, 2.5rem)` at 1.15 leading. Recent Lab Notes uses `clamp(1.75rem, 3.2vw, 2.5rem)` at 1.1 leading and -0.035em tracking.
 - **Cards and rows:** project and note titles use their frontmatter roles at either h2 or h3 without changing appearance. Note descriptions use 15px type at 1.65 leading. Tags and compact metadata use 12px mono; project category uses the fluid `--font-size-label` token.
 - **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses 18px with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px.
@@ -247,7 +247,7 @@ Project cards use 0.9fr/1.1fr columns when a preview exists, 2rem padding, and a
 
 About and Contact use shared `--layout-*` values: 1.25fr/1fr columns, a 95px gap, and 60px/80px block padding. The gap becomes 45px at 900px, then 35px in a single column at 650px. Mobile block padding is 35px/50px. Supporting panels use `--panel-*`: 35px padding and a 30px sticky offset, changing to static positioning with 27px padding on mobile. Their headings change from 35px to 32px.
 
-StudioPageIntro uses 64px/55px block padding, changing to 45px/36px at 650px. Its default bottom divider is disabled on Projects and Lab Notes because their content already supplies the boundary. Project detail uses a metadata/body grid that stacks at 60rem. The note reading frame is capped at 800px around a 700px prose column; it uses 50px/80px padding, becoming 35px/50px on mobile. Default Prose is capped at 70ch.
+StudioPageIntro uses 64px/55px block padding, changing to 45px/36px at 650px. Its default bottom divider is disabled on Projects and Lab Notes because their content already supplies the boundary. Project detail uses a metadata/body grid that stacks at 60rem. Lab Notes uses the same 48px header padding as Projects, followed by a full-width thin divider and a centered reading column. Both reading widths use the 70ch prose token measured at the project's 18px body size; Lab Notes keeps its own inner article typography. Its reading section uses 48px/64px block padding. Default Prose is capped at 70ch.
 
 The footer uses 1.4fr/1fr/1fr columns with 4rem gaps and 3rem block padding. At 48rem, studio identity spans the first row; Explore and Contact share the next row, with 2rem/1.5rem gaps and 2rem block padding. Header navigation remains visible; at 30rem the wordmark stacks above a spaced navigation row.
 
@@ -295,9 +295,9 @@ Buttons, project cards, note rows, build-preview steps, and chips use the existi
 
 ### Reading and informational panels
 
-`Prose` contains Markdown typography with global descendants anchored to its scoped wrapper. The default variant serves project details; `variant="article"` supplies Lab Notes reading styles. Preserve responsive media, scrollable code/tables, visible focus, and green article links. About and Contact share the long-reading colors and supporting tinted-panel treatment; their existing numbered rows and labels belong to those pages.
+`Prose` contains Markdown typography with global descendants anchored to its scoped wrapper. The default variant serves project details; `variant="article"` supplies Lab Notes reading styles. Preserve responsive media, scrollable code/tables, visible focus, and green article links. About and Contact share the long-reading colors and supporting tinted-panel treatment. Their aside rows use unordered lists with matching 6px round bullets in the tinted text color, 20px gaps, and the existing thin rules.
 
-Lab Notes headers retain All Lab Notes navigation, FROM THE LAB label, title, description, UTC date metadata, optional update/topics/cover, related real projects, and return navigation. The sample article remains explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, and their default Prose body.
+Lab Notes headers share Projects' left-facing SVG back link, title scale and spacing, 52ch description, and intro typography. The FROM THE LAB label is removed. Inline publication, optional update, and topics metadata uses visible labels and 14px text, with monospace values and UTC dates. Optional full-width covers, related real projects, and return navigation remain. The sample article stays explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, and their default Prose body.
 
 ### Shared accessibility states
 
