@@ -1,26 +1,34 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { Image } from "astro:assets";
 import ArrowIcon from "../ui/ArrowIcon.astro";
 import Button from "../ui/Button.astro";
 import ProjectStatus from "../ui/ProjectStatus.astro";
-import WebsiteBuildPreview from "./WebsiteBuildPreview.astro";
 
 interface Props {
   project: CollectionEntry<"projects">;
   headingLevel?: 2 | 3;
+  previewComponent?: AstroComponentFactory;
 }
 
-const { project, headingLevel = 2 } = Astro.props;
+const { project, headingLevel = 2, previewComponent: PreviewComponent } = Astro.props;
 const Heading = `h${headingLevel}` as "h2" | "h3";
+const cardImage = project.data.cardImage ?? project.data.coverImage;
+const cardImageAlt = project.data.cardImage
+  ? project.data.cardImageAlt
+  : project.data.coverImageAlt;
+const cardImageWidths = cardImage
+  ? [...new Set([320, 640, 960, 1280, 1600, 2000, cardImage.width]
+      .filter((width) => width <= cardImage.width))].sort((a, b) => a - b)
+  : [];
 ---
 
 <article
   class:list={[
     "project-item",
     {
-      "with-preview":
-        project.data.coverImage || project.id === "vomerlabs-website",
+      "with-preview": Boolean(PreviewComponent || cardImage),
     },
   ]}
   aria-labelledby={`project-card-${project.id}`}
@@ -67,20 +75,28 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
     </div>
   </div>
   {
-    project.data.coverImage ? (
+    PreviewComponent ? (
+      <div class="project-preview"><PreviewComponent /></div>
+    ) : cardImage && (
       <a
         class="project-cover"
         href={`/projects/${project.id}`}
         aria-label={`Read about ${project.data.title}`}
       >
         <Image
-          src={project.data.coverImage}
-          alt={project.data.coverImageAlt!}
+          src={cardImage}
+          alt={cardImageAlt!}
+          width={cardImage.width}
+          height={Math.round(cardImage.width * 5 / 8)}
+          widths={cardImageWidths}
+          sizes="(min-width: 1240px) 600px, (min-width: 961px) calc(55vw - 84px), (min-width: 901px) calc(100vw - 104px), (min-width: 721px) calc(100vw - 120px), (min-width: 651px) calc(100vw - 88px), calc(100vw - 76px)"
+          format="webp"
+          quality={90}
           layout="full-width"
+          fit="cover"
+          position="top"
         />
       </a>
-    ) : (
-      project.id === "vomerlabs-website" && <WebsiteBuildPreview />
     )
   }
 </article>
@@ -100,7 +116,8 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
     align-items: center;
   }
 
-  .project-copy {
+  .project-copy,
+  .project-preview {
     min-width: 0;
   }
 
@@ -191,12 +208,16 @@ const Heading = `h${headingLevel}` as "h2" | "h3";
 
   .project-cover {
     display: block;
+    min-width: 0;
   }
 
   .project-cover :global(img) {
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+    object-position: top;
     border-radius: var(--space-1);
   }
 

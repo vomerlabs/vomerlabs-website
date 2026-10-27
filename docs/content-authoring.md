@@ -35,11 +35,13 @@ Follow the frontmatter with only the sections relevant to the work, such as “T
 | `featured` | Defaults to `false` |
 | `featuredOrder` | Optional nonnegative integer; lower numbers appear first |
 | `tags` | Optional list of nonempty text values; defaults to `[]` |
+| `cardImage` | Optional local image for project cards only; takes precedence over the cover |
+| `cardImageAlt` | Required, nonempty alternative text when a card image is supplied |
 | `coverImage` | Optional local image path, relative to the entry file |
 | `coverImageAlt` | Required, nonempty alternative text when a cover is supplied |
 | `demoUrl`, `repositoryUrl` | Optional absolute HTTP or HTTPS URLs |
 
-Project details show category, publication date, optional update date, and nonempty tags alongside the written status. Dates are formatted in UTC to preserve the authored calendar day. Demo and source links appear only when their URLs are supplied and open through ordinary same-tab navigation. Home and the Projects index share `ProjectCard`, including status, category, description, tags, and a Learn more link. Cards show a supplied cover image or the website-specific build preview when applicable.
+Project details show category, publication date, optional update date, and nonempty tags alongside the written status. Dates are formatted in UTC to preserve the authored calendar day. Demo and source links appear only when their URLs are supplied and open through ordinary same-tab navigation. Home and the Projects index share `ProjectCard`, including status, category, description, tags, and an About this project link. Cards show a supplied component preview first, then `cardImage`, then `coverImage`; without a component or image, the card contains only its text and actions.
 
 Omit unavailable links and images entirely; do not use empty strings. Optional frontmatter fields should be omitted rather than assigned empty YAML values. Projects do not have a draft field: every project entry is considered publishable, even if its status is `in-progress`. Keep unpublished project material outside the collection until it is ready to show.
 
@@ -80,7 +82,36 @@ coverImage: ../../assets/useful-tool.webp
 coverImageAlt: "Describe the visible interface and the information it conveys."
 ```
 
-The collection's `image()` schema resolves the local file into image metadata. Project cards and both detail templates pass covers to Astro's responsive `<Image>` component with `coverImageAlt`. Detail pages display covers without cropping and omit them when absent. Cards omit the cover when absent, except the VomerLabs website card, which uses its build-process diagram. Missing images or missing cover alternatives fail content validation. Informative images inside the Markdown body also need meaningful alternative text.
+The collection's `image()` schema resolves the local file into image metadata. Both detail templates pass covers to Astro's responsive `<Image>` component with `coverImageAlt`, without cropping, and omit them when absent. Missing images or missing image alternatives fail content validation. Informative images inside the Markdown body also need meaningful alternative text.
+
+Projects can supply a separate image for cards on Home and Projects, without adding a cover to the detail page:
+
+```yaml
+cardImage: ../../assets/projects/vomerlabs-homepage.webp
+cardImageAlt: "VomerLabs homepage showing the studio introduction and Think, Build, Share graphic."
+```
+
+Use a 16:10 WebP image, preferably 2000 × 1250px (1600 × 1000px is a suitable minimum). Cards use responsive WebP candidates at 320, 640, 960, 1280, 1600 and 2000px, plus the source width when different, without upscaling the source. Their `sizes` match the desktop image column and the stacked layout below 960px. Images have intrinsic dimensions, top-aligned 16:10 cropping and a link to the project. `cardImage` takes precedence over `coverImage`; each uses its corresponding alternative text. The VomerLabs screenshot is a manually refreshed static asset with capture provenance stored alongside it.
+
+### Component previews
+
+`ProjectCard` accepts an optional `previewComponent` prop, typed as Astro's `AstroComponentFactory`. It renders the component without additional props. Component previews take precedence over both image fields and keep their natural height; only images use the 16:10 crop. There is no client-side preview switch or additional JavaScript.
+
+```astro
+---
+import ProjectCard from '../components/projects/ProjectCard.astro';
+import WebsiteBuildPreview from '../components/projects/WebsiteBuildPreview.astro';
+const { project } = Astro.props;
+---
+
+<!-- Component preview, even when the project has an image -->
+<ProjectCard project={project} previewComponent={WebsiteBuildPreview} />
+
+<!-- Omit the component prop to use the image fallback -->
+<ProjectCard project={project} />
+```
+
+Home and the Projects listing pass `previewComponent` from the shared mapping in `src/config/project-previews.ts`. The VomerLabs website currently maps to `WebsiteBuildPreview`. Remove its mapping entry to show the saved homepage screenshot on both listings; add entries with imported Astro components for other projects. This selection stays in code, without content-schema changes or project-specific logic inside `ProjectCard`. Project detail pages are unaffected.
 
 Wrap rendered Markdown/MDX in `Prose` to contain typography:
 

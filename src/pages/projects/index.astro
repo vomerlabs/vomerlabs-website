@@ -4,6 +4,7 @@ import SiteHeader from '../../components/site/SiteHeader.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import StudioPageIntro from '../../components/site/StudioPageIntro.astro';
 import ProjectCard from '../../components/projects/ProjectCard.astro';
+import { projectPreviewComponents } from '../../config/project-previews';
 import { getProjects } from '../../lib/content';
 
 const projects = await getProjects();
@@ -17,7 +18,7 @@ const projects = await getProjects();
   {projects.length > 0 ? (
     <ul class="projects" aria-label="Projects">
       {projects.map((project) => (
-        <li><ProjectCard project={project} /></li>
+        <li><ProjectCard project={project} previewComponent={projectPreviewComponents[project.id]} /></li>
       ))}
     </ul>
   ) : (

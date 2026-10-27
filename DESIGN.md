@@ -214,7 +214,7 @@ Use the palette by role. Most frontmatter color names map directly to `--color-<
 - **Working Lime** (`accent`, `accent-hover`): primary actions, text selection, and text-action underlines.
 - **Pale Status Lime / Status Green** (`status-background`, `status-dot`): the written project-status badge and its decorative dot.
 - **Paper Rules** (`border`, `border-subtle`): shared section rules and the slightly different page-intro/code borders. Preserve their distinct values.
-- **Inset / Pale Paper** (`surface`, `surface-raised`): inset build previews and chips, versus pale cards, note rows, and empty states. The name `surface-raised` describes a lighter color; it adds no shadow or elevation.
+- **Inset / Pale Paper** (`surface`, `surface-raised`): inset chips and inline code, versus pale cards, note rows, and empty states. The name `surface-raised` describes a lighter color; it adds no shadow or elevation.
 - **Tinted Panel** (`surface-tinted`, `border-tinted`, `text-tinted`, `text-tinted-muted`): About and Contact panels, numbered rows, and supporting panel copy.
 - **Reading Link / Focus Green** (`link`, `focus`): prose links and global keyboard outlines.
 - **Quiet Border** (`muted`): the default prose blockquote rule. **Olive Hover** (`secondary-hover`): the secondary Button's hover fill.
@@ -232,7 +232,7 @@ Kedebideri regular (400) and bold (700) are served locally from `src/assets/font
 - **Detail and recovery titles:** project detail and 404 use `detail-title`. Lab Notes articles now match project detail with `--font-size-page-title` (`clamp(2.75rem, 5.5vw, 4.5rem)`), 1.1 leading, -0.04em tracking, a 20ch maximum measure, and shared 24px/16px title margins.
 - **Section headings:** Featured projects uses `heading`; the homepage studio heading uses `clamp(1.75rem, 3vw, 2.5rem)` at 1.15 leading. Recent Lab Notes uses `clamp(1.75rem, 3.2vw, 2.5rem)` at 1.1 leading and -0.035em tracking.
 - **Cards and rows:** project and note titles use their frontmatter roles at either h2 or h3 without changing appearance. Note descriptions use 15px type at 1.65 leading. Tags and compact metadata use 12px mono; project category uses the fluid `--font-size-label` token.
-- **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses 18px with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px.
+- **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses the shared 16px body token with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px.
 - **Actions and footer:** Button uses 14px at 1.65 leading; ActionLink uses the fluid `action` role. Footer group headings and email use body size, supporting copy uses `small`, and the status badge uses 14px at 1.25 leading.
 
 Shared font sizes, line heights, and tracking live in the global token file. Use them directly when the value serves the same role. Preserve scoped fluid formulas and responsive overrides rather than forcing every heading into one scale.
@@ -247,7 +247,7 @@ Project cards use 0.9fr/1.1fr columns when a preview exists, 2rem padding, and a
 
 About and Contact use shared `--layout-*` values: 1.25fr/1fr columns, a 95px gap, and 60px/80px block padding. The gap becomes 45px at 900px, then 35px in a single column at 650px. Mobile block padding is 35px/50px. Supporting panels use `--panel-*`: 35px padding and a 30px sticky offset, changing to static positioning with 27px padding on mobile. Their headings change from 35px to 32px.
 
-StudioPageIntro uses 64px/55px block padding, changing to 45px/36px at 650px. Its default bottom divider is disabled on Projects and Lab Notes because their content already supplies the boundary. Project detail uses a metadata/body grid that stacks at 60rem. Lab Notes uses the same 48px header padding as Projects, followed by a full-width thin divider and a centered reading column. Both reading widths use the 70ch prose token measured at the project's 18px body size; Lab Notes keeps its own inner article typography. Its reading section uses 48px/64px block padding. Default Prose is capped at 70ch.
+StudioPageIntro uses 64px/55px block padding, changing to 45px/36px at 650px. Its default bottom divider is disabled on Projects and Lab Notes because their content already supplies the boundary. Project detail uses a metadata/body grid that stacks at 60rem. Lab Notes uses the same 48px header padding as Projects, followed by a full-width thin divider and a centered reading column. Both reading widths use the 70ch prose token measured at the shared 16px body size; Lab Notes keeps its own inner article typography. Its reading section uses 48px/64px block padding. Default Prose is capped at 70ch.
 
 The footer uses 1.4fr/1fr/1fr columns with 4rem gaps and 3rem block padding. At 48rem, studio identity spans the first row; Explore and Contact share the next row, with 2rem/1.5rem gaps and 2rem block padding. Header navigation remains visible; at 30rem the wordmark stacks above a spaced navigation row.
 
@@ -255,13 +255,13 @@ Use the quarter-rem `--space-*` scale for shared rhythm. `--space-prose` and sha
 
 ## Elevation & Depth
 
-The system is flat and uses no shadows or depth gradients. Tonal differences separate paper, pale project cards, note rows, inset build previews, and green panels. Thin rules and type establish hierarchy. ActionLink's linear gradient draws a one-pixel underline and does not simulate depth.
+The system is flat and uses no shadows or depth gradients. Tonal differences separate paper, pale project cards, note rows, inset chips, and green panels. Thin rules and type establish hierarchy. ActionLink's linear gradient draws a one-pixel underline and does not simulate depth.
 
 **The Flat Surface Rule.** Use the established pale surfaces and rules to separate content; keep project cards and reading panels free of added shadows.
 
 ## Shapes
 
-Buttons, project cards, note rows, build-preview steps, and chips use the existing 0.25rem radius through `--space-1`. ActionLink's primary variant and ProjectStatus remain pills; the status dot and ContactBand link are circular. Other content stays open and square-edged. Section/table rules are generally 1px; the empty Lab Notes boundary is 2px.
+Buttons, project cards, project images, note rows, and chips use the existing 0.25rem radius through `--space-1`. ActionLink's primary variant and ProjectStatus remain pills; the status dot and ContactBand link are circular. Other content stays open and square-edged. Section/table rules are generally 1px; the empty Lab Notes boundary is 2px.
 
 ## Components
 
@@ -271,9 +271,9 @@ Buttons, project cards, note rows, build-preview steps, and chips use the existi
 
 `ActionLink` remains a separate component for existing detail, empty-state, and recovery actions. It requires `href` and supports primary (default) and text variants. The primary variant is a padded lime pill; text uses the lime underline. Both shift the shared arrow by 0.15em on hover or keyboard focus. Transitions use the global 200ms duration and `cubic-bezier(0.16, 1, 0.3, 1)` easing.
 
-### Project cards and build preview
+### Project cards and images
 
-`ProjectCard` accepts a project entry and `headingLevel` (2 by default; 3 on Home). It presents written status/category, linked title, description, optional tags, secondary Learn more button, optional demo/source links, and an optional processed cover. The website entry uses `WebsiteBuildPreview` when no cover is supplied. The preview is a Content / Build / Pages diagram on the inset surface, with its middle step in ink; it stacks at 40rem. Both lists share this card implementation and retain their own empty states.
+`ProjectCard` accepts a project entry, `headingLevel` (2 by default; 3 on Home), and an optional `previewComponent` typed as AstroComponentFactory. It presents written status/category, linked title, description, optional tags, secondary About this project button, optional demo/source links, and one preview. A component prop takes precedence, renders without additional props and keeps its natural height; otherwise prefer `cardImage`/`cardImageAlt`, then `coverImage`/`coverImageAlt`, and omit the preview column when none is available. Home and Projects use the shared mapping in `src/config/project-previews.ts`; the website currently uses the restored WebsiteBuildPreview, whose Markdown / Astro / HTML diagram stacks vertically below 640px. The saved 2000 × 1250px WebP homepage screenshot remains the image fallback. Image previews reserve a 16:10 area with top-aligned cropping, existing small corners and a native project link. Astro emits responsive WebPs at 320, 640, 960, 1280, 1600 and 2000px (bounded by source size), with a source-width candidate when different and sizes matching the existing two-column/stacked layout. Only the selected preview is rendered. This is a static, code-selected presentation with no client-side toggle or additional JavaScript. Project detail covers remain independent. Both lists share this card implementation and retain their own empty states.
 
 ### Note rows and tags
 

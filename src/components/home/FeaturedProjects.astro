@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import ArrowIcon from "../ui/ArrowIcon.astro";
 import ProjectCard from "../projects/ProjectCard.astro";
+import { projectPreviewComponents } from "../../config/project-previews";
 
 interface Props {
   projects: CollectionEntry<"projects">[];
@@ -20,7 +21,11 @@ const { projects } = Astro.props;
       <ul class="project-list" role="list">
         {projects.map((project) => (
           <li>
-            <ProjectCard project={project} headingLevel={3} />
+            <ProjectCard
+              project={project}
+              headingLevel={3}
+              previewComponent={projectPreviewComponents[project.id]}
+            />
           </li>
         ))}
       </ul>

@@ -1,0 +1,15 @@
+{
+  "url": "http://localhost:4325/",
+  "viewport": {
+    "width": 1000,
+    "height": 625
+  },
+  "deviceScaleFactor": 2,
+  "format": "webp",
+  "quality": 92,
+  "metrics": {
+    "heroBottom": 516.484375,
+    "actionBottom": 460.484375,
+    "dpr": 2
+  }
+}

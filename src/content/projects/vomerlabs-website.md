@@ -5,6 +5,8 @@ status: in-progress
 category: Website
 featured: true
 featuredOrder: 0
+cardImage: ../../assets/projects/vomerlabs-homepage.webp
+cardImageAlt: VomerLabs homepage showing the studio introduction and Think, Build, Share graphic.
 publishedAt: 2026-10-19
 tags:
   - Astro

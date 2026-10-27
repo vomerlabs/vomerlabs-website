@@ -29,11 +29,17 @@ const projects = defineCollection({
         category: z.string().trim().min(1),
         featured: z.boolean().default(false),
         featuredOrder: z.number().int().nonnegative().optional(),
+        cardImage: image().optional(),
+        cardImageAlt: z.string().trim().min(1).optional(),
         coverImage: image().optional(),
         demoUrl: z.url({ protocol: /^https?$/ }).optional(),
         repositoryUrl: z.url({ protocol: /^https?$/ }).optional(),
       })
-      .refine(hasCoverAlternative, coverAlternativeError),
+      .refine(hasCoverAlternative, coverAlternativeError)
+      .refine((data) => !data.cardImage || Boolean(data.cardImageAlt), {
+        message: 'Provide cardImageAlt when using a cardImage.',
+        path: ['cardImageAlt'],
+      }),
 });
 
 const labNotes = defineCollection({

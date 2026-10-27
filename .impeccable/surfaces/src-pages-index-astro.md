@@ -2,7 +2,7 @@
 version: 1
 slug: "src-pages-index-astro"
 primary_target: "src/pages/index.astro"
-related_targets: ["src/layouts/BaseLayout.astro", "src/components/site/SiteFooter.astro", "src/components/site/ContactBand.astro", "src/components/home/FeaturedProjects.astro", "src/components/projects/WebsiteBuildPreview.astro", "src/components/home/HomepageNotes.astro"]
+related_targets: ["src/layouts/BaseLayout.astro", "src/components/site/SiteFooter.astro", "src/components/site/ContactBand.astro", "src/components/home/FeaturedProjects.astro", "src/components/projects/ProjectCard.astro", "src/components/home/HomepageNotes.astro"]
 ---
 
 # Homepage
@@ -68,3 +68,17 @@ The owner requested matching Projects-page cards to the homepage. Both now use s
 ## Shared note rows
 
 The owner requested matching the Lab Notes listing to the homepage. NotePreview.astro now owns the accepted homepage row markup, reading-time calculation, and scoped styles. HomepageNotes renders it with h3 titles and its existing ID prefix; the archive uses h2 titles. Full-row navigation, publication date, estimated reading time, description, topic chips, hover, focus, and mobile reflow share one implementation. The archive list uses the homepage’s 12px gaps and removes its old row borders; its hero, full published-note query, empty state, and article pages remain unchanged. Home keeps its latest-three limit, section heading, archive link, and empty state. The supplied sample stays labeled. Type checks, build, and diff checks pass. Browser verification at 1440, 769, 768, 390, and 320px confirmed matching dimensions, typography, colors, metadata and tags, working hover/focus/Enter navigation without JavaScript, and no overflow or script errors. Captures: `.impeccable/review/shared-note-rows/`.
+
+
+## Responsive project card image
+
+Owner refinement: replace the website build diagram with a real screenshot of the homepage header and hero, on cards only. The source is a 2000 × 1250px WebP captured in Chromium at a 1000 × 625 CSS viewport and 2× density after fonts loaded. The toolbar and content below the hero were hidden only in the capture DOM. Source and provenance live in src/assets/projects/. Project content now supports optional cardImage/cardImageAlt, with required alt text when an image is supplied. Cards prefer that pair, fall back to coverImage/coverImageAlt, and otherwise remain text-only. The image is a top-aligned 16:10 linked Astro Image with responsive WebP candidates and layout-specific sizes. Existing card composition and responsive stacking stay in place; project detail covers stay independent. The unused build preview component is deleted.
+
+Astro check and build pass. Browser checks on Home and Projects at 1440, 960, 390 and 320px, at both 1× and 2× density, confirm loaded WebPs, appropriate source selection, reserved 16:10 dimensions, correct heading levels, keyboard focus/Enter navigation and no overflow. Temporary fixtures confirmed text-only cards, cover fallback and card-image precedence; fixtures were removed. The website detail page has no new cover. Captures and checks: .impeccable/review/project-card-image/. Capture provenance: .impeccable/review/project-screenshot/capture.json.
+
+
+## Component preview prop
+
+The owner restored WebsiteBuildPreview and requested a prop-based choice between components and images. ProjectCard now accepts previewComponent (AstroComponentFactory), rendering it without additional props in a min-width:0 wrapper at its natural height. Precedence is component prop, cardImage, coverImage, then text-only. Only the selected preview renders, and the two-column layout applies to either preview type. Both listings read src/config/project-previews.ts; vomerlabs-website maps to WebsiteBuildPreview by default. Removing that mapping returns both cards to the existing responsive WebP screenshot. Content schema, screenshot, restored component styling and detail pages are preserved; no runtime toggle or client JavaScript is added.
+
+Astro check and build pass. Browser review of Home and Projects at 1440, 960, 390 and 320px confirmed one diagram and no image per card, correct card columns, vertical diagram stacking on mobile, and no overflow. A temporary review route verified a component without images, omitted-prop image rendering, cover fallback, text-only cards, visible image-link focus and Enter navigation. The temporary route was removed. Evidence: .impeccable/review/project-preview-prop/.
