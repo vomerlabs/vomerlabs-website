@@ -1,7 +1,9 @@
 {
   "name": "vomerlabs",
+  "private": true,
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "npm@11.20.0",
   "engines": {
     "node": ">=22.22.0"
   },
@@ -9,6 +11,7 @@
     "dev": "astro dev",
     "check": "astro check",
     "build": "astro build",
+    "check:links": "node scripts/check-links.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

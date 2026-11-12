@@ -10,6 +10,7 @@ import FormattedDate from "../../components/content/FormattedDate.astro";
 import ActionLink from "../../components/ui/ActionLink.astro";
 import ArrowIcon from "../../components/ui/ArrowIcon.astro";
 import { getProjects, getPublishedLabNotes } from "../../lib/content";
+import { estimateReadingTime } from "../../lib/reading-time";
 
 export const getStaticPaths = (async () => {
   const notes = await getPublishedLabNotes();
@@ -20,6 +21,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { note } = Astro.props;
 const { data } = note;
 const { Content } = await render(note);
+const readingTime = estimateReadingTime(note.body);
 const relatedIds = new Set(data.relatedProjects.map(({ id }) => id));
 const relatedProjects =
   relatedIds.size > 0
@@ -31,7 +33,7 @@ const relatedProjects =
   <SiteHeader slot="header" />
   <article class="note" aria-labelledby="note-title">
     <header class="introduction">
-      <a class="back-link" href="/lab-notes"
+      <a class="back-link" href="/lab-notes/"
         ><span class="back-arrow"><ArrowIcon /></span><span>All Lab Notes</span
         ></a
       >
@@ -43,22 +45,22 @@ const relatedProjects =
           <dd><FormattedDate date={data.publishedAt} /></dd>
         </div>
         {data.updatedAt && (
-            <div>
-                <dt>Updated</dt>
+          <div>
+            <dt>Updated</dt>
             <dd><FormattedDate date={data.updatedAt} /></dd>
-            </div>
+          </div>
         )}
         {data.tags.length > 0 && (
-            <div>
+          <div>
             <dt>Topics</dt>
-                <dd>{data.tags.join(" · ")}</dd>
+            <dd>{data.tags.join(" · ")}</dd>
           </div>
         )}
         {readingTime && (
           <div>
             <dt>Reading time</dt>
             <dd>{readingTime} min read</dd>
-            </div>
+          </div>
         )}
       </dl>
     </header>
@@ -89,7 +91,7 @@ const relatedProjects =
               <ul>
                 {relatedProjects.map((project) => (
                   <li>
-                    <ActionLink href={`/projects/${project.id}`} variant="text">
+                    <ActionLink href={`/projects/${project.id}/`} variant="text">
                       {project.data.title}
                     </ActionLink>
                     <p>{project.data.description}</p>
@@ -100,7 +102,7 @@ const relatedProjects =
           )
         }
         <nav class="reading-footer" aria-label="After this note">
-          <ActionLink href="/lab-notes" variant="text"
+          <ActionLink href="/lab-notes/" variant="text"
             >Back to Lab Notes</ActionLink
           >
         </nav>
@@ -140,7 +142,7 @@ const relatedProjects =
   h1 {
     max-width: 20ch;
     margin-block: var(--space-6) var(--space-4);
-    font-size: var(--font-size-page-title);
+    font-size: var(--font-size-detail-title);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;

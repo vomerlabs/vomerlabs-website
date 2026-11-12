@@ -1,13 +1,19 @@
 ---
-import ArrowIcon from '../ui/ArrowIcon.astro';
+import ArrowIcon from "../ui/ArrowIcon.astro";
 ---
 
 <section class="contact-band-wrap" aria-labelledby="contact-band-title">
   <div class="contact-band">
     <span class="contact-label">SOMETHING ON YOUR MIND?</span>
     <div class="contact-heading">
-      <h2 id="contact-band-title">Good things start<br />with a conversation<span>.</span></h2>
-      <a class="round-link" href="/contact/" aria-label="Get in touch"><ArrowIcon /></a>
+      <h2 id="contact-band-title">
+        Good things start
+        <br />
+        with a conversation<span>.</span>
+      </h2>
+      <a class="round-link" href="/contact/" aria-label="Get in touch">
+        <ArrowIcon />
+      </a>
     </div>
     <p>A project, a question, or an idea worth exploring. Let’s talk.</p>
   </div>
@@ -22,9 +28,11 @@ import ArrowIcon from '../ui/ArrowIcon.astro';
   }
 
   .contact-band {
+    /* These accent-band tints are local to this component; shared tokens cover everything else. */
     padding: 45px 40px 42px;
     background: var(--color-accent);
     color: var(--color-text);
+    border-radius: var(--radius-small);
   }
 
   .contact-label {

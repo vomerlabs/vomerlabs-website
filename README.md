@@ -6,7 +6,7 @@ Home, Projects, project details, Lab Notes, note articles, About, Contact, and a
 
 ## Development
 
-Use Node.js 22.22.0 or newer and the locked npm dependencies:
+Use Node.js 22.22.0 or newer (see `.nvmrc`) and the locked npm dependencies:
 
 ```sh
 npm ci
@@ -21,10 +21,11 @@ Use background mode as required by [AGENTS.md](AGENTS.md). Astro normally starts
 ```sh
 npm run check
 npm run build
+npm run check:links
 npm run preview
 ```
 
-`check` validates Astro and TypeScript. `build` validates collection content and writes the static site to `dist/`. `preview` serves that build locally.
+`check` validates Astro and TypeScript. `build` validates collection content and writes the static site to `dist/`. `check:links` verifies that every internal link in `dist/` resolves and uses the directory URL form. `preview` serves that build locally. CI runs the same check, build, and link checks on every push and pull request.
 
 ## Project structure
 
@@ -43,11 +44,13 @@ src/
   content.config.ts          Collection loaders and metadata schemas
   layouts/BaseLayout.astro   Document, metadata, skip link, and layout slots
   lib/content.ts             Typed queries, sorting, and draft filtering
+  lib/reading-time.ts        Shared reading-time estimate
   pages/                     Home, listings, details, About, Contact, and 404
   styles/                    Global tokens, font faces, and document defaults
-public/                      Original logo, SVG favicon, and favicon fallback
+public/                      Original logo, favicons, and Apple touch icon
 docs/content-authoring.md    Content fields, examples, and publishing rules
-docs/next-context.md         Current handoff and outstanding launch work
+scripts/check-links.mjs      Post-build internal link check
+.github/workflows/ci.yml     Check, build, and link-check CI
 PRODUCT.md                   Confirmed product context
 DESIGN.md                    Current visual system and component guidance
 .impeccable/design.json      Design-panel previews and metadata
@@ -60,21 +63,21 @@ Pages load content and compose components. Shared components follow real repeate
 | Route | Purpose |
 | --- | --- |
 | `/` | Studio introduction, featured projects, studio overview, and three latest published notes |
-| `/projects` | All projects |
-| `/projects/[slug]` | Project metadata and rendered Markdown/MDX |
-| `/lab-notes` | All published notes, or an empty state |
-| `/lab-notes/[slug]` | Published article, optional cover and metadata, and related projects |
-| `/about` | Studio focus, approach, and guiding principles |
-| `/contact` | Selectable email link and conversation guidance |
+| `/projects/` | All projects |
+| `/projects/[slug]/` | Project metadata and rendered Markdown/MDX |
+| `/lab-notes/` | All published notes, or an empty state |
+| `/lab-notes/[slug]/` | Published article, optional cover and metadata, and related projects |
+| `/about/` | Studio focus, approach, and guiding principles |
+| `/contact/` | Selectable email link and conversation guidance |
 | `/404` | Missing-page recovery with `noindex`; generates `dist/404.html` |
 
-The current content is available at `/projects/vomerlabs-website` and `/lab-notes/sample-keeping-a-website-simple`. The note is sample content, not an additional claim of real studio work; replace it or set `draft: true` when it is no longer needed.
+The current content is available at `/projects/vomerlabs-website/` and `/lab-notes/sample-keeping-a-website-simple/`. The note is sample content, not an additional claim of real studio work; replace it or set `draft: true` when it is no longer needed.
 
-Home and Projects share `ProjectCard`, using h3 and h2 card titles respectively. Cards include status, category, description, tags, a secondary Learn more button, optional external links, and a supplied cover or the website-specific build preview. Home and Lab Notes share `NotePreview`, with dates, optional estimated reading time, descriptions, topic chips, and h3/h2 titles. Each listing keeps its own empty state.
+Home and Projects share `ProjectCard`, using h3 and h2 card titles respectively. Cards include status, category, description, tags, a secondary About this project button, optional external links, and a supplied cover or the website-specific build preview. Home and Lab Notes share `NotePreview`, with dates, optional estimated reading time, descriptions, topic chips, and h3/h2 titles. Each listing keeps its own empty state.
 
 `getProjects()` sorts newest first. `getFeaturedProjects()` selects featured entries and sorts by `featuredOrder`, then date. `getPublishedLabNotes()` excludes drafts and supplies both note listings and static article paths. Equal dates use entry IDs for stable ordering. Dates do not schedule publication. See [content authoring](docs/content-authoring.md) for schemas, images, related projects, and publishing.
 
-Legacy `/work` and `/work/[slug]` routes redirect to Projects through `astro.config.mjs`. The static build emits HTML redirects; production status codes depend on hosting configuration.
+No legacy routes or redirects are configured. If an old public URL ever needs to keep working, add `redirects` in `astro.config.mjs` and verify the generated redirect page and host status code before relying on it.
 
 ## Styling and shared components
 
@@ -92,7 +95,7 @@ See [UI usage and token conventions](src/components/ui/README.md) and [DESIGN.md
 
 `BaseLayout` requires `title` and `description`. Optional props are `canonical`, `sharingImage: { src, alt }`, and `showContactBand` (default `true`). The default slot renders inside `<main id="main-content">`; named `header`, `footer`, and `head` slots supply the shell and additional metadata. Pages own their headings.
 
-The layout renders `ContactBand` after the main content and before the footer. Contact uses `showContactBand={false}`. `SiteFooter` accepts `topHref` for each page's Back to top target and `showDivider` for its optional top separator; Contact enables the separator. `StudioPageIntro` supplies the shared About, Contact, Projects, and Lab Notes heroes with `id`, `label`, `description`, a heading slot, and optional `showDivider` (default `true`). The two indexes disable that hero divider.
+The layout renders `ContactBand` after the main content and before the footer. Contact uses `showContactBand={false}`. `SiteFooter` accepts `topHref` for each page's Back to top target and `showDivider` for its optional top separator; Contact enables the separator. Its default target is `#main-content`, and every page currently passes its own heading id. `StudioPageIntro` supplies the shared About, Contact, Projects, and Lab Notes heroes with `id`, `label`, `description`, a heading slot, and optional `showDivider` (default `true`). The two indexes disable that hero divider.
 
 The layout appends the studio name to page titles while avoiding duplication on Home. A verified Astro `site` URL enables automatic canonical URLs. Until configured, no domain is assumed. Pass a public image URL or processed image `.src` to `sharingImage`, rather than an image metadata object.
 
@@ -100,4 +103,4 @@ The layout appends the studio name to page titles while avoiding duplication on 
 
 Choose the host and verified production URL, then configure canonical/sharing metadata, sitemap/robots, social imagery, and static-host 404 behavior. Preserve missing-page HTTP 404 responses rather than rewriting every unknown URL to a successful page. Verify delivery for `hi@vomerlabs.com`; the repository currently supplies direct email links and no form, analytics, or response-time promise.
 
-Add real projects and writing when supplied, and replace or hide the sample note before a production release. Keep About focused on the studio without invented biography, credentials, or results. The selected Working Index identity and existing review artifacts remain the baseline; see [the continuation handoff](docs/next-context.md) for current constraints.
+Add real projects and writing when supplied, and replace or hide the sample note before a production release. Keep About focused on the studio without invented biography, credentials, or results. The selected Working Index identity and existing review artifacts remain the baseline; current constraints stay in this README and in [PRODUCT.md](PRODUCT.md).

@@ -70,6 +70,6 @@ That separation leaves room to grow without requiring a new layout for every new
 
 The first version does not need every possible feature. It needs a clear route from the index to an article, a readable body, and a way to continue exploring afterward.
 
-You can inspect the [VomerLabs website project](/projects/vomerlabs-website) for the build description, or return to [all Lab Notes](/lab-notes) to see how this sample appears in the index.
+You can inspect the [VomerLabs website project](/projects/vomerlabs-website/) for the build description, or return to [all Lab Notes](/lab-notes/) to see how this sample appears in the index.
 
 When you are finished previewing, this sample can be replaced with a real note or hidden by setting `draft: true` in its frontmatter.

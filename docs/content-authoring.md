@@ -2,11 +2,11 @@
 
 Content lives in `src/content/projects/` and `src/content/lab-notes/`. Both `.md` and `.mdx` are supported; use Markdown unless embedded Astro components are useful. MDX support does not require a client framework.
 
-The examples below are templates, not real VomerLabs work. Replace their fields and body with accurate content before publishing. The real `vomerlabs-website.md` project appears on Home, the Projects index, and its detail page at `/projects/vomerlabs-website`. The published `sample-keeping-a-website-simple.md` note previews the Lab Notes layout and is explicitly labeled as sample content; it appears on Home, the Lab Notes index, and its article page. Replace it with real writing or set `draft: true` when the preview is no longer needed.
+The examples below are templates, not real VomerLabs work. Replace their fields and body with accurate content before publishing. The real `vomerlabs-website.md` project appears on Home, the Projects index, and its detail page at `/projects/vomerlabs-website/`. The published `sample-keeping-a-website-simple.md` note previews the Lab Notes layout and is explicitly labeled as sample content; it appears on Home, the Lab Notes index, and its article page. Replace it with real writing or set `draft: true` when the preview is no longer needed.
 
 ## IDs and URLs
 
-Use lowercase, hyphen-separated filenames such as `useful-tool.md`. Astro's glob loader generates the entry ID from the filename without its extension. Project pages use that ID at `/projects/useful-tool`; note pages use `/lab-notes/useful-tool`. Keep IDs stable after publishing; renaming published content requires a redirect in the eventual hosting configuration.
+Use lowercase, hyphen-separated filenames such as `useful-tool.md`. Astro's glob loader generates the entry ID from the filename without its extension. Project pages use that ID at `/projects/useful-tool/`; note pages use `/lab-notes/useful-tool/`. Keep IDs stable after publishing; renaming published content requires a redirect in the eventual hosting configuration.
 
 Keep entry files directly in their collection directory for now. Do not create both `.md` and `.mdx` files with the same ID. No separate `slug` field is required.
 
@@ -69,9 +69,9 @@ For example, `relatedProjects: [useful-tool]` refers to `src/content/projects/us
 
 `getPublishedLabNotes()` filters out drafts in both development and production. The listing and `getStaticPaths()` both use this helper so drafts do not receive public links or routes. Draft files are still parsed and schema-validated. Dates do not schedule publication: a note with `draft: false` is publishable regardless of its date.
 
-Start note body headings at `##`; the article template owns the `h1`. Published notes appear newest first with their title, summary, date, and nonempty tags. Article pages show publication and optional update dates in UTC, optional topics and cover, the full Markdown/MDX body, and links to existing referenced projects. Missing referenced projects do not produce broken links, but should be corrected before publication. Duplicate references render once. There is no search, filtering, or browser runtime.
+Start note body headings at `##`; the article template owns the `h1`. Published notes appear newest first with their title, summary, date, and nonempty tags. Article pages show publication and optional update dates in UTC, optional topics, estimated reading time, optional cover, the full Markdown/MDX body, and links to existing referenced projects. Missing referenced projects do not produce broken links, but should be corrected before publication. Duplicate references render once. There is no search, filtering, or browser runtime.
 
-To publish a note, replace the template with accurate writing, then explicitly set `draft: false` (or omit `draft`, which defaults to false). Confirm it appears at `/lab-notes` and its stable detail URL. Home shows the three latest published notes; the index shows all published notes. Both use `NotePreview` rows with dates, topic chips, and estimated reading time at 200 words per minute, omitted when the body is absent. Home uses h3 row titles, while the index uses h2 titles. Drafts remain absent from both lists and generated article routes, including in development. With no published notes, Home and the index show their own empty states; the index includes a link to Projects.
+To publish a note, replace the template with accurate writing, then explicitly set `draft: false` (or omit `draft`, which defaults to false). Confirm it appears at `/lab-notes/` and its stable detail URL. Home shows the three latest published notes; the index shows all published notes. Both use `NotePreview` rows with dates, topic chips, and estimated reading time at 200 words per minute, omitted when the body is absent. Home uses h3 row titles, while the index uses h2 titles. Drafts remain absent from both lists and generated article routes, including in development. With no published notes, Home and the index show their own empty states; the index includes a link to Projects.
 
 ## Images
 

@@ -9,6 +9,7 @@ import ProjectStatus from '../../components/ui/ProjectStatus.astro';
 import ActionLink from '../../components/ui/ActionLink.astro';
 import ArrowIcon from '../../components/ui/ArrowIcon.astro';
 import Prose from '../../components/content/Prose.astro';
+import FormattedDate from '../../components/content/FormattedDate.astro';
 import { getProjects } from '../../lib/content';
 
 export const getStaticPaths = (async () => {
@@ -23,14 +24,13 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { project } = Astro.props;
 const { data } = project;
 const { Content } = await render(project);
-const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZone: 'UTC' });
 ---
 
 <BaseLayout title={data.title} description={data.description}>
   <SiteHeader slot="header" />
   <article aria-labelledby="project-title">
     <header class="introduction">
-      <a class="back-link" href="/projects"><span class="back-arrow"><ArrowIcon /></span><span>All projects</span></a>
+      <a class="back-link" href="/projects/"><span class="back-arrow"><ArrowIcon /></span><span>All projects</span></a>
       <h1 id="project-title">{data.title}</h1>
       <p class="description">{data.description}</p>
     </header>
@@ -46,12 +46,12 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
           <div><dt>Category</dt><dd>{data.category}</dd></div>
           <div>
             <dt>Published</dt>
-            <dd><time datetime={data.publishedAt.toISOString()}>{dateFormatter.format(data.publishedAt)}</time></dd>
+            <dd><FormattedDate date={data.publishedAt} /></dd>
           </div>
           {data.updatedAt && (
             <div>
               <dt>Updated</dt>
-              <dd><time datetime={data.updatedAt.toISOString()}>{dateFormatter.format(data.updatedAt)}</time></dd>
+              <dd><FormattedDate date={data.updatedAt} /></dd>
             </div>
           )}
           {data.tags.length > 0 && (
@@ -68,7 +68,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
       <div class="body-content">
         <Prose><Content /></Prose>
         <nav class="reading-footer" aria-label="After this project">
-          <ActionLink href="/projects" variant="text">Back to Projects</ActionLink>
+          <ActionLink href="/projects/" variant="text">Back to Projects</ActionLink>
         </nav>
       </div>
     </div>
@@ -102,7 +102,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeZ
   h1 {
     max-width: 20ch;
     margin-block: var(--space-6) var(--space-4);
-    font-size: var(--font-size-page-title);
+    font-size: var(--font-size-detail-title);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;

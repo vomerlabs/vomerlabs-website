@@ -13,7 +13,7 @@ import ActionLink from '../components/ui/ActionLink.astro';
     <p>That address doesn’t point to a page on VomerLabs. Head home or browse the projects to find your way.</p>
     <div class="actions">
       <ActionLink href="/">Go home</ActionLink>
-      <ActionLink href="/projects" variant="text">Explore projects</ActionLink>
+      <ActionLink href="/projects/" variant="text">Explore projects</ActionLink>
     </div>
   </section>
   <SiteFooter slot="footer" topHref="#missing-title" />
@@ -27,7 +27,7 @@ import ActionLink from '../components/ui/ActionLink.astro';
   h1 {
     max-width: 16ch;
     margin: 0;
-    font-size: var(--font-size-page-title);
+    font-size: var(--font-size-detail-title);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tightest);
     text-wrap: balance;

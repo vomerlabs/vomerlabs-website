@@ -15,7 +15,7 @@ const { notes, id = 'home-notes' } = Astro.props;
 <section class="home-notes" aria-labelledby={`${id}-title`}>
   <div class="notes-heading">
     <h2 id={`${id}-title`}>Recent Lab Notes</h2>
-    <a class="all-notes" href="/lab-notes">Browse all lab notes <ArrowIcon /></a>
+    <a class="all-notes" href="/lab-notes/">Browse all lab notes <ArrowIcon /></a>
   </div>
   {notes.length ? (
     <ul class="home-note-list" role="list">
@@ -79,7 +79,7 @@ const { notes, id = 'home-notes' } = Astro.props;
     margin: 0;
     padding: var(--space-6);
     background: var(--color-surface-raised);
-    border-radius: var(--space-1);
+    border-radius: var(--radius-small);
     color: var(--color-text-muted);
     line-height: 1.75;
   }

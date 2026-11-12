@@ -14,7 +14,7 @@ const { projects } = Astro.props;
 <section id="projects" class="featured-projects" aria-labelledby="featured-projects-title">
   <div class="section-heading">
     <h2 id="featured-projects-title">Featured projects</h2>
-    <a class="all-projects" href="/projects">Browse all projects <ArrowIcon /></a>
+    <a class="all-projects" href="/projects/">Browse all projects <ArrowIcon /></a>
   </div>
   {
     projects.length ? (
@@ -85,7 +85,7 @@ const { projects } = Astro.props;
     margin: 0;
     padding: var(--space-6);
     background: var(--color-surface-raised);
-    border-radius: var(--space-1);
+    border-radius: var(--radius-small);
     color: var(--color-text-muted);
   }
 

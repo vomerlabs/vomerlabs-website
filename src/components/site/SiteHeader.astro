@@ -13,7 +13,7 @@ const isLabNotes =
   </a>
   <nav aria-label="Main navigation">
     <a
-      href="/projects"
+      href="/projects/"
       aria-current={isProjects
         ? pathname === "/projects"
           ? "page"
@@ -21,18 +21,18 @@ const isLabNotes =
         : undefined}>Projects</a
     >
     <a
-      href="/lab-notes"
+      href="/lab-notes/"
       aria-current={isLabNotes
         ? pathname === "/lab-notes"
           ? "page"
           : "true"
         : undefined}>Lab Notes</a
     >
-    <a href="/about" aria-current={pathname === "/about" ? "page" : undefined}
+    <a href="/about/" aria-current={pathname === "/about" ? "page" : undefined}
       >About</a
     >
     <a
-      href="/contact"
+      href="/contact/"
       aria-current={pathname === "/contact" ? "page" : undefined}>Contact</a
     >
   </nav>
@@ -101,6 +101,12 @@ const isLabNotes =
     nav {
       width: 100%;
       justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 22.5rem) {
+    nav {
+      gap: var(--space-3);
     }
   }
 </style>

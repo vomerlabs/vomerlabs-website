@@ -7,16 +7,16 @@ interface Props {
   showDivider?: boolean;
 }
 
-const { topHref = '#intro-title', showDivider = false } = Astro.props;
+const { topHref = '#main-content', showDivider = false } = Astro.props;
 const links = [
-  { href: '/projects', label: 'Projects' },
-  { href: '/lab-notes', label: 'Lab Notes' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/lab-notes/', label: 'Lab Notes' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
 ];
 ---
 
-<footer id="contact" class="site-footer">
+<footer class="site-footer">
   <div class:list={['footer-top', { 'with-divider': showDivider }]}>
     <div class="footer-studio">
       <a class="footer-wordmark" href="/" aria-label={`${site.name} home`}>
