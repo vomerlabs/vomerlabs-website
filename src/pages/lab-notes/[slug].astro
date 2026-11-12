@@ -39,30 +39,27 @@ const relatedProjects =
       <p class="description">{data.description}</p>
       <dl class="metadata">
         <div>
-          <dt>Published:</dt><dd><FormattedDate date={data.publishedAt} /></dd>
+          <dt>Published</dt>
+          <dd><FormattedDate date={data.publishedAt} /></dd>
         </div>
-        {
-          data.updatedAt && (
+        {data.updatedAt && (
             <div>
-              <>
                 <dt>Updated</dt>
-                <dd>
-                  <FormattedDate date={data.updatedAt} />
-                </dd>
-              </>
+            <dd><FormattedDate date={data.updatedAt} /></dd>
             </div>
-          )
-        }
-        {
-          data.tags.length > 0 && (
+        )}
+        {data.tags.length > 0 && (
             <div>
-              <>
-                <dt>Topics: </dt>
+            <dt>Topics</dt>
                 <dd>{data.tags.join(" · ")}</dd>
-              </>
+          </div>
+        )}
+        {readingTime && (
+          <div>
+            <dt>Reading time</dt>
+            <dd>{readingTime} min read</dd>
             </div>
-          )
-        }
+        )}
       </dl>
     </header>
     {
