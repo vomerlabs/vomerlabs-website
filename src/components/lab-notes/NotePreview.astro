@@ -7,15 +7,14 @@ import { estimateReadingTime } from '../../lib/reading-time';
 interface Props {
   note: CollectionEntry<'lab-notes'>;
   headingLevel?: 2 | 3;
-  idPrefix?: string;
 }
 
-const { note, headingLevel = 2, idPrefix = 'note' } = Astro.props;
+const { note, headingLevel = 2 } = Astro.props;
 const Heading = `h${headingLevel}` as 'h2' | 'h3';
 const readingTime = estimateReadingTime(note.body);
 ---
 
-<a class="note-link" href={`/lab-notes/${note.id}/`} aria-labelledby={`${idPrefix}-${note.id}`}>
+<a class="note-link" href={`/lab-notes/${note.id}/`} aria-label={`Read ${note.data.title}`}>
   <div class="note-meta">
     <FormattedDate date={note.data.publishedAt} />
     {readingTime && (
@@ -25,7 +24,7 @@ const readingTime = estimateReadingTime(note.body);
     )}
   </div>
   <div class="note-copy">
-    <Heading class="note-title" id={`${idPrefix}-${note.id}`}>{note.data.title}</Heading>
+    <Heading class="note-title">{note.data.title}</Heading>
     <p class="note-description">{note.data.description}</p>
     {note.data.tags.length > 0 && (
       <ul class="note-topics" role="list" aria-label="Topics">

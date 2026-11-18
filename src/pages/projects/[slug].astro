@@ -28,10 +28,10 @@ const { Content } = await render(project);
 
 <BaseLayout title={data.title} description={data.description}>
   <SiteHeader slot="header" />
-  <article aria-labelledby="project-title">
+  <article>
     <header class="introduction">
       <a class="back-link" href="/projects/"><span class="back-arrow"><ArrowIcon /></span><span>All projects</span></a>
-      <h1 id="project-title">{data.title}</h1>
+      <h1>{data.title}</h1>
       <p class="description">{data.description}</p>
     </header>
     {data.coverImage && (
@@ -73,7 +73,7 @@ const { Content } = await render(project);
       </div>
     </div>
   </article>
-  <SiteFooter slot="footer" topHref="#project-title" />
+  <SiteFooter slot="footer" />
 </BaseLayout>
 
 <style>

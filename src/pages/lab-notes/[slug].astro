@@ -31,13 +31,13 @@ const relatedProjects =
 
 <BaseLayout title={data.title} description={data.description}>
   <SiteHeader slot="header" />
-  <article class="note" aria-labelledby="note-title">
+  <article class="note">
     <header class="introduction">
       <a class="back-link" href="/lab-notes/"
         ><span class="back-arrow"><ArrowIcon /></span><span>All Lab Notes</span
         ></a
       >
-      <h1 id="note-title">{data.title}</h1>
+      <h1>{data.title}</h1>
       <p class="description">{data.description}</p>
       <dl class="metadata">
         <div>
@@ -82,8 +82,8 @@ const relatedProjects =
         </div>
         {
           relatedProjects.length > 0 && (
-            <section class="related-projects" aria-labelledby="related-title">
-              <h2 id="related-title">
+            <section class="related-projects">
+              <h2>
                 {relatedProjects.length === 1
                   ? "Related project"
                   : "Related projects"}
@@ -109,7 +109,7 @@ const relatedProjects =
       </div>
     </div>
   </article>
-  <SiteFooter slot="footer" topHref="#note-title" />
+  <SiteFooter slot="footer" />
 </BaseLayout>
 
 <style>

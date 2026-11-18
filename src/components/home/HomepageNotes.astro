@@ -5,22 +5,21 @@ import ArrowIcon from '../ui/ArrowIcon.astro';
 
 interface Props {
   notes: CollectionEntry<'lab-notes'>[];
-  id?: string;
 }
 
-const { notes, id = 'home-notes' } = Astro.props;
+const { notes } = Astro.props;
 
 ---
 
-<section class="home-notes" aria-labelledby={`${id}-title`}>
+<section class="home-notes">
   <div class="notes-heading">
-    <h2 id={`${id}-title`}>Recent Lab Notes</h2>
+    <h2>Recent Lab Notes</h2>
     <a class="all-notes" href="/lab-notes/">Browse all lab notes <ArrowIcon /></a>
   </div>
   {notes.length ? (
     <ul class="home-note-list" role="list">
       {notes.map((note) => (
-        <li><NotePreview note={note} headingLevel={3} idPrefix={id} /></li>
+        <li><NotePreview note={note} headingLevel={3} /></li>
       ))}
     </ul>
   ) : (
@@ -45,9 +44,9 @@ const { notes, id = 'home-notes' } = Astro.props;
 
   h2 {
     margin: 0;
-    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
+    font-size: var(--font-size-heading);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
     text-wrap: balance;
   }
 

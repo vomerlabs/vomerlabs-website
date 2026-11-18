@@ -8,15 +8,15 @@ import ActionLink from '../components/ui/ActionLink.astro';
 <BaseLayout title="Page not found" description="This page could not be found. Return home or explore projects from VomerLabs.">
   <meta slot="head" name="robots" content="noindex" />
   <SiteHeader slot="header" />
-  <section class="recovery" aria-labelledby="missing-title">
-    <h1 id="missing-title">Page not found.</h1>
+  <section class="recovery">
+    <h1>Page not found.</h1>
     <p>That address doesn’t point to a page on VomerLabs. Head home or browse the projects to find your way.</p>
     <div class="actions">
       <ActionLink href="/">Go home</ActionLink>
       <ActionLink href="/projects/" variant="text">Explore projects</ActionLink>
     </div>
   </section>
-  <SiteFooter slot="footer" topHref="#missing-title" />
+  <SiteFooter slot="footer" />
 </BaseLayout>
 
 <style>

@@ -230,8 +230,8 @@ Kedebideri regular (400) and bold (700) are served locally from `src/assets/font
 - **Homepage:** `hero-display` scales from 36–64px at the default root size, with 1.1 leading and -0.025em tracking. It keeps the explicit two-line statement. `hero-intro` scales from 16–18px at 1.65 leading and a 55ch measure. Process labels use the body size at 1.4 leading.
 - **Shared page intro:** `page-title` belongs to About, Contact, Projects, and Lab Notes. At 650px and below it becomes 52px; supporting copy changes from 17px to 15px. Labels use 12px mono at 1.5 leading and 0.065em tracking.
 - **Detail and recovery titles:** project detail and 404 use `detail-title`. Lab Notes articles now match project detail with `--font-size-page-title` (`clamp(2.75rem, 5.5vw, 4.5rem)`), 1.1 leading, -0.04em tracking, a 20ch maximum measure, and shared 24px/16px title margins.
-- **Section headings:** Featured projects uses `heading`; the homepage studio heading uses `clamp(1.75rem, 3vw, 2.5rem)` at 1.15 leading. Recent Lab Notes uses `clamp(1.75rem, 3.2vw, 2.5rem)` at 1.1 leading and -0.035em tracking.
-- **Cards and rows:** project and note titles use their frontmatter roles at either h2 or h3 without changing appearance. Note descriptions use 15px type at 1.65 leading. Tags and compact metadata use 12px mono; project category uses the fluid `--font-size-label` token.
+- **Section headings:** Homepage section headings (Featured projects, the studio statement, and Recent Lab Notes) all use `heading` with 1.15 leading, -0.025em tracking, and balanced wrapping. Keep the three consistent.
+- **Cards and rows:** project and note titles use their frontmatter roles at either h2 or h3 without changing appearance. Note descriptions use 15px type at 1.65 leading. Tags and compact metadata use 12px mono.
 - **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses the shared 16px body token with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px.
 - **Actions and footer:** Button uses 14px at 1.65 leading; ActionLink uses the fluid `action` role. Footer group headings and email use body size, supporting copy uses `small`, and the status badge uses 14px at 1.25 leading.
 
@@ -277,7 +277,7 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 ### Note rows and tags
 
-`NotePreview` accepts a note, `headingLevel` (2 by default; 3 on Home), and optional `idPrefix`. The entire row links to the article and includes a semantic publication date, optional reading-time estimate, title, description, topics, and arrow. Estimate at 200 words per minute; omit it when the body is absent. Hover or focus changes the row to the inset surface, underlines the title, and shifts the arrow. Tags and reading-time chips are descriptive, with pale inset fills and small corners; they are not filter controls.
+`NotePreview` accepts a note and `headingLevel` (2 by default; 3 on Home). The entire row links to the article and is named by the note title. It includes a semantic publication date, optional reading-time estimate, title, description, topics, and arrow. Estimate at 200 words per minute; omit it when the body is absent. Hover or focus changes the row to the inset surface, underlines the title, and shifts the arrow. Tags and reading-time chips are descriptive, with pale inset fills and small corners; they are not filter controls.
 
 ### Status
 
@@ -287,11 +287,11 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 `SiteHeader` renders the original logo with the accessible name “VomerLabs home” and empty image alt text. Preserve the asset's proportions and olive period. Projects and Lab Notes indicate their current section; About and Contact indicate their current page. Hover/focus uses ink with a green underline; no menu runtime is needed.
 
-`StudioPageIntro` accepts `id`, `label`, `description`, optional `showDivider` (default true), and a heading slot. It supplies the current shared informational/index hero, including existing uppercase labels. Each page preserves its own wording and heading target.
+`StudioPageIntro` accepts `label`, `description`, optional `showDivider` (default true), and a heading slot. It supplies the current shared informational/index hero, including existing uppercase labels. Each page preserves its own wording.
 
 `BaseLayout` owns document metadata, the skip link, main container, slots, and a separate ContactBand after main content. `showContactBand` defaults to true; Contact disables it. The band's existing lime invitation, green period, circular SVG action, and mobile wrapping stay local to this component. It uses 45px/40px/42px padding, becoming 30px/23px at 650px, a 75px action becoming 49px, and the established 56px maximum heading becoming 33px mobile and 28px at 380px.
 
-`SiteFooter` is a quiet studio directory with the 160px original logo, supplied description, Projects/Lab Notes/About/Contact navigation, real email, short invitation, and ruled copyright/Back to top row. It accepts `topHref` and `showDivider` (default false); Contact enables the top rule. Links retain native destinations, visible focus, and 44px minimum heights. The contact band remains outside the footer.
+`SiteFooter` is a quiet studio directory with the 160px original logo, supplied description, Projects/Lab Notes/About/Contact navigation, real email, short invitation, and ruled copyright/Back to top row. It accepts `showDivider` (default false); Contact enables the top rule. Back to top targets the shared `#main-content` skip target. Links retain native destinations, visible focus, and 44px minimum heights. The contact band remains outside the footer.
 
 ### Reading and informational panels
 

@@ -16,9 +16,9 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
 <BaseLayout title={site.name} description={site.description}>
   <SiteHeader slot="header" />
   <div class="homepage">
-    <section class="home-hero" aria-labelledby="intro-title">
+    <section class="home-hero">
       <div class="hero-heading">
-        <h1 id="intro-title">Ideas into<br /><span>useful things.</span></h1>
+        <h1>Ideas into<br /><span>useful things.</span></h1>
         <div
           class="process-graphic"
           role="img"
@@ -71,7 +71,8 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
         </p>
         <a class="home-link" href="/about/">More about the lab <ArrowIcon /></a>
       </div>
-    </section><HomepageNotes notes={notes} id="home-notes" />
+    </section>
+    <HomepageNotes notes={notes} />
   </div>
   <SiteFooter slot="footer" />
 </BaseLayout>
@@ -84,7 +85,7 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
   }
   .homepage h2 {
     margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.65rem);
+    font-size: var(--font-size-heading);
     line-height: var(--line-height-heading);
     letter-spacing: var(--letter-spacing-heading);
     text-wrap: balance;
@@ -189,9 +190,6 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
     line-height: var(--line-height-compact);
     text-align: center;
     color: var(--color-text-muted);
-  }
-  .homepage .home-studio h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
   }
   .homepage .home-studio .home-link {
     color: var(--color-text);

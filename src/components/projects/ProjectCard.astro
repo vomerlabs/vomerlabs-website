@@ -40,13 +40,12 @@ const cardImageWidths = cardImage
       "with-preview": Boolean(PreviewComponent || cardImage),
     },
   ]}
-  aria-labelledby={`project-card-${project.id}`}
 >
   <div class="project-copy">
     <div class="project-meta">
       <ProjectStatus status={project.data.status} />
     </div>
-    <Heading class="card-title" id={`project-card-${project.id}`}>
+    <Heading class="card-title">
       <a class="project-title" href={`/projects/${project.id}/`}>
         {project.data.title}
         <ArrowIcon />
@@ -123,12 +122,6 @@ const cardImageWidths = cardImage
     margin-block-end: var(--space-6);
   }
 
-  .category {
-    color: var(--color-text-muted);
-    font-family: var(--font-mono);
-    font-size: var(--font-size-label);
-  }
-
   .card-title {
     margin: 0;
     font-size: clamp(1.5rem, 2.5vw, 2rem);
@@ -183,15 +176,6 @@ const cardImageWidths = cardImage
     align-items: center;
     gap: var(--space-4) var(--space-6);
     margin-block-start: var(--space-8);
-  }
-
-  .extra-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    min-height: 2.75rem;
-    color: var(--color-text);
-    text-underline-offset: 0.3em;
   }
 
   .project-title:is(:hover, :focus-visible) {

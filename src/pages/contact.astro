@@ -14,15 +14,14 @@ import { site } from "../config/site";
 >
   <SiteHeader slot="header" />
   <StudioPageIntro
-    id="contact-title"
     label="GET IN TOUCH"
     description="A project you’re working on, a problem that’s getting in the way, or an idea you’d like to build. A short email is enough."
   >
     Let’s make<br />something useful.
   </StudioPageIntro>
   <div class="contact-content">
-    <section class="contact-invitation" aria-labelledby="email-title">
-      <h2 id="email-title">Start with a hello.</h2>
+    <section class="contact-invitation">
+      <h2>Start with a hello.</h2>
       <p>
         Tell me what you have in mind, who it’s for, and where you are in the
         process. We can go from there.
@@ -36,9 +35,9 @@ import { site } from "../config/site";
         preferred email service.
       </p>
     </section>
-    <aside class="contact-aside" aria-labelledby="context-title">
+    <aside class="contact-aside">
       <span class="eyebrow">A USEFUL STARTING POINT</span>
-      <h2 id="context-title">A little context helps.</h2>
+      <h2>A little context helps.</h2>
       <ul class="conversation-prompts" role="list">
         <li>
           <p>What are you trying to build or improve?</p>
@@ -56,7 +55,7 @@ import { site } from "../config/site";
       <p class="closing-note">A QUESTION IS A GOOD START, TOO.</p>
     </aside>
   </div>
-  <SiteFooter slot="footer" topHref="#contact-title" showDivider />
+  <SiteFooter slot="footer" showDivider />
 </BaseLayout>
 
 <style>

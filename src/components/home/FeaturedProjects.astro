@@ -11,13 +11,9 @@ interface Props {
 const { projects } = Astro.props;
 ---
 
-<section
-  id="projects"
-  class="featured-projects"
-  aria-labelledby="featured-projects-title"
->
+<section class="featured-projects">
   <div class="section-heading">
-    <h2 id="featured-projects-title">Featured Projects</h2>
+    <h2>Featured Projects</h2>
     <a class="all-projects" href="/projects/">
       Browse all projects <ArrowIcon />
     </a>
@@ -61,6 +57,7 @@ const { projects } = Astro.props;
     font-size: var(--font-size-heading);
     line-height: var(--line-height-heading);
     letter-spacing: var(--letter-spacing-heading);
+    text-wrap: balance;
   }
 
   .all-projects {

@@ -13,7 +13,6 @@ const projects = await getProjects();
 <BaseLayout title="Projects" description="Projects from VomerLabs, with their current status and the process behind them.">
   <SiteHeader slot="header" />
   <StudioPageIntro
-    id="projects-title"
     label="THE PROJECT NOTEBOOK"
     description="I keep a working record of what I’m building. Each project shows what it does, why I made it, and what still needs work."
     showDivider={false}
@@ -29,7 +28,7 @@ const projects = await getProjects();
   ) : (
     <p class="empty-projects">Projects will appear here when they are ready to share.</p>
   )}
-  <SiteFooter slot="footer" topHref="#projects-title" />
+  <SiteFooter slot="footer" />
 </BaseLayout>
 
 <style>

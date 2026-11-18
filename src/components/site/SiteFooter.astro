@@ -3,11 +3,10 @@ import { site } from '../../config/site';
 import ArrowIcon from '../ui/ArrowIcon.astro';
 
 interface Props {
-  topHref?: string;
   showDivider?: boolean;
 }
 
-const { topHref = '#main-content', showDivider = false } = Astro.props;
+const { showDivider = false } = Astro.props;
 const links = [
   { href: '/projects/', label: 'Projects' },
   { href: '/lab-notes/', label: 'Lab Notes' },
@@ -24,8 +23,8 @@ const links = [
       </a>
       <p class="studio-description">{site.description}</p>
     </div>
-    <nav class="footer-navigation" aria-labelledby="footer-explore-title">
-      <h2 id="footer-explore-title">Explore</h2>
+    <nav aria-label="Explore">
+      <h2>Explore</h2>
       <ul role="list">
         {links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
       </ul>
@@ -38,7 +37,7 @@ const links = [
   </div>
   <div class="colophon">
     <p>© {new Date().getFullYear()} {site.name}</p>
-    <a class="back-top" href={topHref}>Back to top <ArrowIcon /></a>
+    <a class="back-top" href="#main-content">Back to top <ArrowIcon /></a>
   </div>
 </footer>
 
