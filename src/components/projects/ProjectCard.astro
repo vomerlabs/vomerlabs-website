@@ -12,15 +12,24 @@ interface Props {
   previewComponent?: AstroComponentFactory;
 }
 
-const { project, headingLevel = 2, previewComponent: PreviewComponent } = Astro.props;
+const {
+  project,
+  headingLevel = 2,
+  previewComponent: PreviewComponent,
+} = Astro.props;
 const Heading = `h${headingLevel}` as "h2" | "h3";
 const cardImage = project.data.cardImage ?? project.data.coverImage;
 const cardImageAlt = project.data.cardImage
   ? project.data.cardImageAlt
   : project.data.coverImageAlt;
 const cardImageWidths = cardImage
-  ? [...new Set([320, 640, 960, 1280, 1600, 2000, cardImage.width]
-      .filter((width) => width <= cardImage.width))].sort((a, b) => a - b)
+  ? [
+      ...new Set(
+        [320, 640, 960, 1280, 1600, 2000, cardImage.width].filter(
+          (width) => width <= cardImage.width,
+        ),
+      ),
+    ].sort((a, b) => a - b)
   : [];
 ---
 
@@ -36,7 +45,6 @@ const cardImageWidths = cardImage
   <div class="project-copy">
     <div class="project-meta">
       <ProjectStatus status={project.data.status} />
-      <span class="category">{project.data.category}</span>
     </div>
     <Heading class="card-title" id={`project-card-${project.id}`}>
       <a class="project-title" href={`/projects/${project.id}/`}>
@@ -45,39 +53,25 @@ const cardImageWidths = cardImage
       </a>
     </Heading>
     <p class="description">{project.data.description}</p>
-    {
-      project.data.tags.length > 0 && (
-        <ul class="project-tags" role="list" aria-label="Tools and topics">
-          {project.data.tags.map((tag) => (
-            <li>{tag}</li>
-          ))}
-        </ul>
-      )
-    }
+    {project.data.tags.length > 0 && (
+      <ul class="project-tags" role="list" aria-label="Tools and topics">
+        {project.data.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )}
     <div class="project-actions">
       <Button href={`/projects/${project.id}/`} variant="secondary">
         About this project
       </Button>
-      {
-        project.data.demoUrl && (
-          <a class="extra-link" href={project.data.demoUrl}>
-            View demo <ArrowIcon />
-          </a>
-        )
-      }
-      {
-        project.data.repositoryUrl && (
-          <a class="extra-link" href={project.data.repositoryUrl}>
-            View source <ArrowIcon />
-          </a>
-        )
-      }
     </div>
   </div>
-  {
-    PreviewComponent ? (
-      <div class="project-preview"><PreviewComponent /></div>
-    ) : cardImage && (
+  {PreviewComponent ? (
+    <div class="project-preview">
+      <PreviewComponent />
+    </div>
+  ) : (
+    cardImage && (
       <a
         class="project-cover"
         href={`/projects/${project.id}/`}
@@ -87,7 +81,7 @@ const cardImageWidths = cardImage
           src={cardImage}
           alt={cardImageAlt!}
           width={cardImage.width}
-          height={Math.round(cardImage.width * 5 / 8)}
+          height={Math.round((cardImage.width * 5) / 8)}
           widths={cardImageWidths}
           sizes="(min-width: 1240px) 600px, (min-width: 961px) calc(55vw - 84px), (min-width: 901px) calc(100vw - 104px), (min-width: 721px) calc(100vw - 120px), (min-width: 651px) calc(100vw - 88px), calc(100vw - 76px)"
           format="webp"
@@ -98,7 +92,7 @@ const cardImageWidths = cardImage
         />
       </a>
     )
-  }
+  )}
 </article>
 
 <style>

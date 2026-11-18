@@ -5,24 +5,28 @@ import SiteFooter from '../components/site/SiteFooter.astro';
 import StudioPageIntro from '../components/site/StudioPageIntro.astro';
 ---
 
-<BaseLayout title="About" description="About VomerLabs, an independent studio building software, exploring practical AI, and sharing the process.">
+<BaseLayout title="About" description="About VomerLabs, an independent lab building software, testing AI against real work, and sharing the process.">
   <SiteHeader slot="header" />
-  <StudioPageIntro id="about-title" label="BEHIND VOMERLABS" description="A personal space for building software, exploring ideas, and sharing the useful things I learn along the way.">
-    A small studio.<br />Room for curiosity.
+  <StudioPageIntro
+    id="about-title"
+    label="BEHIND VOMERLABS"
+    description="A personal space for building software, testing ideas, and sharing what I learn along the way."
+  >
+    A small lab.<br />Room for curiosity.
   </StudioPageIntro>
   <div class="about-layout">
     <article class="prose">
       <h2>Hello, from the lab.</h2>
-      <p>VomerLabs is my independent studio. It’s where I turn ideas into software, explore practical uses for AI, and document the process of making things.</p>
-      <p>I’m drawn to problems that are easy to overlook: a repetitive task, a workflow with too many steps, or a useful idea that hasn’t quite become a tool yet. The interesting part is understanding what would actually help, then building towards that.</p>
+      <p>VomerLabs is my independent lab. It’s where I turn ideas into software, test AI against real work, and keep a record of the process.</p>
+      <p>I’m drawn to problems that are easy to overlook: a task that takes longer than it should, a process with too many steps, or an idea that hasn’t become a tool yet. The interesting part is figuring out what would actually help, then building it.</p>
       <h2>Useful comes first.</h2>
-      <p>I want each project here to explain itself clearly. What problem led to it? What does it do today? What still needs work? The technical details matter, but they should help you understand the thing being built.</p>
-      <p>That also means treating experiments as experiments. Some ideas will become useful tools. Others will leave behind a lesson or a better question. Both are worth sharing honestly.</p>
-      <h2>A studio that can grow.</h2>
-      <p>For now, VomerLabs is a home for independent projects and notes. Over time, there’s room for collaborations, client projects, and products of its own. The aim stays the same: thoughtful software that earns its place.</p>
+      <p>I want each project here to explain itself clearly. What problem led to it? What does it do today? What still needs work? The technical details matter, but they should help you understand the work.</p>
+      <p>That also means treating experiments as experiments. Some ideas become useful tools. Others leave behind a lesson or a better question. Both are worth sharing honestly.</p>
+      <h2>A lab that can grow.</h2>
+      <p>For now, VomerLabs is a home for independent projects and notes. Over time, there’s room for collaborations, client work, and products of its own. The aim stays the same: thoughtful software that earns its place.</p>
       <p>If that sounds like the way you like to work, <a href="/contact/">let’s start a conversation</a>.</p>
     </article>
-    <aside class="about-panel" aria-label="Studio principles">
+    <aside class="about-panel" aria-label="Lab principles">
       <span class="eyebrow">A FEW GUIDING IDEAS</span>
       <h2>Stay curious.<br />Make it useful.<br />Share the process.</h2>
       <ul class="principles" role="list">

@@ -11,30 +11,34 @@ interface Props {
 const { projects } = Astro.props;
 ---
 
-<section id="projects" class="featured-projects" aria-labelledby="featured-projects-title">
+<section
+  id="projects"
+  class="featured-projects"
+  aria-labelledby="featured-projects-title"
+>
   <div class="section-heading">
-    <h2 id="featured-projects-title">Featured projects</h2>
-    <a class="all-projects" href="/projects/">Browse all projects <ArrowIcon /></a>
+    <h2 id="featured-projects-title">Featured Projects</h2>
+    <a class="all-projects" href="/projects/">
+      Browse all projects <ArrowIcon />
+    </a>
   </div>
-  {
-    projects.length ? (
-      <ul class="project-list" role="list">
-        {projects.map((project) => (
-          <li>
-            <ProjectCard
-              project={project}
-              headingLevel={3}
-              previewComponent={projectPreviewComponents[project.id]}
-            />
-          </li>
-        ))}
-      </ul>
-    ) : (
-      <p class="empty-projects">
-        Featured projects will appear here when they’re ready to share.
-      </p>
-    )
-  }
+  {projects.length ? (
+    <ul class="project-list" role="list">
+      {projects.map((project) => (
+        <li>
+          <ProjectCard
+            project={project}
+            headingLevel={3}
+            previewComponent={projectPreviewComponents[project.id]}
+          />
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="empty-projects">
+      Featured projects will appear here when they’re ready to share.
+    </p>
+  )}
 </section>
 
 <style>

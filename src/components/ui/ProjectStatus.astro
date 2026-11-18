@@ -1,20 +1,23 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  status: CollectionEntry<'projects'>['data']['status'];
+  status: CollectionEntry<"projects">["data"]["status"];
 }
 
 const { status } = Astro.props;
 const labels = {
-  live: 'Live',
-  prototype: 'Prototype',
-  experiment: 'Experiment',
-  'in-progress': 'In progress',
+  live: "Live",
+  prototype: "Prototype",
+  experiment: "Experiment",
+  "in-progress": "In progress",
 };
 ---
 
-<span class="status"><span class="dot" aria-hidden="true"></span>{labels[status]}</span>
+<span class="status">
+  <span class="dot" aria-hidden="true"></span>
+  {labels[status]}
+</span>
 
 <style>
   .status {
@@ -22,7 +25,6 @@ const labels = {
     align-items: center;
     gap: 0.65em;
     justify-content: center;
-    min-width: 8rem;
     padding: 0.35em 0.85em;
     border-radius: 100vw;
     background: var(--color-status-background);

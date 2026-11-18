@@ -9,14 +9,14 @@ import { site } from "../config/site";
 
 <BaseLayout
   title="Contact"
-  description="Get in touch with VomerLabs about a project, a question, or an idea to explore."
+  description="Get in touch with VomerLabs about a project, a problem, or an idea. A short email is enough."
   showContactBand={false}
 >
   <SiteHeader slot="header" />
   <StudioPageIntro
     id="contact-title"
     label="GET IN TOUCH"
-    description="A project you’re thinking about, a problem worth solving, or simply a shared curiosity. There’s room for a conversation."
+    description="A project you’re working on, a problem that’s getting in the way, or an idea you’d like to build. A short email is enough."
   >
     Let’s make<br />something useful.
   </StudioPageIntro>
@@ -24,8 +24,8 @@ import { site } from "../config/site";
     <section class="contact-invitation" aria-labelledby="email-title">
       <h2 id="email-title">Start with a hello.</h2>
       <p>
-        You don’t need a polished brief. A few words about what you have in
-        mind, who it’s for, and where you are in the process is a good start.
+        Tell me what you have in mind, who it’s for, and where you are in the
+        process. We can go from there.
       </p>
       <a class="email-link" href={`mailto:${site.email}`}>
         {site.email}<span class="arrow"><ArrowIcon /></span>

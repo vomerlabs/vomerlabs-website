@@ -12,8 +12,13 @@ const projects = await getProjects();
 
 <BaseLayout title="Projects" description="Projects from VomerLabs, with their current status and the process behind them.">
   <SiteHeader slot="header" />
-  <StudioPageIntro id="projects-title" label="THE PROJECT NOTEBOOK" description="A growing collection of things I’m building. Each project starts with a question, a problem, or a small idea worth following." showDivider={false}>
-    Projects, with a reason<br />behind them.
+  <StudioPageIntro
+    id="projects-title"
+    label="THE PROJECT NOTEBOOK"
+    description="I keep a working record of what I’m building. Each project shows what it does, why I made it, and what still needs work."
+    showDivider={false}
+  >
+    Projects, with the thinking behind them.
   </StudioPageIntro>
   {projects.length > 0 ? (
     <ul class="projects" aria-label="Projects">

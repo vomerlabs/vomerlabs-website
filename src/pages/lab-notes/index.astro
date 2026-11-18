@@ -12,8 +12,13 @@ const notes = await getPublishedLabNotes();
 
 <BaseLayout title="Lab Notes" description="Build notes, technical writing, and lessons from VomerLabs projects.">
   <SiteHeader slot="header" />
-  <StudioPageIntro id="notes-title" label="AN OPEN NOTEBOOK" description="What I’m making, what I’m learning, and the decisions in between. A place to think out loud and leave something useful behind." showDivider={false}>
-    Notes along<br />the way.
+  <StudioPageIntro
+    id="notes-title"
+    label="AN OPEN NOTEBOOK"
+    description="I write about the decisions, the dead ends, and what I learned while building. Some notes explain a choice; others are a record of figuring it out."
+    showDivider={false}
+  >
+    Notes from the work.
   </StudioPageIntro>
   {notes.length > 0 ? (
     <ul class="notes" role="list" aria-label="Published notes">
