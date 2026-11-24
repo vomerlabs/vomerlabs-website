@@ -297,6 +297,8 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 `Prose` contains Markdown typography with global descendants anchored to its scoped wrapper. The default variant serves project details; `variant="article"` supplies Lab Notes reading styles. Preserve responsive media, scrollable code/tables, visible focus, and green article links. About and Contact share the long-reading colors and supporting tinted-panel treatment. Their aside rows use unordered lists with matching 6px round bullets in the tinted text color, 20px gaps, and the existing thin rules.
 
+Contact keeps its large mailto address and adds a quiet `Prefer to copy it?` line beneath it. The line uses a 14px mono lead-in; the underlined, arrow-bearing `Click here` action is 16px and copies the address. The supporting paragraph acts as a polite status, confirming “Copied to clipboard.” or showing the address after a failure. Without JavaScript the address remains selectable text and the copy action is hidden.
+
 Lab Notes headers share Projects' left-facing SVG back link, title scale and spacing, 52ch description, and intro typography. The FROM THE LAB label is removed. Inline publication, optional update, and topics metadata uses visible labels and 14px text, with monospace values and UTC dates. Optional full-width covers, related real projects, and return navigation remain. The sample article stays explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, and their default Prose body.
 
 ### Shared accessibility states

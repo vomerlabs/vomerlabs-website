@@ -68,7 +68,7 @@ Pages load content and compose components. Shared components follow real repeate
 | `/lab-notes/` | All published notes, or an empty state |
 | `/lab-notes/[slug]/` | Published article, optional cover and metadata, and related projects |
 | `/about/` | Studio focus, approach, and guiding principles |
-| `/contact/` | Selectable email link and conversation guidance |
+| `/contact/` | Large email link, copy-to-clipboard fallback, and conversation guidance |
 | `/404` | Missing-page recovery with `noindex`; generates `dist/404.html` |
 
 The current content is available at `/projects/vomerlabs-website/` and `/lab-notes/sample-keeping-a-website-simple/`. The note is sample content, not an additional claim of real studio work; replace it or set `draft: true` when it is no longer needed.

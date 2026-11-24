@@ -17,20 +17,42 @@ import { site } from "../config/site";
     label="GET IN TOUCH"
     description="A project you’re working on, a problem that’s getting in the way, or an idea you’d like to build. A short email is enough."
   >
-    Let’s make<br />something useful.
+    Let’s make
+    <br />
+    something useful.
   </StudioPageIntro>
   <div class="contact-content">
     <section class="contact-invitation">
+      <script is:inline>
+        document.currentScript?.parentElement?.setAttribute("data-copy-js", "");
+      </script>
       <h2>Start with a hello.</h2>
       <p>
         Tell me what you have in mind, who it’s for, and where you are in the
         process. We can go from there.
       </p>
       <a class="email-link" href={`mailto:${site.email}`}>
-        {site.email}<span class="arrow"><ArrowIcon /></span>
+        {site.email}
+        <span class="arrow">
+          <ArrowIcon />
+        </span>
       </a>
-      <p class="email-fallback">Prefer to copy it? {site.email}</p>
-      <p>
+      <p class="email-fallback">
+        <span>Prefer to copy it?</span>
+        <span class="copy-address">{site.email}</span>
+        <button
+          class="copy-link"
+          type="button"
+          data-copy-email={site.email}
+          aria-label={`Click here to copy ${site.email} to the clipboard`}
+        >
+          Click here
+          <span class="arrow">
+            <ArrowIcon />
+          </span>
+        </button>
+      </p>
+      <p class="email-help" data-copy-status role="status" aria-atomic="true">
         This opens your email app. You can also copy the address into your
         preferred email service.
       </p>
@@ -147,7 +169,7 @@ import { site } from "../config/site";
   }
 
   .conversation-prompts li::before {
-    content: '';
+    content: "";
     flex-shrink: 0;
     align-self: flex-start;
     width: 0.375rem;
@@ -177,10 +199,46 @@ import { site } from "../config/site";
     transform: rotate(-45deg);
   }
 
-  .contact-invitation .email-fallback {
+  .email-fallback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35em 0.5em;
     color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: var(--font-size-caption);
+    font-size: var(--font-size-small);
+  }
+
+  .copy-address {
+    overflow-wrap: anywhere;
+  }
+
+  .copy-link {
+    display: none;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.15em 0;
+    border: 0;
+    background: none;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-snug);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    cursor: pointer;
+  }
+
+  .copy-link:is(:hover, :focus-visible) {
+    text-decoration-thickness: 2px;
+  }
+
+  .contact-invitation[data-copy-js] .copy-link {
+    display: inline-flex;
+  }
+
+  .contact-invitation[data-copy-js] .copy-address {
+    display: none;
   }
 
   .contact-aside h2 {
@@ -220,3 +278,69 @@ import { site } from "../config/site";
     }
   }
 </style>
+
+<script>
+  const copyButton =
+    document.querySelector<HTMLButtonElement>("[data-copy-email]");
+  const copyStatus = document.querySelector<HTMLElement>("[data-copy-status]");
+
+  if (copyButton && copyStatus) {
+    const email = copyButton.dataset.copyEmail ?? "";
+    const defaultStatus = copyStatus.textContent?.trim() ?? "";
+    let resetTimer: number | undefined;
+
+    const copyText = async (text: string) => {
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch {
+        // Fall through to the selection-based fallback.
+      }
+
+      try {
+        const field = document.createElement("textarea");
+        field.value = text;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.top = "0";
+        field.style.left = "0";
+        field.style.opacity = "0";
+        document.body.append(field);
+
+        try {
+          field.select();
+          field.setSelectionRange(0, field.value.length);
+          // Legacy fallback for browsers without the Clipboard API.
+          const legacyDocument = document as unknown as {
+            execCommand(commandId: string): boolean;
+          };
+          return legacyDocument.execCommand("copy");
+        } finally {
+          field.remove();
+        }
+      } catch {
+        return false;
+      }
+    };
+
+    copyButton.addEventListener("click", async () => {
+      if (!email) {
+        return;
+      }
+
+      window.clearTimeout(resetTimer);
+      const copied = await copyText(email);
+
+      if (copied) {
+        copyStatus.textContent = "Copied to clipboard.";
+        resetTimer = window.setTimeout(() => {
+          copyStatus.textContent = defaultStatus;
+        }, 2500);
+      } else {
+        copyStatus.textContent = `Couldn’t copy. Email ${email}.`;
+      }
+    });
+  }
+</script>
