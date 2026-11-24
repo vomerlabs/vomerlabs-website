@@ -9,7 +9,7 @@ import ProjectStatus from '../../components/ui/ProjectStatus.astro';
 import ActionLink from '../../components/ui/ActionLink.astro';
 import Prose from '../../components/content/Prose.astro';
 import FormattedDate from '../../components/content/FormattedDate.astro';
-import { getProjects } from '../../lib/content';
+import { getProjects, getPublishedLabNotes } from '../../lib/content';
 
 export const getStaticPaths = (async () => {
   const projects = await getProjects();
@@ -23,6 +23,11 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { project } = Astro.props;
 const { data } = project;
 const { Content } = await render(project);
+const relatedNoteIds = new Set(data.relatedNotes.map(({ id }) => id));
+const relatedNotes =
+  relatedNoteIds.size > 0
+    ? (await getPublishedLabNotes()).filter((note) => relatedNoteIds.has(note.id))
+    : [];
 ---
 
 <BaseLayout title={data.title} description={data.description}>
@@ -66,6 +71,21 @@ const { Content } = await render(project);
       </aside>
       <div class="body-content">
         <Prose><Content /></Prose>
+        {relatedNotes.length > 0 && (
+          <section class="related-notes">
+            <h2>{relatedNotes.length === 1 ? 'Related note' : 'Related notes'}</h2>
+            <ul>
+              {relatedNotes.map((note) => (
+                <li>
+                  <ActionLink href={`/lab-notes/${note.id}/`} variant="text">
+                    {note.data.title}
+                  </ActionLink>
+                  <p>{note.data.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         <nav class="reading-footer" aria-label="After this project">
           <ActionLink href="/projects/" variant="text">Back to Projects</ActionLink>
         </nav>
@@ -150,6 +170,33 @@ const { Content } = await render(project);
 
   .reading-footer {
     margin-block-start: var(--space-12);
+  }
+
+  .related-notes {
+    max-width: var(--width-prose);
+    margin-block-start: var(--space-12);
+    padding-block-start: var(--space-8);
+    border-block-start: 1px solid var(--color-border);
+    font-size: var(--font-size-body-large);
+  }
+
+  .related-notes h2 {
+    margin: 0 0 var(--space-6);
+    font-size: var(--font-size-section-title);
+    line-height: var(--line-height-heading);
+  }
+
+  .related-notes ul {
+    display: grid;
+    gap: var(--space-8);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .related-notes p {
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-muted);
   }
 
   @media (max-width: 60rem) {

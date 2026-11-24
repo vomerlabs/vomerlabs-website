@@ -297,7 +297,7 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 Contact keeps its large mailto address and adds a quiet `Prefer to copy it?` line beneath it. The lead-in uses the 16px body sans; the underlined, arrow-bearing `Click here` action copies the address. The supporting paragraph acts as a polite status, confirming “Copied to clipboard.” or showing the address after a failure. Without JavaScript the address remains selectable text and the copy action is hidden.
 
-Lab Notes headers share Projects' left-facing SVG back link, title scale and spacing, 52ch description, and intro typography. The FROM THE LAB label is removed. Inline publication, optional update, and topics metadata uses visible labels and 14px text, with monospace values and UTC dates. Optional full-width covers, related real projects, and return navigation remain. The sample article stays explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, and their default Prose body.
+Lab Notes headers share Projects' left-facing SVG back link, title scale and spacing, 52ch description, and intro typography. The FROM THE LAB label is removed. Inline publication, optional update, and topics metadata uses visible labels and 14px text, with monospace values and UTC dates. Optional full-width covers, related real projects, and return navigation remain. The sample article stays explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, optional related notes, and their default Prose body.
 
 ### Shared accessibility states
 

@@ -12,6 +12,7 @@ demoUrl: https://vomerlabs.com/
 repositoryUrl: https://github.com/vomerlabs/vomerlabs-website
 tags:
   - Website
+relatedNotes: [a-small-deliberate-start]
 ---
 
 ## What it is

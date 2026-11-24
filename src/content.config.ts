@@ -34,6 +34,7 @@ const projects = defineCollection({
         coverImage: image().optional(),
         demoUrl: z.url({ protocol: /^https?$/ }).optional(),
         repositoryUrl: z.url({ protocol: /^https?$/ }).optional(),
+        relatedNotes: z.array(reference('lab-notes')).default([]),
       })
       .refine(hasCoverAlternative, coverAlternativeError)
       .refine((data) => !data.cardImage || Boolean(data.cardImageAlt), {

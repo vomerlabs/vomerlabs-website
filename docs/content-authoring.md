@@ -21,6 +21,7 @@ category: Software
 publishedAt: 2026-10-19
 featured: false
 tags: []
+relatedNotes: []
 ---
 ```
 
@@ -40,8 +41,11 @@ Follow the frontmatter with only the sections relevant to the work, such as “T
 | `coverImage` | Optional local image path, relative to the entry file |
 | `coverImageAlt` | Required, nonempty alternative text when a cover is supplied |
 | `demoUrl`, `repositoryUrl` | Optional absolute HTTP or HTTPS URLs |
+| `relatedNotes` | Optional Lab Note entry IDs; defaults to `[]` |
 
 Project details show category, publication date, optional update date, and nonempty tags alongside the written status. Dates are formatted in UTC to preserve the authored calendar day. Demo and source links appear only when their URLs are supplied and open through ordinary same-tab navigation. Home and the Projects index share `ProjectCard`, including status, category, description, tags, and an About this project link. Cards show a supplied component preview first, then `cardImage`, then `coverImage`; without a component or image, the card contains only its text and actions.
+
+A project can point to published Lab Notes with `relatedNotes: [a-small-deliberate-start]`; the value is the note’s file name. Project details render related notes after the body, using the same list treatment as a note’s related projects. Only published notes appear; draft or missing references are omitted. This mirrors the Lab Notes `relatedProjects` field.
 
 Omit unavailable links and images entirely; do not use empty strings. Optional frontmatter fields should be omitted rather than assigned empty YAML values. Projects do not have a draft field: every project entry is considered publishable, even if its status is `in-progress`. Keep unpublished project material outside the collection until it is ready to show.
 

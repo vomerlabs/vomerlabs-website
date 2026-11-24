@@ -64,7 +64,7 @@ Pages load content and compose components. Shared components follow real repeate
 | --- | --- |
 | `/` | Studio introduction, featured projects, studio overview, and three latest published notes |
 | `/projects/` | All projects |
-| `/projects/[slug]/` | Project metadata and rendered Markdown/MDX |
+| `/projects/[slug]/` | Project metadata, rendered Markdown/MDX, and related notes |
 | `/lab-notes/` | All published notes, or an empty state |
 | `/lab-notes/[slug]/` | Published article, optional cover and metadata, and related projects |
 | `/about/` | Studio focus, approach, and guiding principles |
@@ -75,7 +75,7 @@ The current content is available at `/projects/vomerlabs-website/` and `/lab-not
 
 Home and Projects share `ProjectCard`, using h3 and h2 card titles respectively. Cards include status, category, description, tags, a secondary About this project button, optional external links, and a supplied cover or the website-specific build preview. Home and Lab Notes share `NotePreview`, with dates, optional estimated reading time, descriptions, topic chips, and h3/h2 titles. Each listing keeps its own empty state.
 
-`getProjects()` sorts newest first. `getFeaturedProjects()` selects featured entries and sorts by `featuredOrder`, then date. `getPublishedLabNotes()` excludes drafts and supplies both note listings and static article paths. Equal dates use entry IDs for stable ordering. Dates do not schedule publication. See [content authoring](docs/content-authoring.md) for schemas, images, related projects, and publishing.
+`getProjects()` sorts newest first. `getFeaturedProjects()` selects featured entries and sorts by `featuredOrder`, then date. `getPublishedLabNotes()` excludes drafts and supplies both note listings and static article paths. Equal dates use entry IDs for stable ordering. Dates do not schedule publication. See [content authoring](docs/content-authoring.md) for schemas, images, related projects and notes, and publishing.
 
 No legacy routes or redirects are configured. If an old public URL ever needs to keep working, add `redirects` in `astro.config.mjs` and verify the generated redirect page and host status code before relying on it.
 
