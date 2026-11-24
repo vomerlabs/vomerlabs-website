@@ -5,45 +5,88 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isProjects = pathname === "/projects" || pathname.startsWith("/projects/");
 const isLabNotes =
   pathname === "/lab-notes" || pathname.startsWith("/lab-notes/");
+
+const navItems = [
+  {
+    href: "/projects/",
+    label: "Projects",
+    current: isProjects
+      ? pathname === "/projects"
+        ? "page"
+        : "true"
+      : undefined,
+  },
+  {
+    href: "/lab-notes/",
+    label: "Lab Notes",
+    current: isLabNotes
+      ? pathname === "/lab-notes"
+        ? "page"
+        : "true"
+      : undefined,
+  },
+  {
+    href: "/about/",
+    label: "About",
+    current: pathname === "/about" ? "page" : undefined,
+  },
+  {
+    href: "/contact/",
+    label: "Contact",
+    current: pathname === "/contact" ? "page" : undefined,
+  },
+] as const;
 ---
 
 <header class="site-header">
+  <script is:inline>
+    document.currentScript?.parentElement?.setAttribute("data-menu-js", "");
+  </script>
+
   <a class="wordmark" href="/" aria-label={`${site.name} home`}>
     <img src="/vomerlabs-logo.svg" alt="" width="125" height="22" />
   </a>
-  <nav aria-label="Main navigation">
-    <a
-      href="/projects/"
-      aria-current={isProjects
-        ? pathname === "/projects"
-          ? "page"
-          : "true"
-        : undefined}>Projects</a
-    >
-    <a
-      href="/lab-notes/"
-      aria-current={isLabNotes
-        ? pathname === "/lab-notes"
-          ? "page"
-          : "true"
-        : undefined}>Lab Notes</a
-    >
-    <a href="/about/" aria-current={pathname === "/about" ? "page" : undefined}
-      >About</a
-    >
-    <a
-      href="/contact/"
-      aria-current={pathname === "/contact" ? "page" : undefined}>Contact</a
-    >
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-nav"
+    data-menu-toggle
+  >
+    <span class="visually-hidden" data-menu-label>Menu</span>
+    <span class="burger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <nav
+    id="site-nav"
+    class="primary-nav"
+    aria-label="Main navigation"
+    data-menu-panel
+  >
+    {
+      navItems.map(({ href, label, current }) => (
+        <a href={href} aria-current={current}>
+          {label}
+        </a>
+      ))
+    }
   </nav>
 </header>
 
 <style>
   .site-header {
+    position: relative;
+    z-index: 10;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-6);
+    gap: var(--space-2) var(--space-6);
     width: 100%;
     max-width: var(--width-content);
     margin-inline: auto;
@@ -69,44 +112,220 @@ const isLabNotes =
     height: auto;
   }
 
-  nav {
-    display: flex;
+  .menu-toggle {
+    display: none;
     align-items: center;
-    gap: clamp(1.25rem, 2.8vw, 2.75rem);
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--color-text-muted);
+    font: inherit;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: color 180ms var(--motion-ease);
+  }
+
+  .menu-toggle:is(:hover, :focus-visible, [aria-expanded="true"]) {
+    color: var(--color-text);
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 14.5px;
+  }
+
+  .burger span {
+    position: absolute;
+    inset-inline: 0;
+    height: 1.5px;
+    border-radius: var(--radius-small);
+    background: currentColor;
+    transition:
+      transform 180ms var(--motion-ease),
+      opacity 180ms var(--motion-ease);
+  }
+
+  .burger span:nth-child(1) {
+    top: 0;
+  }
+
+  .burger span:nth-child(2) {
+    top: 6.5px;
+  }
+
+  .burger span:nth-child(3) {
+    bottom: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .burger span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .burger span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .primary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-3);
+    width: 100%;
     color: var(--color-text-muted);
     font-size: var(--font-size-body);
     line-height: 1.3;
   }
 
-  nav a {
+  .primary-nav a {
     display: inline-flex;
     align-items: center;
-    min-height: clamp(2.5rem, 2.78vw, 2.75rem);
+    min-height: 2.75rem;
     text-underline-offset: 0.3em;
   }
 
-  nav a:is(:hover, :focus-visible, [aria-current]) {
+  .primary-nav a:is(:hover, :focus-visible, [aria-current]) {
     color: var(--color-text);
     text-decoration: underline;
     text-decoration-color: var(--color-focus);
   }
 
-  @media (max-width: 30rem) {
-    .site-header {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: var(--space-2);
+  /* The button and panel only apply once the inline marker confirms script is available. */
+  @media (max-width: 39.999rem) {
+    .site-header[data-menu-js] {
+      flex-wrap: nowrap;
+      gap: var(--space-6);
     }
 
-    nav {
+    .site-header[data-menu-js] .menu-toggle {
+      display: inline-flex;
+    }
+
+    .site-header[data-menu-js] .primary-nav {
+      position: absolute;
+      inset-block-start: 100%;
+      inset-inline: 0;
+      display: none;
+      width: auto;
+      padding: var(--space-2) var(--page-gutter);
+      background: var(--color-background);
+      border-block: 1px solid var(--color-border);
+    }
+
+    .site-header[data-menu-js] .primary-nav[data-open] {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      animation: site-menu-in 180ms var(--motion-ease);
+    }
+
+    .site-header[data-menu-js] .primary-nav[data-open] a {
       width: 100%;
-      justify-content: space-between;
     }
   }
 
-  @media (max-width: 22.5rem) {
-    nav {
-      gap: var(--space-3);
+  @media (min-width: 40rem) {
+    .site-header {
+      flex-wrap: nowrap;
+      gap: var(--space-6);
+    }
+
+    .primary-nav {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: clamp(1.25rem, 2.8vw, 2.75rem);
+      width: auto;
+    }
+
+    .primary-nav a {
+      min-height: clamp(2.5rem, 2.78vw, 2.75rem);
+    }
+  }
+
+  @keyframes site-menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
     }
   }
 </style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+  const panel = document.querySelector<HTMLElement>("[data-menu-panel]");
+  const label = toggle?.querySelector<HTMLElement>("[data-menu-label]");
+
+  if (toggle && panel && label) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.toggleAttribute("data-open", open);
+      label.textContent = open ? "Close" : "Menu";
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        toggle.getAttribute("aria-expanded") === "true"
+      ) {
+        const focusIsInside =
+          document.activeElement === toggle ||
+          panel.contains(document.activeElement);
+
+        setOpen(false);
+
+        if (focusIsInside) {
+          toggle.focus();
+        }
+      }
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (
+        toggle.getAttribute("aria-expanded") !== "true" ||
+        !(event.target instanceof Node)
+      ) {
+        return;
+      }
+
+      if (!toggle.contains(event.target) && !panel.contains(event.target)) {
+        setOpen(false);
+      }
+    });
+
+    const desktop = window.matchMedia("(min-width: 40rem)");
+
+    desktop.addEventListener("change", (event) => {
+      if (event.matches) {
+        setOpen(false);
+      }
+    });
+  }
+</script>

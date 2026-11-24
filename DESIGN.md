@@ -249,7 +249,7 @@ About and Contact use shared `--layout-*` values: 1.25fr/1fr columns, a 95px gap
 
 StudioPageIntro uses 64px/55px block padding, changing to 45px/36px at 650px. Its default bottom divider is disabled on Projects and Lab Notes because their content already supplies the boundary. Project detail uses a metadata/body grid that stacks at 60rem. Lab Notes uses the same 48px header padding as Projects, followed by a full-width thin divider and a centered reading column. Both reading widths use the 70ch prose token measured at the shared 16px body size; Lab Notes keeps its own inner article typography. Its reading section uses 48px/64px block padding. Default Prose is capped at 70ch.
 
-The footer uses 1.4fr/1fr/1fr columns with 4rem gaps and 3rem block padding. At 48rem, studio identity spans the first row; Explore and Contact share the next row, with 2rem/1.5rem gaps and 2rem block padding. Header navigation remains visible; at 30rem the wordmark stacks above a spaced navigation row.
+The footer uses 1.4fr/1fr/1fr columns with 4rem gaps and 3rem block padding. At 48rem, studio identity spans the first row; Explore and Contact share the next row, with 2rem/1.5rem gaps and 2rem block padding. Header navigation stays inline above 40rem; below that the wordmark and a 44px menu button share one row, and the button discloses a full-bleed paper panel with the four links. Without JavaScript the navigation remains visible as a wrapped row.
 
 Use the quarter-rem `--space-*` scale for shared rhythm. `--space-prose` and shared layout/panel tokens preserve deliberate fixed-pixel spacing. Responsive overrides remain in scoped styles. Keep source order, readable measures, and horizontal code/table scrolling.
 
@@ -285,7 +285,7 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 ### Shared shell and introductions
 
-`SiteHeader` renders the original logo with the accessible name “VomerLabs home” and empty image alt text. Preserve the asset's proportions and olive period. Projects and Lab Notes indicate their current section; About and Contact indicate their current page. Hover/focus uses ink with a green underline; no menu runtime is needed.
+`SiteHeader` renders the original logo with the accessible name “VomerLabs home” and empty image alt text. Preserve the asset's proportions and olive period. Projects and Lab Notes indicate their current section; About and Contact indicate their current page. Hover/focus uses ink with a green underline. A single nav landmark is disclosed on mobile by a 44px button with `aria-expanded` and `aria-controls`; the bundled enhancement closes it on Escape, outside clicks, and breakpoint changes, and the button label changes from Menu to Close. When JavaScript is unavailable the button is hidden and the links stay visible as a wrapped row.
 
 `StudioPageIntro` accepts `label`, `description`, optional `showDivider` (default true), and a heading slot. It supplies the current shared informational/index hero, including existing uppercase labels. Each page preserves its own wording.
 
@@ -301,7 +301,7 @@ Lab Notes headers share Projects' left-facing SVG back link, title scale and spa
 
 ### Shared accessibility states
 
-Global focus is a 2px Focus Green outline with a 4px offset; Button and the homepage studio link retain their scoped focus treatments. Selection uses lime with ink text. Reduced-motion rules shorten animation/transitions to 0.01ms, limit animation iterations, and disable smooth scrolling; Button disables its transition and the homepage also suppresses motion. Keep semantic headings, selectable email text, written status, and JavaScript-free navigation.
+Global focus is a 2px Focus Green outline with a 4px offset; Button and the homepage studio link retain their scoped focus treatments. Selection uses lime with ink text. Reduced-motion rules shorten animation/transitions to 0.01ms, limit animation iterations, and disable smooth scrolling; Button disables its transition and the homepage also suppresses motion. Keep semantic headings, selectable email text, written status, and navigation that remains usable without JavaScript.
 
 ## Do's and Don'ts
 
