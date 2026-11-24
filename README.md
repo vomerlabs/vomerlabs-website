@@ -85,7 +85,7 @@ No legacy routes or redirects are configured. If an old public URL ever needs to
 - Import `tokens.css`, `fonts.css`, and `global.css` through `BaseLayout` only. Global CSS owns document defaults, box sizing, selection, keyboard focus, and reduced-motion safeguards.
 - Shared values live in `src/styles/tokens.css`. Use global names such as `--color-text` and `--space-4` directly; avoid page or component aliases for the same value. Keep one-off values local and preserve distinct units and responsive formulas.
 - `Prose` anchors its global Markdown selectors to a scoped wrapper. Project details use the default variant; Lab Notes uses `variant="article"`.
-- `Button` accepts a required `href`, a label slot, `variant="primary" | "secondary"` (primary by default), and standard anchor attributes. Home uses primary; project cards use secondary. `ActionLink` supplies the existing primary and text variants used in detail, empty, and recovery views.
+- `Button` accepts a required `href`, a label slot, `variant="primary" | "secondary"` (primary by default), and standard anchor attributes. Home uses primary; project cards use secondary. `ActionLink` supplies the existing primary and text variants used in homepage, detail, empty, and recovery views.
 - Use Astro-processed source images from `src/assets/`. Serve original files such as `public/vomerlabs-logo.svg` unchanged. Preserve the logo's proportions and accessible home-link label.
 - Kedebideri regular and bold are served locally with `font-display: swap`; the bold face is preloaded. The OFL license is stored with the fonts. Visitors make no third-party font request.
 

@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import ArrowIcon from "../ui/ArrowIcon.astro";
+import ActionLink from "../ui/ActionLink.astro";
 import ProjectCard from "../projects/ProjectCard.astro";
 import { projectPreviewComponents } from "../../config/project-previews";
 
@@ -14,9 +14,7 @@ const { projects } = Astro.props;
 <section class="featured-projects">
   <div class="section-heading">
     <h2>Featured Projects</h2>
-    <a class="all-projects" href="/projects/">
-      Browse all projects <ArrowIcon />
-    </a>
+    <ActionLink href="/projects/" variant="text">Browse all projects</ActionLink>
   </div>
   {projects.length ? (
     <ul class="project-list" role="list">
@@ -60,26 +58,12 @@ const { projects } = Astro.props;
     text-wrap: balance;
   }
 
-  .all-projects {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    min-height: 2.75rem;
-    color: var(--color-text);
-    text-underline-offset: 0.35em;
-    text-decoration-thickness: 1px;
-  }
-
   .project-list {
     display: grid;
     gap: var(--space-6);
     margin: 0;
     padding: 0;
     list-style: none;
-  }
-
-  .all-projects:is(:hover, :focus-visible) {
-    text-decoration-thickness: 2px;
   }
 
   .empty-projects {

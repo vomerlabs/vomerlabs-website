@@ -50,7 +50,9 @@ const {
     font-size: var(--font-size-small);
     line-height: var(--line-height-body);
     text-decoration: none;
-    transition: background-color 180ms;
+    transition:
+      background-color 180ms,
+      color 180ms;
     border-radius: var(--radius-small);
   }
 
@@ -69,11 +71,12 @@ const {
   }
 
   .button--secondary:hover {
-    background: var(--color-secondary-hover);
+    background: var(--color-accent);
+    color: var(--color-text);
   }
 
   .button:focus-visible {
-    outline: 3px solid var(--color-focus);
+    outline: 3px solid var(--color-text);
     outline-offset: 6px;
   }
 

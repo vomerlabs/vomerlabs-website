@@ -4,14 +4,34 @@ import ArrowIcon from './ArrowIcon.astro';
 interface Props {
   href: string;
   variant?: 'primary' | 'text';
+  arrowPosition?: 'start' | 'end';
+  class?: string;
 }
 
-const { href, variant = 'primary' } = Astro.props;
+const {
+  href,
+  variant = 'primary',
+  arrowPosition = 'end',
+  class: className,
+} = Astro.props;
 ---
 
-<a href={href} class:list={['action', variant]}>
+<a
+  href={href}
+  class:list={[
+    'action',
+    variant,
+    { 'arrow-start': arrowPosition === 'start' },
+    className,
+  ]}
+>
+  {arrowPosition === 'start' && (
+    <span class="arrow"><ArrowIcon /></span>
+  )}
   <span><slot /></span>
-  <span class="arrow"><ArrowIcon /></span>
+  {arrowPosition === 'end' && (
+    <span class="arrow"><ArrowIcon /></span>
+  )}
 </a>
 
 <style>
@@ -40,16 +60,34 @@ const { href, variant = 'primary' } = Astro.props;
   }
 
   .text {
-    padding-block: 0.2em;
-    background: linear-gradient(var(--color-accent), var(--color-accent)) left bottom / 100% 1px no-repeat;
+    gap: var(--space-3);
+    min-height: 2.75rem;
+    width: fit-content;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.35em;
+  }
+
+  .text:is(:hover, :focus-visible) {
+    text-decoration-thickness: 2px;
   }
 
   .arrow {
     display: flex;
+    flex-shrink: 0;
+  }
+
+  .arrow-start .arrow {
+    transform: rotate(180deg);
+  }
+
+  .primary .arrow {
     transition: transform var(--motion-duration) var(--motion-ease);
   }
 
-  .action:is(:hover, :focus-visible) .arrow {
+  .primary:is(:hover, :focus-visible) .arrow {
     transform: translateX(0.15em);
   }
 </style>

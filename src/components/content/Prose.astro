@@ -16,6 +16,7 @@ const { variant = 'default' } = Astro.props;
   .prose {
     max-width: var(--width-prose);
     min-width: 0;
+    color: var(--color-text-prose);
   }
 
   .prose > :global(*) {
@@ -26,8 +27,10 @@ const { variant = 'default' } = Astro.props;
     margin-block-start: var(--space-6);
   }
 
+  /* Body copy uses the reading color; headings stay ink. */
   .prose :global(:is(h2, h3, h4, h5, h6)) {
     margin-block: var(--space-12) var(--space-4);
+    color: var(--color-text);
     line-height: var(--line-height-heading);
     text-wrap: balance;
     scroll-margin-block-start: var(--space-8);
@@ -42,13 +45,9 @@ const { variant = 'default' } = Astro.props;
   }
 
   .prose :global(a) {
-    color: inherit;
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.2em;
-  }
-
-  .prose :global(a:hover) {
-    text-decoration-thickness: 0.15em;
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .prose :global(:is(ul, ol)) {
@@ -150,10 +149,6 @@ const { variant = 'default' } = Astro.props;
 
   .article-prose :global(p) {
     margin-block-end: var(--space-prose);
-  }
-
-  .article-prose :global(a) {
-    text-underline-offset: 3px;
   }
 
   .article-prose :global(:is(ul, ol)) {

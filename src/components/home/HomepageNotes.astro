@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import NotePreview from '../lab-notes/NotePreview.astro';
-import ArrowIcon from '../ui/ArrowIcon.astro';
+import ActionLink from '../ui/ActionLink.astro';
 
 interface Props {
   notes: CollectionEntry<'lab-notes'>[];
@@ -14,7 +14,7 @@ const { notes } = Astro.props;
 <section class="home-notes">
   <div class="notes-heading">
     <h2>Recent Lab Notes</h2>
-    <a class="all-notes" href="/lab-notes/">Browse all lab notes <ArrowIcon /></a>
+    <ActionLink href="/lab-notes/" variant="text">Browse all lab notes</ActionLink>
   </div>
   {notes.length ? (
     <ul class="home-note-list" role="list">
@@ -48,21 +48,6 @@ const { notes } = Astro.props;
     line-height: var(--line-height-heading);
     letter-spacing: var(--letter-spacing-heading);
     text-wrap: balance;
-  }
-
-  .all-notes {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    min-height: 2.75rem;
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.35em;
-  }
-
-  .all-notes:is(:hover, :focus-visible) {
-    text-decoration-thickness: 2px;
   }
 
   .home-note-list {

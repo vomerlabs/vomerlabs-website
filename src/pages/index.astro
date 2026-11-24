@@ -4,7 +4,7 @@ import SiteHeader from "../components/site/SiteHeader.astro";
 import SiteFooter from "../components/site/SiteFooter.astro";
 import HomepageNotes from "../components/home/HomepageNotes.astro";
 import FeaturedProjects from "../components/home/FeaturedProjects.astro";
-import ArrowIcon from "../components/ui/ArrowIcon.astro";
+import ActionLink from "../components/ui/ActionLink.astro";
 import Button from "../components/ui/Button.astro";
 import { getFeaturedProjects, getPublishedLabNotes } from "../lib/content";
 import { site } from "../config/site";
@@ -69,7 +69,7 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
           easier, and I test practical uses for AI along the way. The projects
           and notes show what works today and what still needs work.
         </p>
-        <a class="home-link" href="/about/">More about the lab <ArrowIcon /></a>
+        <ActionLink class="home-link" href="/about/" variant="text">More about the lab</ActionLink>
       </div>
     </section>
     <HomepageNotes notes={notes} />
@@ -109,25 +109,6 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
     color: var(--color-text-muted);
     text-wrap: pretty;
   }
-  .home-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-4);
-    min-height: 44px;
-    width: fit-content;
-    color: inherit;
-    font-size: var(--font-size-body);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.3em;
-  }
-  .home-link:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 5px;
-  }
-  .home-link:hover {
-    text-decoration-thickness: 2px;
-  }
   .home-studio {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -139,7 +120,7 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
     line-height: var(--line-height-relaxed);
     color: var(--color-text-muted);
   }
-  .home-studio .home-link {
+  .home-studio :global(.home-link) {
     margin-top: var(--space-4);
   }
   .homepage :global(.home-notes) {
@@ -190,9 +171,6 @@ const notes = (await getPublishedLabNotes()).slice(0, 3);
     line-height: var(--line-height-compact);
     text-align: center;
     color: var(--color-text-muted);
-  }
-  .homepage .home-studio .home-link {
-    color: var(--color-text);
   }
   .homepage :global(.home-notes a) {
     color: var(--color-text);

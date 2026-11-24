@@ -16,26 +16,29 @@ import Button from './Button.astro';
 ```
 
 - `href` (required): the destination URL.
-- `variant`: `primary` (default) uses accent green with a deeper green hover; `secondary` uses ink with an olive hover.
+- `variant`: `primary` (default) uses accent green with a deeper green hover; `secondary` uses ink and switches to lime with ink text on hover.
 - The default slot supplies the label. Standard anchor attributes, including `class`, `aria-label`, `target`, and `rel`, are forwarded.
 
 Both variants include visible keyboard focus, responsive padding, a minimum 44px height, and reduced-motion support. Keep page-specific spacing on the caller's class; the component owns its colors and states. Use a native `<button>` for form submissions and other actions that do not navigate.
 
 ## ActionLink
 
-`ActionLink.astro` renders an anchor with the shared arrow. It is used for detail, empty, related, and recovery links.
+`ActionLink.astro` renders an anchor with the shared arrow. It is the shared text-link style for homepage, detail, empty, related, and recovery links, with a primary pill variant.
 
 ```astro
 ---
 import ActionLink from './ActionLink.astro';
 ---
 
-<ActionLink href="/projects/">Explore projects</ActionLink>
-<ActionLink href="/lab-notes/" variant="text">Back to Lab Notes</ActionLink>
+<ActionLink href="/projects/" variant="text">Browse all projects</ActionLink>
+<ActionLink href="/projects/" variant="text" arrowPosition="start">All projects</ActionLink>
+<ActionLink href="/">Go home</ActionLink>
 ```
 
 - `href` (required): the destination URL.
-- `variant`: `primary` (default) draws the accent pill; `text` draws the lime underline treatment.
+- `variant`: `primary` (default) draws the accent pill; `text` uses the 16px ink underlined homepage link style with a static arrow.
+- `arrowPosition`: `end` (default) or `start`; `start` places the arrow before the label and rotates it for back links.
+- `class`: optional layout class; forwarded to the anchor.
 - The default slot supplies the label.
 
 ## ProjectStatus

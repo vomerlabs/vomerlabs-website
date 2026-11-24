@@ -20,8 +20,6 @@ colors:
   surface-raised: "#faf9f6"
   surface-tinted: "#e0e7d5"
   link: "#466123"
-  focus: "#42651b"
-  secondary-hover: "#3f4e31"
 typography:
   hero-display:
     fontFamily: "Kedebideri, Arial, sans-serif"
@@ -144,7 +142,8 @@ components:
     rounded: "{rounded.small}"
     padding: "14px 20px"
   button-secondary-hover:
-    backgroundColor: "{colors.secondary-hover}"
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.text}"
   action-primary:
     backgroundColor: "{colors.accent}"
     textColor: "{colors.text}"
@@ -153,8 +152,7 @@ components:
     padding: "0.75em 1em"
   action-text:
     textColor: "{colors.text}"
-    typography: "{typography.action}"
-    padding: "0.2em 0"
+    typography: "{typography.body}"
   project-card:
     backgroundColor: "{colors.surface-raised}"
     textColor: "{colors.text}"
@@ -202,26 +200,26 @@ The studio feels curious, clear, independent, and thoughtful. A compact two-line
 - Flat pale cards, quiet panels, and thin section rules.
 - Native links, visible keyboard focus, and reduced-motion support.
 
-This document describes the current implementation. `src/styles/tokens.css` is the code source for shared values; scoped component styles supply local exceptions. Frontmatter records design values and roles, including the secondary button's local hover color. `.impeccable/design.json` extends it with preview snippets, motion, and breakpoint metadata. Surface briefs and review artifacts preserve historical decisions.
+This document describes the current implementation. `src/styles/tokens.css` is the code source for shared values; scoped component styles supply local exceptions. Frontmatter records design values and roles. `.impeccable/design.json` extends it with preview snippets, motion, and breakpoint metadata. Surface briefs and review artifacts preserve historical decisions.
 
 ## Colors
 
-Use the palette by role. Most frontmatter color names map directly to `--color-<name>` globals; `secondary-hover` remains a local Button value.
+Use the palette by role. Most frontmatter color names map directly to `--color-<name>` globals.
 
 - **Warm Paper** (`background`): document ground and text on ink buttons.
 - **Near-black Ink** (`text`): headings, body text, action labels, and secondary button fill.
-- **Gray-green Text** (`text-muted`): supporting text, dates, tags, navigation, and footer copy. `text-prose` is the distinct long-reading text color used in About and Contact. Project and Lab Notes prose share the document's ink color.
-- **Working Lime** (`accent`, `accent-hover`): primary actions, text selection, and text-action underlines.
+- **Gray-green Text** (`text-muted`): supporting text, dates, tags, navigation, and footer copy. `text-prose` is the distinct long-reading text color used in About, Contact, project details, and Lab Notes; headings remain ink.
+- **Working Lime** (`accent`, `accent-hover`): primary actions, the secondary Button's hover fill, and text selection.
 - **Pale Status Lime / Status Green** (`status-background`, `status-dot`): the written project-status badge and its decorative dot.
 - **Paper Rules** (`border`, `border-subtle`): shared section rules and the slightly different page-intro/code borders. Preserve their distinct values.
 - **Inset / Pale Paper** (`surface`, `surface-raised`): inset chips and inline code, versus pale cards, note rows, and empty states. The name `surface-raised` describes a lighter color; it adds no shadow or elevation.
 - **Tinted Panel** (`surface-tinted`, `border-tinted`, `text-tinted`, `text-tinted-muted`): About and Contact panels, numbered rows, and supporting panel copy.
-- **Reading Link / Focus Green** (`link`, `focus`): prose links and global keyboard outlines.
-- **Quiet Border** (`muted`): the default prose blockquote rule. **Olive Hover** (`secondary-hover`): the secondary Button's hover fill.
+- **Reading Link** (`link`): prose links in project details, Lab Notes, and About, underlined with a 3px offset.
+- **Quiet Border** (`muted`): the default prose blockquote rule.
 
-ContactBand retains local green tones for its label (#3d4f2d), supporting copy (#445431), heading period (#647f37), circular-link border (#819c53), and hover fill (#aedd5d). Lab Notes inherits the shared Projects prose palette: ink text and links, inset inline-code backgrounds, muted quotations and a 1px muted quotation rule. Highlighted code retains its renderer's theme. The original logo's olive period (#688343) belongs to the supplied asset. Keep these established exceptions distinct from the shared palette.
+ContactBand retains local green tones for its label (#3d4f2d), supporting copy (#445431), heading period (#647f37), circular-link border (#819c53), and hover fill (#aedd5d). Lab Notes inherits the shared Projects prose palette: text-prose body copy, `--color-link` links, ink headings, inset inline-code backgrounds, muted quotations and a 1px muted quotation rule. Highlighted code retains its renderer's theme. The original logo's olive period (#688343) belongs to the supplied asset. Keep these established exceptions distinct from the shared palette.
 
-**The Useful Lime Rule.** Use lime for primary actions, selection, and project status; keep the document ground warm and quiet.
+**The Useful Lime Rule.** Use lime for primary actions, the secondary Button's hover fill, selection, and project status; keep the document ground warm and quiet.
 
 ## Typography
 
@@ -232,8 +230,8 @@ Kedebideri regular (400) and bold (700) are served locally from `src/assets/font
 - **Detail and recovery titles:** project detail and 404 use `detail-title`. Lab Notes articles now match project detail with `--font-size-page-title` (`clamp(2.75rem, 5.5vw, 4.5rem)`), 1.1 leading, -0.04em tracking, a 20ch maximum measure, and shared 24px/16px title margins.
 - **Section headings:** Homepage section headings (Featured projects, the studio statement, and Recent Lab Notes) all use `heading` with 1.15 leading, -0.025em tracking, and balanced wrapping. Keep the three consistent.
 - **Cards and rows:** project and note titles use their frontmatter roles at either h2 or h3 without changing appearance. Note descriptions use 15px type at 1.65 leading. Tags and compact metadata use 12px mono.
-- **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses the shared 16px body token with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px.
-- **Actions and footer:** Button uses 14px at 1.65 leading; ActionLink uses the fluid `action` role. Footer group headings and email use body size, supporting copy uses `small`, and the status badge uses 14px at 1.25 leading.
+- **Reading:** document defaults use `body`. Article/About/Contact prose uses 16px at 1.9 leading, becoming 15px at 1.85 on mobile. Shared prose h2 headings use 30px desktop and 27px mobile. Project body content uses the shared 16px body token with the default Prose variant; default prose h2 uses `--font-size-section-title` and h3 uses 20px. Both Prose variants use `--color-text-prose` for body copy, `--color-link` for links, and ink headings.
+- **Actions and footer:** Button uses 14px at 1.65 leading. ActionLink's primary variant uses the fluid `action` role; its text variant uses the 16px body link style. Footer group headings and email use body size, supporting copy uses `small`, and the status badge uses 14px at 1.25 leading.
 
 Shared font sizes, line heights, and tracking live in the global token file. Use them directly when the value serves the same role. Preserve scoped fluid formulas and responsive overrides rather than forcing every heading into one scale.
 
@@ -255,7 +253,7 @@ Use the quarter-rem `--space-*` scale for shared rhythm. `--space-prose` and sha
 
 ## Elevation & Depth
 
-The system is flat and uses no shadows or depth gradients. Tonal differences separate paper, pale project cards, note rows, inset chips, and green panels. Thin rules and type establish hierarchy. ActionLink's linear gradient draws a one-pixel underline and does not simulate depth.
+The system is flat and uses no shadows or depth gradients. Tonal differences separate paper, pale project cards, note rows, inset chips, and green panels. Thin rules and type establish hierarchy.
 
 **The Flat Surface Rule.** Use the established pale surfaces and rules to separate content; keep project cards and reading panels free of added shadows.
 
@@ -267,9 +265,9 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 ### Navigation buttons and action links
 
-`Button` renders an anchor with required `href`, label slot, optional primary/secondary variant (primary by default), and forwarded anchor attributes including class. Primary uses lime/ink; secondary uses ink/paper and olive hover. Both have a northeast inline SVG arrow, 24px gap, 44px minimum height, and 14px/20px padding, changing to 13px/19px at 650px. Keyboard focus is a 3px green outline offset by 6px. Background transition is 180ms; reduced motion disables it. The homepage uses primary and project cards use secondary. Usage is documented in `src/components/ui/README.md`.
+`Button` renders an anchor with required `href`, label slot, optional primary/secondary variant (primary by default), and forwarded anchor attributes including class. Primary uses lime/ink; secondary uses ink/paper and switches to lime with ink text on hover. Both have a northeast inline SVG arrow, 24px gap, 44px minimum height, and 14px/20px padding, changing to 13px/19px at 650px. Keyboard focus is a 3px ink outline offset by 6px. Background and text color transition is 180ms; reduced motion disables it. The homepage uses primary and project cards use secondary. Usage is documented in `src/components/ui/README.md`.
 
-`ActionLink` remains a separate component for existing detail, empty-state, and recovery actions. It requires `href` and supports primary (default) and text variants. The primary variant is a padded lime pill; text uses the lime underline. Both shift the shared arrow by 0.15em on hover or keyboard focus. Transitions use the global 200ms duration and `cubic-bezier(0.16, 1, 0.3, 1)` easing.
+`ActionLink` is the shared text-link component for homepage, detail, empty-state, related, and recovery links. It requires `href` and supports primary (default) and text variants, plus an optional `class` for layout. The text variant matches the homepage text links: 16px body sans, ink, a 1px underline with a 0.35em offset, 2px on hover or keyboard focus, a 44px minimum height, and a static arrow. Detail-page back links use the text variant with `arrowPosition="start"`; the arrow moves before the label and rotates 180°. The primary variant remains a padded lime pill and keeps its arrow shift. Transitions use the global 200ms duration and `cubic-bezier(0.16, 1, 0.3, 1)` easing.
 
 ### Project cards and images
 
@@ -285,7 +283,7 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 ### Shared shell and introductions
 
-`SiteHeader` renders the original logo with the accessible name “VomerLabs home” and empty image alt text. Preserve the asset's proportions and olive period. Projects and Lab Notes indicate their current section; About and Contact indicate their current page. Hover/focus uses ink with a green underline. A single nav landmark is disclosed on mobile by a 44px button with `aria-expanded` and `aria-controls`; the bundled enhancement closes it on Escape, outside clicks, and breakpoint changes, and the button label changes from Menu to Close. When JavaScript is unavailable the button is hidden and the links stay visible as a wrapped row.
+`SiteHeader` renders the original logo with the accessible name “VomerLabs home” and empty image alt text. Preserve the asset's proportions and olive period. Projects and Lab Notes indicate their current section; About and Contact indicate their current page. Hover/focus turns the link ink and underlines it. A single nav landmark is disclosed on mobile by a 44px button with `aria-expanded` and `aria-controls`; the bundled enhancement closes it on Escape, outside clicks, and breakpoint changes, and the button label changes from Menu to Close. When JavaScript is unavailable the button is hidden and the links stay visible as a wrapped row.
 
 `StudioPageIntro` accepts `label`, `description`, optional `showDivider` (default true), and a heading slot. It supplies the current shared informational/index hero, including existing uppercase labels. Each page preserves its own wording.
 
@@ -295,15 +293,15 @@ Buttons, project cards, project images, note rows, and chips use the existing 0.
 
 ### Reading and informational panels
 
-`Prose` contains Markdown typography with global descendants anchored to its scoped wrapper. The default variant serves project details; `variant="article"` supplies Lab Notes reading styles. Preserve responsive media, scrollable code/tables, visible focus, and green article links. About and Contact share the long-reading colors and supporting tinted-panel treatment. Their aside rows use unordered lists with matching 6px round bullets in the tinted text color, 20px gaps, and the existing thin rules.
+`Prose` contains Markdown typography with global descendants anchored to its scoped wrapper. The default variant serves project details; `variant="article"` supplies Lab Notes reading styles. Both variants use `--color-text-prose` for body copy, `--color-link` for links, and ink headings. Preserve responsive media, scrollable code/tables, and visible focus. About and Contact share the long-reading colors and supporting tinted-panel treatment. Their aside rows use unordered lists with matching 6px round bullets in the tinted text color, 20px gaps, and the existing thin rules.
 
-Contact keeps its large mailto address and adds a quiet `Prefer to copy it?` line beneath it. The line uses a 14px mono lead-in; the underlined, arrow-bearing `Click here` action is 16px and copies the address. The supporting paragraph acts as a polite status, confirming “Copied to clipboard.” or showing the address after a failure. Without JavaScript the address remains selectable text and the copy action is hidden.
+Contact keeps its large mailto address and adds a quiet `Prefer to copy it?` line beneath it. The lead-in uses the 16px body sans; the underlined, arrow-bearing `Click here` action copies the address. The supporting paragraph acts as a polite status, confirming “Copied to clipboard.” or showing the address after a failure. Without JavaScript the address remains selectable text and the copy action is hidden.
 
 Lab Notes headers share Projects' left-facing SVG back link, title scale and spacing, 52ch description, and intro typography. The FROM THE LAB label is removed. Inline publication, optional update, and topics metadata uses visible labels and 14px text, with monospace values and UTC dates. Optional full-width covers, related real projects, and return navigation remain. The sample article stays explicitly labeled as sample content. Project details retain written status, category, dates, optional tags/cover/external links, and their default Prose body.
 
 ### Shared accessibility states
 
-Global focus is a 2px Focus Green outline with a 4px offset; Button and the homepage studio link retain their scoped focus treatments. Selection uses lime with ink text. Reduced-motion rules shorten animation/transitions to 0.01ms, limit animation iterations, and disable smooth scrolling; Button disables its transition and the homepage also suppresses motion. Keep semantic headings, selectable email text, written status, and navigation that remains usable without JavaScript.
+Global focus is a 2px ink outline with a 4px offset; Button retains its scoped focus treatment. Selection uses lime with ink text. Reduced-motion rules shorten animation/transitions to 0.01ms, limit animation iterations, and disable smooth scrolling; Button disables its transition and the homepage also suppresses motion. Keep semantic headings, selectable email text, written status, and navigation that remains usable without JavaScript.
 
 ## Do's and Don'ts
 

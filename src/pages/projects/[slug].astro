@@ -7,7 +7,6 @@ import SiteHeader from '../../components/site/SiteHeader.astro';
 import SiteFooter from '../../components/site/SiteFooter.astro';
 import ProjectStatus from '../../components/ui/ProjectStatus.astro';
 import ActionLink from '../../components/ui/ActionLink.astro';
-import ArrowIcon from '../../components/ui/ArrowIcon.astro';
 import Prose from '../../components/content/Prose.astro';
 import FormattedDate from '../../components/content/FormattedDate.astro';
 import { getProjects } from '../../lib/content';
@@ -30,7 +29,7 @@ const { Content } = await render(project);
   <SiteHeader slot="header" />
   <article>
     <header class="introduction">
-      <a class="back-link" href="/projects/"><span class="back-arrow"><ArrowIcon /></span><span>All projects</span></a>
+      <ActionLink href="/projects/" variant="text" arrowPosition="start">All projects</ActionLink>
       <h1>{data.title}</h1>
       <p class="description">{data.description}</p>
     </header>
@@ -79,24 +78,6 @@ const { Content } = await render(project);
 <style>
   .introduction {
     padding-block: var(--space-12);
-  }
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-3);
-    min-height: 2.75rem;
-    color: var(--color-text-muted);
-    text-underline-offset: 0.3em;
-  }
-
-  .back-link:hover {
-    color: var(--color-text);
-  }
-
-  .back-arrow {
-    display: flex;
-    transform: rotate(180deg);
   }
 
   h1 {
